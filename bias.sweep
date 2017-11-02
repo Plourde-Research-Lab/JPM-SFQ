@@ -1,0 +1,7 @@
+.control
+source -c underdamped_JTL.cir
+
+sweep -1e-4 1e-4 5-06
+
+write underdamped_JTL_bias.out
+.endc
