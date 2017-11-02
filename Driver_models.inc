@@ -1,0 +1,6 @@
+*****  xic 4.3.1 LinuxRHEL7 x86_64 10/18/2017 20:53 GMT
+
+.model jj1 jj
++ rtype     = 1             cct       = 1             icon      = 10m           
++ vg        = 2.8m          delv      = 0.08m         icrit     = 1.00E-5       
++ r0        = 30            rn        = 30            cap       = 50f           

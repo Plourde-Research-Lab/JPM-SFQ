@@ -1,0 +1,1 @@
+.model jjud jj(rtype=1, cct=1, vg=2.8m, icrit=2u, vshunt=0.5mV cap=300f)

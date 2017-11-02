@@ -1,0 +1,62 @@
+RSFQ Library Status
+12/17/09
+
+SUNY circuits
+
+Josephson Transmission Line             jtl             DONE
+Splitter                                split           DONE
+Merger (Connfluence Junction)           merge           DONE
+Microstrip driver                       tldrvr          DONE
+Microstrip receiver                     tlrcvr          DONE
+C Element (Coincidence Junction)        cel             DONE
+Inverted C element                      cnot            DONE
+
+D Flip-Flop                             dff             DONE
+Inverter                                inv             DONE
+OR                                      or              DONE
+AND                                                     skip
+XOR                                     xor             DONE
+
+T Flip-Flop                             tff             DONE
+T1 Flip-Flop                            t1ff            DONE
+D Flip-Flop with Two Readouts           dff2            DONE
+D Flip-Flop with Complementary Outputs  dffc            DONE
+B Flip-Flop                                             skip
+NDRO Cell                                               NOT DONE (to do)
+
+DC/SFQ                                  dcsfq           DONE
+SFQ/DC                                  sfqdc           DONE
+
+
+Ilmenau Circuits
+
+JTL                                     jtl             DONE (same as SUNY)
+Splitter                                split_il        DONE
+Confluence Buffer                       conf_il         DONE
+PTL-Driver                              tldrvr_il       DONE
+PTL-Receiver                            tlrcvr_il       DONE
+DFF                                     dff_il          DONE
+TFF                                     tff_il          DONE
+
+DC/SFQ                                  dcsfq_il        DONE
+SFQ/DC                                  sfqdc_il        DONE
+
+
+NOTES:
+
+The AND gate does not have circuit element values provided.
+The B flip-flop is more of a concept than an actual useful circuit.
+
+"DONE" means that the test circuit illustrates correct operation of
+the circuit, and no more work on that circuit is anticipated.
+
+"NOT DONE" means that implementation of the circuit element is not
+yet at the "DONE" status, but is in progress or intended to be done.
+
+Note that some functions are duplicated from the SUNY and Ilmenau
+libraries.  It is too early to tell which implementation is "better",
+but in general the Ilmenau circuits appear to have advantages, such as
+avoiding the need for a negative current source in the T flip-flop.
+
+All cells can be freely mixed (as far as I can tell at present).
+

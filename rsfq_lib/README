@@ -1,0 +1,49 @@
+
+This directory contains RSFQ library cells and corresponding
+test/demonstration cells, for the Xic program from Whiteley Research
+Inc.  (www.wrcad.com).
+
+The cells were generated using parameters provided for RSFQ cells from
+the State University of New York (SUNY) archive
+
+http://pavel.physics.sunysb.edu/RSFQ/Lib/
+
+and the RSFQ cells proviced from the Technische Universitat Ilmenau
+(Germany)
+
+http://www4.tu-ilmenau.de/EI/ATE/kryo/cell_library/index.htm
+
+Please consult these sites for available information on the
+characteristics of these cells.
+
+The Xic cells were created by Steve Whiteley (stevew@wrcad.com) of
+Whiteley Research Inc., initially in December 2009.  At this point,
+the cells are intended to be direct translations of the source
+designs, though component values have typically been rounded to two
+decimal places.
+
+To use the library, a recent release of Xic (www.wrcad.com) should be
+available, as well as WRspice for simulation.
+
+The model.lib and device.lib files in this directory must be those
+read on startup.  These can be copied to a directory at the start of
+the library search path, or the user can start Xic in a directory
+containing these files.
+
+These cells contain electrical data only, and should work with any
+technology file.
+
+In electrical mode, the cells can be read into Xic.  The cells with
+"test" in the name provide a test circuit, which can be simulated if
+WRspice is available.  Press the "run" button in the side menu, then
+the "plot" button to view the results.
+
+All primitive cells have a symbolic representation, one must switch
+off symbolic mode to view the actual schematics.
+
+The ".txt" files in this directory contain additional information and
+documentation.
+
+The psu.cc file is a skeletal utility for converting to/from PSCAN
+units, a dimensionless unit system used in the SUNY raw design info.
+

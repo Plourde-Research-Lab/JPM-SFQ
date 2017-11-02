@@ -1,0 +1,7 @@
+.control
+source -c SU-UWM-Driver.cir
+
+sweep -0.00011 -5e-05 5.4545454545454545e-06
+
+write bias.out
+.endc

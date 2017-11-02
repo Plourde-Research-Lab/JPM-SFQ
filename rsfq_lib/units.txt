@@ -1,0 +1,89 @@
+
+PSCAN UNITS
+
+Introduction and Definition
+
+The definition of dimensionless variables and units used in PSCAN and
+many other Josephson junction circuit simulators stems from the basic
+equations of Josephson junction dynamics - see, e.g., Ref.  1.  In
+dimensional units the equations describing the time evolution of
+Josephson phases even in simplest circuits are rather bulky.  For
+example, for a single Josephson junction (described within the RSJ
+model [1]) closed with a superconductor loop we have:
+
+C(phi/2pi)d2p/dt2 + (1/R)(phi/2pi)dp/dt + Ic*sin(p) + (1/L)(phi/2pi)p = 0
+
+phi = h/2e = 2.07 mV-pS
+
+Here C is the junction capacitance, R its normal resistance (including
+external shunt, if any), Ic critical current, while L is the loop
+inductance.  Introducing the dimensionless current, voltage, time,
+resistance, inductance, and capacitance as follows:
+
+i = I/Iu               ic = Ic/Iu
+v = V/Vu               Vu = IcR
+t = T/Tu               Tu = (phi/2pi)(1/Vu)
+r = R/Ru               Ru = Vu/Iu
+l = L/Lu               Lu = RuTu = (phi/2pi)(1/Iu)
+c = C/Cu               Cu = Tu/Ru = (pji/2pi)(1/Vu)(1/Ru)
+
+we can reduce Eq. (1a) to a much simpler form:
+
+    cd2p/dp2 + dp/dt + icsin(p) + p/l = 0
+
+PSCAN uses these dimensionless variables (i, v, t, r, l, and c). 
+Notice that according to Eq.  (2a) the choice of the critical current
+unit (Iu) remains arbitrary.  (For a single junction, Iu = Ic is an
+evident choice [1], but a typical RSFQ circuit uses many junctions
+with a variety of areas and hence Ic values.) PSCAN accepts a value of
+0.125 mA which is equal to the typical critical current of the
+smallest junctions in RSFQ circuits operating at liquid helium
+temperatures.
+
+Typical Values of Units
+
+
+Variable     Notation of the Unit
+                    Unit Values for Various Levels of Nb-trilayer Technology 
+                        3.5 um          0.8 um          0.4 um 
+ Voltage        Vu      0.3     mV      1.1     mV      2.0     mV 
+ Current        Iu      0.125   mA      0.125   mA      0.125   mA 
+ Time   tu      1.1     ps      0.30    ps      0.165   ps 
+ Resistance     Ru      2.4     Ohm     8.8     Ohm     16      Ohm
+ Inductance     Lu      2.64    pH      2.64    pH      2.64    pH
+ Capacitance    Cu      455     fF      37      fF      10      fF
+
+Comments:
+
+* At proper shunting (or no shunting) the IcR product (and hence Vu)
+  does not depend on the junction area.
+
+* For RSFQ applications, larger (>0.5 um) Josephson junctions should
+  be externally shunted to avoid hysteretic behavior [1].  The
+  standard choice of the shunt resistance is that resulting in
+  critical damping:  c = 1, i.e. Cu = AminC0, where Amin is the
+  smallest junction area and C0 is its specific capacitance.  For
+  Nb-trilayer junctions, C0 slowly increases at logarithm of the
+  critical current density jc:  from 5 uF/cm2 at jc = 1 kA/cm2 to
+  approximately 8 uF/cm2 at jc = 100 kA/cm2 [2, 3].
+
+* For deep-submicron, self-shunted Nb-based junctions, the theoretical
+  maximum of Vu = IcR is 2.2 mV; the first experimental data [4] are
+  surprisingly close (~2.0 mV).  Theoretically, Vu should not depend
+  on the junction area, but may depend on the details of the
+  particular fabrication technology, so that the table above lists
+  only approximate values of this parameter.
+
+* The unit of current (Iu) depends solely on convention (see above).
+
+* As soon as Vu has been determined (generally, from experiment) and
+  Iu chosen, all other units are defined exactly by Eqs.  (2).
+
+* The time unit defined by Eq.  (2c) is natural, but a little bit
+  small for Josephson junction dynamics description.  For example,
+  typical FWHM duration of the SFQ pulse is about 3 tauu.  This is why
+  the canonical RSFQ text [5] uses the units of tau0 = (pi)x(tu). 
+  (tau0 in picoseconds is conveniently close to the linear size of a
+  0.125 mA junction in microns.) When comparing various results, it is
+  necessary to mind this duality. 
+

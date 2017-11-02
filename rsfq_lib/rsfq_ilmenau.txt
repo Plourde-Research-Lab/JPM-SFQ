@@ -1,0 +1,6 @@
+Tu-Ilmenau has a nice RSFQ library of the basic cells, including clear
+schematics, values in sane units, layouts and sim results.
+
+http://www4.tu-ilmenau.de/EI/ATE/kryo/cell_library/index.htm
+
+Some of the Xic cells here came from this library.

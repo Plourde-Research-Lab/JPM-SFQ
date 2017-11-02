@@ -1,0 +1,17 @@
+WRspice-4.3.1 Darwin (wrs-4-3-1)
+Thu Oct 19 17:52:05 2017  Pid = 8966  DeathAddr = 0x40
+0   wrspice                             0x000000010ff1437d _ZN8miscutil14dump_backtraceEPKcS1_S1_PKv + 509
+1   wrspice                             0x000000010f8e003a _Z5fatali + 330
+2   wrspice                             0x000000010f8e0589 _ZN11IFsimulator7SigHdlrEiPvS0_ + 681
+3   libsystem_platform.dylib            0x00007fff6e53ef5a _sigtramp + 26
+4   ???                                 0x0000000000000001 0x0 + 1
+5   wrspice                             0x000000010f970af9 _ZN11IFsimulator8SpSourceEP7__sFILEbbPKc + 3209
+6   wrspice                             0x000000010f96fd62 _ZN11IFsimulator6SourceEP8file_eltbbb + 514
+7   wrspice                             0x000000010f96f9de _ZN10CommandTab10com_sourceEP8wordlist + 350
+8   wrspice                             0x000000010f8e927e _ZN6CshPar9DoCommandEP8wordlist + 462
+9   wrspice                             0x000000010f8e989a _ZN8sControl7doblockEP7retinfo + 554
+10  wrspice                             0x000000010f8e7ea2 _ZN8sControl10eval_blockEPS_ + 50
+11  wrspice                             0x000000010f8e7d33 _ZN6CshPar6EvLoopEPKc + 435
+12  wrspice                             0x000000010f8def1a main + 13866
+13  libdyld.dylib                       0x00007fff6e2be145 start + 1
+14  ???                                 0x0000000000000002 0x0 + 2

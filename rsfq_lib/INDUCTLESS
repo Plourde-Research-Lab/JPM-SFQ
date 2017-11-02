@@ -1,0 +1,77 @@
+
+The cells with a "_jj" name suffix, and have "noL" as a label in the
+schematic symbol, are a variation that use no inductors.  These gates
+may be freely mixed with conventional RSFQ gates.
+
+1. Theory
+
+It can be seen that the two roles that inductors play in SFQ circuits
+can be assumed by arrays of Josephson junctions.  These arrays
+establish a phase difference in response to current flow, like
+inductors.  If the phase change is "small", then the array will tend
+to propagate an SFQ pulse, as in a JTL.  It the phase change is
+"large", a junction loop can trap a persistent current (corresponding
+to a "flux" quantum) but it is not magnetic flux!  For example,
+consider a loop of six identical junctions.  Suppose that each
+junction has a phase of 60 degrees.  The total phase around the loop
+is 360 degrees, satisfying the boundary conditions, while a persistent
+current of Ic*sin(60) is flowing.  Clearly, all phase angles and
+corresponding persistent current of 0 is also a valid solution.
+
+2. Local Assumption
+
+There are probably many possible ways to exploit this comcept.  Here,
+the following is assumed:
+
+The fab process provides individual junctions, and junction "stacks"
+containing  four barriers (junctions).  All junctions have the same
+critical current density, and the same damping coefficient.
+
+Practically, parasitic inductance, which will be present in any circuit,
+will affect circuit behavior and should be minimized.  The use of
+junction stacks minimizes the parsitic series inductance.
+
+Can such a fab process be developed?
+
+The ideal process would provide repeatable and robust planar SNS
+junctions, self damped.  One possible approach would be an in-situ
+full-wafer four-barrier formation process, similar conceptually to the
+trilayer process in present use.  The challenge would be to incorporate
+etch-stopping at points within this structure, to enable
+
+a) Etching through the entire structure, for isolation.
+b) Contact to the lowest metal layer, removing all material above.
+c) Contact to the top metal of the lowest junction, removing all material
+above, providing the single junctions.
+d) (Trivially) contact to the top level, providing the second contact
+to the stack junctions.
+
+2. Potential Advantages
+
+Why use junctions rather than inductors?
+
+a) Inductors tend to take a large fraction of total area in SFQ
+circuits, and replacement by junction stacks would potentially greatly
+increase circuit density.  While inductors require a certain area to
+provide the required inductance, junctions can in principle be
+arbitrarily small.
+
+b) Junction/inductor loops are sensitive to external magnetic fields,
+which can potehtially cause failure due to cross-talk with other
+circuits, or from fields produced by power busses, ambient magnetic
+fields including power lines and the earth's field, and fields from
+flux trapped in superconducting metalization.  Magnetic shielding is a
+major requirement for operating and testing SFQ circuits, and magnetic
+coupling and trapped-flux reduction fundamentally impact SFQ circuit
+layout.
+
+Elimination of inductors would potentially greatly reduce magnetic
+effects.  This should further improve circuit density, and may allow
+operation with less-stringent or no magnetic shielding.
+
+c) This may require further analysis, but it is likely that
+junction-only circuits will be less sensitive to junction
+critical-current variation, if it can be assumed that all junctions
+have the same spatial and run-to-run variation.
+
+

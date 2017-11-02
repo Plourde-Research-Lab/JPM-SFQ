@@ -1,0 +1,510 @@
+ All parameters are in  PSCAN dimensionless units .
+
+JTL
+
+This is the simplest RSFQ element.  It allows an input SFQ pulse to
+pass through (in either direction) while possibly "sharpening" the
+pulse.
+
+How It Works
+
+When an input SFQ pulse arrives it switches J1.  The inductance L2+L3
+is not large enough to hold an SFQ and J2 also switches producing an
+output pulse.
+
+The main use of JTL in real designs is interconnecting more complex
+cells over short distances while insulating the cells from each other.
+
+Probably even more important use of this circuit is during simulation
+and optimization of more complex cells to provide "standard" load on
+cell's input and output ports.  Then we try to optimize a cell in such
+a way that there is no current flowing through its IO ports.  Cells
+optimized in such a way can be interconnected directly with an
+inductance without intermediate JTL junctions.  Achieving this goal
+usually means adding an extra junction on each port, these junctions
+can be viewed as interconnecting JTL junctions while they belong to
+the cell itself.
+
+Choosing the parameters of the "standard" JTL segment is probably the
+first thing one does when faced with a novel JJ technology or when
+designing a new cell library.  Usually such a standard JTL has
+junctions of critical current 2 (in dimensionless units) with
+interconnecting inductance of 1.5 units.  In our library junctions are
+biased to 0.7 of their critical current (i.e., power supply current is
+2.8 units divided evenly between two junctions).  This provides for
+-30% margin on global critical current density XJ and +43% for the
+margin on global power supply current XI.  Lowering the bias value
+will increase these margins but will make JTL slower.  With our
+parameters the delay in JTL is about 4 time units per Josephson
+junction.
+
+One can also design an "amplifying" JTL segment with gradually
+increased values of junction critical currents.  The suggested Ic
+factor between two consecutive junctions is Sqrt(2), i.e., a junction
+with value 1.4 can drive a junction with value 2 which in turn can
+drive one with value 2.8.  In this case all junctions are still biased
+to 0.7 of their critical currents, the central power supply current
+naturally is the sum of these bias currents and ratio of inductances
+L2/L3 should be chosen to divide this current in the right proportion
+between the two junctions.  The sum of L2+L3 is chosen to drive the
+larger junction J2.
+
+
+Splitter
+
+This element produces two SFQ pulses (one on each output) for each
+incoming pulse.
+
+How It Works
+
+An input SFQ pulse switches junction J1, which in turn switches both
+J2 and J3 producing two pulses on two outputs.
+
+The parameters of this cell were calculated to make it work like an
+amplifying JTL segment.  The input junction J1 is Sqrt(2) times larger
+than the standard JTL junctions.  It drives two junctions of value 2,
+the sum of their critical currents is again Sqrt(2) times larger than
+J1.  The inductance L1+(L2||L3) with the value of 0.75 units is
+exactly what is needed to drive a "junction" with critical current 4.
+
+Power supply current and inductance ratios are chosen to bias all
+junctions to the "standard" value of 0.7 of their critical currents.
+
+The delay of this splitter is about 10 time units.
+
+One can cascade any number of these splitters together (e.g., to build
+a clock distribution tree) without margins degradation.
+
+This cell was optimized for interconnectivity to be a part of cell
+library. 
+
+Merger (confluence junction)
+
+This element produces an output SFQ pulse for each incoming pulse from
+either input.
+
+How It Works
+
+Consider the top half of the circuit.  An SFQ pulse on input IN1
+switches junction J3, which in turn switches J5 and an output pulse is
+produced.  Simultaneously junction J1 switches (because it had smaller
+critical current than J4) and pulse does not propagate backwards to
+input IN2.
+
+Behaviour of the circuit when input pulse arrives at IN2 is symmetric. 
+If two pulses arrive at both inputs close in time at least one of them
+always propagates to the output.  If only one output pulse is
+produced, J1 (or J2) does not switch.
+
+One half of the merger can be used as a "diode".  It allows pulses to
+propagate from input to output while throwing away the pulses
+propagating backwards.
+
+The delay of this merger is about 10 time units.
+
+Merger can be used as non-latching or gate for the encoding of boolean
+values such that any number of pulses between two clock pulses
+correspond to logical 1 while no pulses correspond to logical 0.  Any
+logic function can be implemented using only mergers and inverters (or
+and not is a complete set of boolean functions) if we use a special
+version of inverter which throws away extra data pulses arriving
+between two clock pulses.
+
+This cell was optimized for interconnectivity to be a part of cell
+library.
+
+Microstrip driver and receiver
+
+These two elements are essentially Josephson Transmission Line
+segments with parameters chosen to make one end match a "standard" JTL
+and another end to have an impedance matched with a passive
+superconductive microstrip transmission line (MSL).
+
+How It Works
+
+While active JTLs are perfect to pass an RSFQ pulse over a short
+distance, for longer signal paths they require too many Josephson
+junctions and large chip area, they also have large propagation delay
+and introduce too much timing uncertainty due to technological spread
+and thermal noise in Josephson junctions.  For any realistic circuit
+(except ones which have purely systolic structure) it is beneficial to
+make long-distance signal transfers using matched superconductive
+MSLs.
+
+Such lines, with their very low attenuation and dispersion, allow one
+to pass picosecond waveforms for distances well exceeding the typical
+chip size, with a low crosstalk.  As a consequence, ultrafast digital
+signals can be passed along the chips ballistically (rather than
+diffusively) with a propagation speed c approaching that of light [in
+the media].
+
+K.Likharev, V. Semenov, "RSFQ Logic/Memory Family..."
+
+Ballistic propagation of pulses in superconductive MSL means that a
+large number of pulses can coexist (and propagate) through the line.
+
+Timing uncertainty introduced even by a long MSL is much smaller than
+that of a long JTL since MSL does not contain any Josephson junctions
+which are subject to relatively large technological variations and
+thermal noise.
+
+This particular pair of driver/receiver cells were optimized by V. 
+Semenov to match MSLs with impedance 2.3 Ohm which is convenient for
+present-day HYPRES technology.  The extremely small resistor in
+superconductive path (large green rectangle on receiver layout below)
+provides decoupling between driver and receiver cells.
+
+An MSL with this driver/receiver pair was experimentally tested to
+have margins of +/- 30%.
+
+These cells were optimized for interconnectivity to be a part of cell
+library.f}
+
+C element (coincidence junction)
+
+This particular C element has been optimized primarily for the lowest
+possible static I/O currents and matching I/O impedance, and secondary
+for the highest XI and XJ margins.
+
+How It Works
+
+The element consists of two quantizing interferometers J0-L3-J1 and
+J2-L4-J1.  Each of the interferometers alone can hold an incoming SFQ
+pulse, either A or B, respectively.  When both A and B arrive in any
+order, they together switch the junction J1, reset the element and
+produce the output Q.
+
+Inverted C element
+
+This particular inverted C element has been optimized primarily for
+the lowest possible static I/O currents and matching I/O impedance,
+and secondary for the highest XI and XJ margins.
+
+
+How It Works
+
+The element consists of two quantizing interferometers J0-L3-J1 and
+J2-L4-J1.  When an SFQ pulse arrives to either input A or input B, it
+immediately propagates to the output Q and is stored in the opposite
+interferometer (e.g., input A is stored in J2-L4-J1).  The opposite
+input SFQ pulse resets the element to its original state.
+
+D flip-flop
+
+How it works
+
+This basic latch is also known as RS (reset-set) flip-flop.  It is
+build around a DC SQUID J1-L1-J2 which has two stable states:  "1" and
+"0", i.e. with and without a magnetic flux quantum inside.  In state
+"0", an SFQ voltage pulse applied to the input "in" enters the SQUID
+through junction J1 and is stored inside.  In state "1" the dc current
+in the quantizing loop flows clockwise and as a result the junction J1
+is biased very far from its critical current value.  If another SFQ
+pulse applied to the input "in", it flips the junction J0 and the
+latch remains in state "1".  If, instead, we apply an SFQ pulse to the
+"clk" input when the latch is in state "1", the junction J2 would
+flip, releasing the stored flux quantum and thus clearing the
+quantizing loop.  In state "0" junction J3 is closer than J2 to its
+threshold value and an SFQ pulse "clk" flips J3, so that the latch
+remains in state "0".  For a clocked operation in a bigger design,
+when all inputs arrive from previous stages (as in a shift register)
+junction J0 is not necessary.
+
+The device was simulated and optimized with a phase sources and a
+matching JTLs at both inputs and a JTL and a resistive load at the
+output: 
+
+Inverter
+
+This is a simple inverting latch.  If data pulse arrives then the next
+clock pulse reads out '0' (no output pulse is produced), otherwise it
+reads out '1' (output pulse is produced).  If more than one data
+pulses arrive between two clock pulses all except the first one are
+ignored.
+
+How It Works
+
+When data pulse arrives at input ri it propagates through junctions
+j1, j2 and switches junction j4.  Inductance l4 is large enough and
+SFQ is stored in the loop j4-l41-l4-j5-l5.  Subsequent data pulses can
+not enter the loop through j4 and switch junction j3 instead.
+
+When clock pulse arrives at input tri it propagates through jt0 and
+chooses which junction (j5 or j6) to switch.  If an SFQ is stored in
+the loop, j5 switches, otherwise j6 switches and output pulse is
+produced and exit through j6, j7.
+
+Any logic function can be implemented using only mergers and inverters
+(or and not is a complete set of boolean functions).
+
+This cell was optimized for interconnectivity to be a part of cell
+library.
+
+OR
+
+Nominal parameters (optimized for margins rather than speed) [1]:
+Ic1= Ic5= 250 uA, all other Ici = 176 uA;
+I1= I2= 176 uA, I3= I4= 132 uA;
+L1= L2=15.1 pH, L3= L4= 3.78 pH, L5= L6= 5.68 pH,  L7= L8= 5.68 pH
+
+How It Works
+
+This is essentially not an elementary circuit, but rather a
+combination of two D Flip-flops (one formed by Josephson junctions
+J1-J4 and quantizing inductance L1, and another by J5-J8 and L2) and
+the asynchronous merger (J9-J11).  The new feature of this combination
+is its synchronism:  a single clock pulse CLK is split to two
+simultaneous clock pulses which read out information from the
+flip-flops in parallel, so that the corresponding output SFQ pulses
+(if any) arrive to the merger virtually simultaneously.  This feature
+may increase parameter margins, since the merger may be optimized for
+the fixed (zero) time delay between input pulses, while the
+asynchronous merger should operate at arbitrary delay.
+  
+AND
+
+The circuit is essentially a combination of two D Flip-flops (one
+formed by Josephson junctions J1-J4 and quantizing inductance L1 and
+another formed by J5-J8 and L2) and a nested, asynchronous system of 3
+Josephson junctions J9, J10, and J11).  Clock signal CLK reads out the
+contents of each flip-flop into a non-quantizing loop (e.g., one
+formed by J2, L2, J9, and J11).  If only one flip-flop was in state
+"1", it gives a flux quantum into the non-quantizing loop; then the
+series junction (e.g, J9) is switched, and flux is falls out of the
+loop without giving any output signal.  However, if both flip-flops
+were in state "1", they give fluxes into both non-quantizing loops
+simultaneously.  In this case the induced currents in J11 add up, and
+this junctions is switched before any of J9, J10 have enough time to
+do.  Switching of J11 procuces the output pulse OUT across this
+junction and also quenches switching of J9, J10.
+
+
+XOR
+
+How it works
+
+Operation of the circuit is as follows:  an input SFQ pulse "A"
+("inA") enters through junction J1 and is stored in the quantizing
+loop J1-J2-L1-L18-J4-J5, or loop "A".  Similarly, an SFQ pulse applied
+to input "B"("inB") enters through junction J8 and is stored in loop
+"B":  J8-J7-L2-L18-J4-J5.  When both loop "A" and loop "B" are empty,
+the incoming clock pulse "CLOCK" ("clk") induces a 2*Pi phase leap in
+junction J6 and there is no output.  We have, therefore, the 0+0=0
+function (here "+" stands for modulo 2 addition operator, or XOR). 
+When there was only input pulse before the clock, the current through
+the quantizing inductance of one of the loops biases the two-junction
+comparator J4-J5 so that the next clock pulse flips junction J5
+(rather than J6) and we get and SFQ pulse at the output of the XOR. 
+In other words, we have 1+0=0+1=1.  The output SFQ voltage pulse
+across J5 clears the loop which contained the flux quantum and is at
+the same time applied to the empty loop.  This is why the buffer
+junctions J2 and J7 are necessary.  They prevent junctions J1 and J8
+from flipping (and thus injecting parasitic backward-moving SFQ pulses
+into the input circuits) when the output pulse is generated.  The
+slowest and most untrivial operation is 1+1=0.  It is performed by
+junction J4 which flips when both quantizing loops have and SFQ
+inside.  This process starts asynchronously, as soon as both "A" and
+"B" are in and has to finish before the arrival of the clock signal. 
+Ideally, when the clock pulse arrives, it finds the gate in the same
+state as in the case of zero inputs.  Junctions J3 and J9 are
+optional, they serve as buffers in case 2 "A"'s or 2 "B"'s arrive
+before the clock pulse.
+ 
+
+The latch was simulated and optimized with inputs and output matched
+with special JTLs: 
+
+T flip-flop
+
+How it works
+
+The operation of this latch is identical to that of an RS flip-flop
+(trigger) with joined set and reset inputs.
+
+T flip-flop has 2 stable states:  "1" and "0", that is, with and
+without a magnetic flux quantum stored inside the loop LPJ4 - J4 - L7
+- L4 - L6 - J3 - LPJ3.  Every input pulse "T" triggers switching of
+the latch to the opposite state.  When it is in state "0" an incoming
+SFQ pulse at port "T" flips junctions J0, J4 and J1 and thus switches
+the T flip-flop to the state "1".  When the latch is in state "1" an
+SFQ pulse at input "T" flips junctions J0, J2 and J3 and returns the
+flip-flop to state "0".  The transition "1" -> "0" results in
+appearance of an SFQ pulse at the output "QN" (junction J3).  Note
+that the frequency of the of the output pulses is exactly 1/2 of the
+frequency of the input pulses.
+
+Junction J0 is optional and serves as a one-stage matching JTL.  Due
+to bipolar dc biasing scheme (note the dc current drain IA) this
+particluar version has an unusually wide parameter tolerance band.
+
+The latch was simulated and optimized as an array of 3 identical T
+flip-flops with special JTLs at the input and the output of the array: 
+
+T1 (T-flip-flop with asynchronous output (C) and destructive read-out)
+
+How It Works
+
+This circuit is a modified T-flip-flop with added asynchronous output
+C (J2) and the destructive read-out (Josephson junctions:  J7, J9,
+J11, J12).
+
+Just like the T-flip-flop T1 has two stable states:  "1" and "0"
+characterized respectively by the presence or absence of a magnetic
+flux quantum stored in the loop L6 - J1 - L7 - L4 - J9 - L10 - J5 -
+L9.  Each pulse arriving at A switches the T1 state.
+
+An input A arriving in state "0" also produces an output pulse at the
+output C.  This happens every other odd-numbered input pulse after the
+last reset.
+
+A pulse arriving at the input DR resets T1 to the state "0".  In state
+"1" it also produces an output pulse at the output S.
+
+In the state "0" a pulse from DR simply flips J11, in state "1" it
+flips J12 and J9 releasing the magnetic flux quantum and changing the
+state to "0".
+
+In the state "0" a pulse from the input A flips J1, J4 and J2
+switching T1 to the state "1", in the state "1" it flips J3, J5 and J7
+changing the state back to "0".
+
+Here is the complete SFQHDL script for T1.
+
+D Flip-Flop with Two Readouts
+
+This particular flip-flop has been optimized primarily for the lowest
+possible static I/O currents and matching I/O impedance, and secondary
+for the highest XI and XJ margins.
+
+How It Works
+
+This circuit is a D flip-flop J7-LM-...  with replicated readout
+comparators J3/J4 and J1/J2.  The D2 is a core of any networking
+switching circuit because it allows to destructively dispatch its
+contents D to any of the two outputs O1 or O2 using the right readout
+signal C1 or C2.
+
+D Flip-Flop with Complementary Outputs
+
+This particular flip-flop has been optimized primarily for the lowest
+possible static I/O currents and matching I/O impedance, and secondary
+for the highest XI and XJ margins.
+
+How It Works
+
+This is just a combination of a D flip-flop J8-L13-L34-J11 and an
+invertor J27-J28-L29-L39-L31-J20-J40 with common read-out, and it
+seems to be the most robust implementation of the DFFC.  Depending on
+whether or not there was a data pulse D between two consequitive clock
+pulses C, the will be a pulse either on output NOUT (QNot on the
+Mealey diagram) or OUT (Q).
+
+
+B Flip-flop
+
+Nominal parameter values as listed in Ref. 1:
+critical currents: J1, J4, J7, J10: 0.22 mA; J2, J5, J8, J11: 0.30 mA;
+  J3, J6, J9, J12: 0.30 mA;
+quantizing inductance: L1= 4.2 pH; dc bias current I1= 0.46 mA.
+
+How It Works
+
+B Flip-flop is a multi-branch RSFQ cell which may serve up to 4 inputs
+(S1,2 and R1,2) and provide up to six outputs.  (Besides the four Q
+output terminals shown above, output pulses may be picked from both
+sides of the quantizing inductance L1).  The circuit has a single
+quantizing loop (and hence just two stationary states).  The loop is
+formed by inductance L1 closed via the ground and two 4-JJ
+low-inductance loops (J1, J3, J7, J9 and J4, J6, J10, J12 ).  The
+loops themselves are not quantizing, and hence switching of one
+junction (say, switching of J1 by input pulse S1) is rapidly followed
+by the switching of a complementary junction in the same loop, in this
+particular case J9.  Besides this feature, the operation of the B
+Flip-flop is similar to that of the basic RSFQ Flip-flop.  Due to the
+high symmetry of the device, it may serve as a template for several
+useful cells - see "Comments" below.
+
+NDRO cell
+
+How it works
+
+This is a T flip-flop-based NDRO (Non Destructive Read Out) cell.  "A"
+is the toggle input of the T flip-flop, formed by junctions
+J1-J2-J3-J4-J5-J7 (J1 and J2 act as a single junction, J7 is a single
+stage output JTL).  The quantizing inductance of the T flip-flop is
+formed by L7+L5+L4+L13.  Note that output "C" follows the "0" -> "1"
+transitions of the T flip-flop.  Junctions J9, J10 and J12 (directly
+connected to the quantizing inductance) are the key element of the
+design, allowing a non-destructive read-off of the internal state of
+the T flip-flop.  When the T flip-flop is in state "0" (no flux
+quantum inside) junction J12 is biased well below the critical value,
+so that when a read-out SFQ voltage pulse appears at the "NR" input,
+it induces a 2*Pi phase leap in buffer junction J11, while J12 (as
+well as J9, J10) preserves its state.  As a result, no output is
+produced at pin "S" and, therefore, the "0" state of the T flip-flop
+is successfully read out.  When T flip-flop is in state "1", junctions
+J9 and J12 are baised closer to their critical values so that an SFQ
+pulse at input "NR" flips junctions J8, J12, J13 and J14.  As a
+result, we have an output SFQ pulse at pin "S".  Junction J9 also
+flips during the read out of "1", compensating for the phase change
+across J12.  Junction J10 flips when the state of the T flip-flop
+changes from "1" to "0" (i.e., when junctions J1, J2 and J4 flip),
+preventing accumulation of flux in the loops J2-L8-L5-L10-J9-J10-J12
+and J7-L11-L4-L10-J9-J10-J12.  It is instructive to compare this cell
+to its close relative - SFQ/DC converter.
+ 
+
+The cell was simulated and optimized with inputs and output matched
+with special JTLs: 
+
+DC to SFQ converter
+
+How it works
+
+The purpose of this device is to produce a controlled number of
+picosecond SFQ pulses at the output "OUT" when a slowly changing DC
+current is applied to the input "IN".  The device is build around a DC
+SQUID J2-L8-{J3,J1} (junctions J1 and J3 act as a single junction). 
+When the input current is increased above a certain value, the dc
+current through junction J2 exceeds the critical value and the
+junction flips, generating a flux-antiflux pair.  The flux quantum
+moves to the output, while the antiflux is captured in the quantizing
+loop of the SQUID.  This immediately changes the dc current inside the
+SQUID (approximately, by F0/L8) and the current through junction J2 is
+reduced below the critical value.  The net result is that a single
+picosecond SFQ pulse can be generated on-chip by applying a slowly
+changing, noisy and inexact (within the F0/L8 = 0.5 mA window) dc
+current from a room-temperature current source.  Similarly, when the
+input current is decreased below a certain value, the split junction
+{J1,J3} flips, restoring the initial state of the SQUID.  Junction J4
+is optional, it serves as a one-stage output JTL to sharpen the SFQ
+pulse (compare the J2 and J4 waveforms below) and to match the output
+of the DC/SFQ converter with the load.
+
+The device was simulated and optimized with a current source and a
+resistor at the input and a resistive load at the output:
+
+SFQ to DC converter
+
+How it works
+
+Although the schematic above could seem rather complicated, the device
+is actually very simple.  Its purpose is to monitor the internal state
+of the T flip-flop build around junctions J0 ...  J6 as a DC voltage
+across the junction J8 (see waveforms below, where /M0/ABS is the
+average value of the U(/M0/J8) voltage).  A straightforward approach
+to the problem of monitoring the inner state of an RSFQ gate would be
+to inductively couple it with a DC SQUID.  The main idea of such an
+approach is that when there is no flux inside the gate, the SQUID is
+in a superconducting state and produces 0 voltage drop.  When there is
+a flux quantum inside the RSFQ gate, the resulting current inductively
+biases the SQUID into the normal state and we can observe a finite
+voltage (of the order of Ic*Rn) across it.  The SFQ/DC converter above
+represents a further development of this approach.  The J7-J8 pair
+behaves exactly as an output SQUID.  But instead of inductive
+coupling, it is directly connected to the quantizing inductance of the
+T flip-flop.
+
+The device was simulated and optimized with a phase source source and
+a matching JTL at the input and a resistive load at the output: 
+

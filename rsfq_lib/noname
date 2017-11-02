@@ -1,0 +1,27 @@
+(Symbol noname);
+($Id:$);
+(xic 4.3.1 Darwin x86_64 10/11/2017 17:12 GMT);
+(PHYSICAL);
+(RESOLUTION 1000);
+( CREATED 10/11/2017 17:12:3, MODIFIED 10/11/2017 17:12:3 );
+9 noname;
+DS 0 1 1;
+DF;
+E
+(ELECTRICAL);
+(RESOLUTION 1000);
+5 7103 (||1:-9000 -5000||)  (||1:10000 -5000||);
+5 7102 (||1:-9000 -5000||)  (||1:10000 -5000||) v(2) v(5) v(7) v(6);
+5 7101 tran 1p 1n;
+9 noname;
+DS 0 1 1;
+(SymbolCall dcsfq_test);
+5 11 X 0 subckt;
+1 Bound -12000 -18600 42000 16200;
+9 dcsfq_test;
+C 0 T -1000 2000;
+L NAME;
+5 16 X 0 11;
+94 <<X0>> -16250 18771 320 1275 1000;
+DF;
+E

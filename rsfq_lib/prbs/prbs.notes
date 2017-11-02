@@ -1,0 +1,65 @@
+Steve Whiteiey
+4/12/10
+
+The prbs_demo file contains an RSFQ six-bit pseudo-random bit sequence
+(prbs) generator, as an Xic cell.
+
+The file prbs_verilog.sp is a logically equivalent Verilog model of
+the prbs, in the form of a WRspice circuit file.  Sourcing this file
+into WRspice will automatically run the file, and print/plot the
+sequence values.
+
+Pseudo-random sequences have uses in encryption/decryption, and
+spread-spectrum communications.
+
+The circuit logically consists of a six-bit shift register, with the
+inverse of the last output exclusive-or'ed with the next to last
+output and fed to the input.  This provides a maximal-length sequence
+containing the all-zeros value.
+
+Implementing this circuit in RSFQ posed some challenges.  The first
+was design of a suitable shift register.  The design chosen consists
+of two D flip-flops, clocked by opposite phases of a 2-phase clock.
+This is logically equivalent to a master-slave flip-flop.  Although
+there may be simpler arrangements, this circuit provides the following
+advantages:
+1) robustness with regard to component value and timing variation.
+2) interoperability with sequential systems based on a 2-phase clock
+   (more on this below).
+3) adaptability for enhancements: parallel loading, etc.
+4) modularity for ease of synthesis and design.
+
+It appears that a 2-phase (at least) clock is a requirement for
+practical RSFQ sequential circuits.  This is due to the nature of
+inverting circuits such as inverters and exclusive-or gates in RSFQ,
+which hold the value until triggered, acting essentially as a D
+flip-flop.  Integration of these circuits requires the opposite phase
+clock to provide the trigger.
+
+The same applies to shift registers.  The opposite-phase clock moves
+the data from the input latch to the output latch, allowing the input
+latch to be loaded on the next clock, while the output latch is
+simultaneously being interrogated.
+
+There is a natural integrability of inverting elements with D
+flip-flops, using alternate-phase clocking.
+
+However, one should bear in mind that the use of any inverting element
+implies use of a sequential network, which is not the case in CMOS or
+other semiconductor logic.  In some cases, this may represent a
+performance disadvantage for RSFQ.
+
+In the prbs circuit, the final stage of the shift register exists
+logically within the inverter and following D flip-flop.  Further, the
+exclusive-or gate logically contains the input latch of the first
+shift register stage.  In this case, there is no penalty for the
+sequential nature of the inverting elements. 
+
+A second not-so-nice aspect of RSFQ logic is the limitation of fan-in
+and fan-out to one, requiring use of (numerous) splitter cells.  This
+is most evident in the two trees used to produce the clock and
+alternate-clock pulses in the prbs circuit.  Three levels of splitters
+provides eight available clock sources, not all of which are used. 
+Although this is manageable in this simple example, generating and
+propagating clock signals in a complex circuit would be challenging.
+
