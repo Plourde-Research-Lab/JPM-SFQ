@@ -1,0 +1,11 @@
+.exec
+source -c Herr.cir
+.endc
+
+.control
+
+sweep I0 -1u 1u .1u
+
+plot v(3) v(15) i()
+write bias.out
+.endc
