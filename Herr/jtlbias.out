@@ -1,0 +1,34 @@
+Title: Constant values
+Date: Wed Feb 21 11:20:25 2018
+Plotname: constants
+Flags: complex
+No. Variables: 13
+No. Points: 1       
+Command: version 4.3.1
+Variables:
+ 0 yes 
+ 1 boltz VCl/C
+ 2 const_c M/S
+ 3 const_e 
+ 4 const_j 
+ 5 echarge Cl
+ 6 false 
+ 7 kelvin C
+ 8 no 
+ 9 phi0 Wb
+ 10 pi 
+ 11 planck ClWb
+ 12 true 
+Values:
+ 0	1.000000000000000e+00,0.0
+	1.380622600000000e-23,0.0
+	2.997925000000000e+08,0.0
+	2.718281828459045e+00,0.0
+	1.602176460000000e-19,0.0
+	0.000000000000000e+00,0.0
+	-2.731500000000000e+02,0.0
+	0.000000000000000e+00,0.0
+	2.067833667000000e-15,0.0
+	3.141592653589793e+00,0.0
+	6.626068960000000e-34,0.0
+	1.000000000000000e+00,0.0

@@ -4,8 +4,8 @@ source -c Herr.cir
 
 .control
 
-sweep I0 -1u 1u .1u
-
-plot v(3) v(15) i()
-write bias.out
+set $value1=50u
+sweep $value2 -1u 1u .1u tran .5p 200p
+plot v(3) v(15)
+write jpmbias.out
 .endc

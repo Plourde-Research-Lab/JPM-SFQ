@@ -1,0 +1,8 @@
+# xic 4.3.1 Darwin x86_64 02/20/2018 23:50 GMT crash log, pid: 14567
+cell: BallisticJTL top: BallisticJTL mode: 1
+cmd: MAIN level: 1
+Logfiles retained in /var/folders/t_/y5t63zxn3fn4b4gdqlc2wh4m0000gn/T/xic.14567.
+Dumping modified cells...
+BallisticJTL saved.
+JTLM saved.
+All modified cells have been dumped in ./panic.14567.

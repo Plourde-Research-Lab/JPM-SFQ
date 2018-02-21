@@ -1,0 +1,10 @@
+.exec
+source -c Herr.cir
+.endc
+
+.control
+
+sweep -500u 0u 50u tran 2p 5n
+plot v(3) v(9) v(15)
+write jtlbias.out
+.endc
