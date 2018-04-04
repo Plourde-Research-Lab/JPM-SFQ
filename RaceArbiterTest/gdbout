@@ -1,0 +1,18 @@
+Xic-4.3.1 Darwin (xic-4-3-1)
+Wed Mar 28 13:36:17 2018  Pid = 16617  DeathAddr = 0x7fff51fc85e2
+0   xic                                 0x0000000106fa7e7d _ZN8miscutil14dump_backtraceEPKcS1_S1_PKv + 509
+1   xic                                 0x0000000106985854 _ZN5cMain4ExitE8ExitType + 516
+2   xic                                 0x00000001069b0266 _ZN12_GLOBAL__N_18sig_hdlrEiP9__siginfoPv + 822
+3   libsystem_platform.dylib            0x00007fff51fc5f5a _sigtramp + 26
+4   ???                                 0x00007f8ce891b1f0 0x0 + 140243174011376
+5   libsystem_malloc.dylib              0x00007fff51e602ee szone_malloc_should_clear + 213
+6   libsystem_malloc.dylib              0x00007fff51e601bd malloc_zone_malloc + 103
+7   libsystem_malloc.dylib              0x00007fff51e5f4c7 malloc + 24
+8   libc++abi.dylib                     0x00007fff4fc67628 _Znwm + 40
+9   xic                                 0x0000000106fa2821 _ZN5sLstr5add_cEcb + 113
+10  xic                                 0x0000000106bc12b4 _ZN9cSpiceIPC8read_msgEiiPPcbPPh + 180
+11  xic                                 0x0000000106bbce07 _ZN9cSpiceIPC13send_to_spiceEPKci + 279
+12  xic                                 0x0000000106bc0da9 _ZN9cSpiceIPC14complete_spiceEv + 89
+13  xic                                 0x0000000106bc0c2b _ZN9cSpiceIPC9SigIOhdlrEi + 539
+14  libsystem_platform.dylib            0x00007fff51fc5f5a _sigtramp + 26
+15  libglib-2.0.0.dylib                 0x0000000107c80d98 g_hash_table_lookup + 39

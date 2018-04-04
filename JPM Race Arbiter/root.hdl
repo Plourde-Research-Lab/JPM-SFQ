@@ -1,0 +1,25 @@
+PARAMETER
+	tseq=400,
+	wbc=5.6, wvg = 4.13, wvrat = 0.7, wrrat = 0.1,
+	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0,
+	IJPM=0;
+
+INTERNAL
+	IJPM=0,
+	LJPM=1,
+	L1=1,
+	JB1=1,
+	JB2=1;
+
+circuit root()
+{
+INTERNAL
+	tp=tseq/4,
+	p1=0.85+psfq(tp,4,10);
+
+rule inp1(inc(P1))
+	set(dcsfq.IN);
+
+rule rout(GET(dff.OUT))
+	set(jtlout.IN);
+}

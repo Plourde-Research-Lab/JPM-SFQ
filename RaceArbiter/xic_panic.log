@@ -1,0 +1,5 @@
+# xic 4.3.1 Darwin x86_64 03/22/2018 18:16 GMT crash log, pid: 53497
+cell: RA top: RA mode: 1
+cmd: MAIN level: 1
+Logfiles retained in /var/folders/t_/y5t63zxn3fn4b4gdqlc2wh4m0000gn/T/xic.53497.
+Dumping modified cells...

@@ -1,0 +1,34 @@
+Xic-4.3.1 Darwin (xic-4-3-1)
+Fri Mar 16 17:04:22 2018  Pid = 15713  DeathAddr = 0x7fff59c3d5e2
+0   xic                                 0x0000000105c36e7d _ZN8miscutil14dump_backtraceEPKcS1_S1_PKv + 509
+1   xic                                 0x0000000105614854 _ZN5cMain4ExitE8ExitType + 516
+2   xic                                 0x000000010563f266 _ZN12_GLOBAL__N_18sig_hdlrEiP9__siginfoPv + 822
+3   libsystem_platform.dylib            0x00007fff59c3af5a _sigtramp + 26
+4   ???                                 0x00007ffb6e4292d0 0x0 + 140717863375568
+5   libsystem_malloc.dylib              0x00007fff59ae02ee szone_malloc_should_clear + 213
+6   libsystem_malloc.dylib              0x00007fff59ae01bd malloc_zone_malloc + 103
+7   libsystem_malloc.dylib              0x00007fff59adf4c7 malloc + 24
+8   libc++abi.dylib                     0x00007fff578e8628 _Znwm + 40
+9   xic                                 0x0000000105c31821 _ZN5sLstr5add_cEcb + 113
+10  xic                                 0x00000001058502b4 _ZN9cSpiceIPC8read_msgEiiPPcbPPh + 180
+11  xic                                 0x000000010584be07 _ZN9cSpiceIPC13send_to_spiceEPKci + 279
+12  xic                                 0x000000010584fda9 _ZN9cSpiceIPC14complete_spiceEv + 89
+13  xic                                 0x000000010584fc2b _ZN9cSpiceIPC9SigIOhdlrEi + 539
+14  libsystem_platform.dylib            0x00007fff59c3af5a _sigtramp + 26
+15  ???                                 0x00007ffeea6aba38 0x0 + 140732831283768
+16  libsystem_malloc.dylib              0x00007fff59ae03bf szone_malloc_should_clear + 422
+17  libsystem_malloc.dylib              0x00007fff59ae01bd malloc_zone_malloc + 103
+18  libsystem_malloc.dylib              0x00007fff59adf4c7 malloc + 24
+19  libX11.6.dylib                      0x0000000106741b31 append_pending_request + 23
+20  libX11.6.dylib                      0x0000000106741f9b _XReply + 143
+21  libX11.6.dylib                      0x000000010672b3ac XGetWindowProperty + 193
+22  libgdk-x11-2.0.0.dylib              0x000000010639d54c gdk_event_translate + 3883
+23  libgdk-x11-2.0.0.dylib              0x000000010639dfb2 _gdk_events_queue + 173
+24  libgdk-x11-2.0.0.dylib              0x000000010639f2fb gdk_event_dispatch + 35
+25  libglib-2.0.0.dylib                 0x0000000106999897 g_main_context_dispatch + 282
+26  libglib-2.0.0.dylib                 0x0000000106999b83 g_main_context_iterate + 413
+27  libglib-2.0.0.dylib                 0x0000000106999dcd g_main_loop_run + 195
+28  libgtk-x11-2.0.0.dylib              0x000000010605a28c gtk_main + 180
+29  xic                                 0x0000000105bfe889 _ZN9gtkinterf6GTKdev8MainLoopEb + 41
+30  xic                                 0x0000000105555a3f main + 2239
+31  libdyld.dylib                       0x00007fff59937015 start + 1

@@ -1,0 +1,22 @@
+PARAMETER
+	TSEQ      = 400.00,
+	XI = 1.0,
+	XJ = 1.0,
+	XL = 1.0;
+
+circuit root()
+{
+INTERNAL
+	tp=tseq/4,
+	p1=0.85+psfq(tseq/5,4,10),
+	pclk=0.85+psfq(tseq/10,4,20);
+
+rule inp1(inc(P1))
+	set(jtl0.IN);
+
+rule inclk(inc(PCLK))
+	set(jtl2.IN);
+
+rule rout(GET(dff.OUT))
+	set(jtl1.IN);
+}

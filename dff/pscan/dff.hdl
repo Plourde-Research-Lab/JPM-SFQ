@@ -1,0 +1,37 @@
+circuit dff()
+{
+
+PARAMETER
+	J1=2,
+	J2=2,
+	L1=3.38,
+  LJ1=0.5,
+	L2=0.1,
+  LJ2=0.05;
+
+EXTERNAL
+	XJ1=1,
+	XJ2=1,
+	XL1=1,
+	XL2=1;
+
+EXTERNAL xst=0,xclk=0;
+
+rule init(Tcurr<5)
+	xst=0,tcurr>5;
+
+RULE flip(GET(IN))
+  xst=1;
+
+RULE clock(GET(CLK))
+  xclk=1;
+
+RULE flop0(GET(CLK) and xst eq 0)
+  inc(j1),
+  xst = 0;
+
+RULE flop1(GET(CLK) and xst eq 1)
+  inc(j2),
+  set(OUT),
+  xst=0;
+}

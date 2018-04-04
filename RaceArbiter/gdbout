@@ -1,0 +1,21 @@
+Xic-4.3.1 Darwin (xic-4-3-1)
+Fri Mar  9 14:54:55 2018  Pid = 1046  DeathAddr = 0x7fff59ae1593
+0   xic                                 0x00000001052e6e7d _ZN8miscutil14dump_backtraceEPKcS1_S1_PKv + 509
+1   xic                                 0x0000000104cc4854 _ZN5cMain4ExitE8ExitType + 516
+2   xic                                 0x0000000104cef266 _ZN12_GLOBAL__N_18sig_hdlrEiP9__siginfoPv + 822
+3   libsystem_platform.dylib            0x00007fff59c3af5a _sigtramp + 26
+4   ???                                 0x0000000000000000 0x0 + 0
+5   libsystem_malloc.dylib              0x00007fff59ae03bf szone_malloc_should_clear + 422
+6   libsystem_malloc.dylib              0x00007fff59ae01bd malloc_zone_malloc + 103
+7   libsystem_malloc.dylib              0x00007fff59adf4c7 malloc + 24
+8   libc++abi.dylib                     0x00007fff578e8628 _Znwm + 40
+9   xic                                 0x00000001052913c8 _ZN5UpdIf15distrib_versionEPKcPPcS3_S3_S3_ + 856
+10  xic                                 0x0000000104c08411 _ZN12_GLOBAL__N_18xic_main10start_procEPv + 1201
+11  libglib-2.0.0.dylib                 0x0000000105fda897 g_main_context_dispatch + 282
+12  libglib-2.0.0.dylib                 0x0000000105fdab83 g_main_context_iterate + 413
+13  libglib-2.0.0.dylib                 0x0000000105fdadcd g_main_loop_run + 195
+14  libgtk-x11-2.0.0.dylib              0x000000010570f28c gtk_main + 180
+15  xic                                 0x00000001052ae889 _ZN9gtkinterf6GTKdev8MainLoopEb + 41
+16  xic                                 0x0000000104c05a3f main + 2239
+17  libdyld.dylib                       0x00007fff59937015 start + 1
+18  ???                                 0x0000000000000003 0x0 + 3

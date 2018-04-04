@@ -1,0 +1,16 @@
+circuit jtl()
+{
+parameter
+	i1 = 1.8,
+	j1 = 1.0,
+	j2 = 1.0;
+
+external
+	xj1 = 1.0,
+	xj2 = 1.0;
+
+rule r1(get(IN))
+	inc(j1),
+	inc(j2),
+	set(OUT);
+}

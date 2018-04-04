@@ -1,0 +1,16 @@
+# Global parameters
+tseq	400.0
+xi	1.0
+xj	1.0
+xl	1.0
+# jtl parameters
+jtl.i1	1.8
+jtl.j1	1.0
+jtl.j2	1.0
+# dff parameters
+dff.j1	2.0
+dff.j2	2.0
+dff.l1	3.38
+dff.l2	0.1
+dff.lj1	0.5
+dff.lj2	0.05
