@@ -34,3 +34,281 @@ LOG STARTED: Fri, 30 Mar 2018 11:50:32
 LOG STARTED: Fri, 30 Mar 2018 12:01:40
 ***************************************
 LOG STARTED: Mon, 02 Apr 2018 10:22:27
+***************************************
+LOG STARTED: Fri, 06 Apr 2018 10:56:36
+***************************************
+LOG STARTED: Fri, 06 Apr 2018 10:58:24
+***************************************
+LOG STARTED: Thu, 19 Apr 2018 11:46:03
+***************************************
+LOG STARTED: Wed, 25 Apr 2018 14:58:00
+Find margins for xi
+Test initial point 1.00
+------------------------------
+1.0 Rule dff.init activated
+1.0 Rule dff.init clause # 1 passed
+------------------------------
+6.0 Rule dff.init clause # 2 passed
+6.0 Rule dff.init deactivated
+------------------------------
+11.8 Rule inp1 activated
+11.8 Rule inp1 clause # 1 passed
+11.8 Rule inp1 deactivated
+------------------------------
+12.0 Rule jtlin.r1 activated
+------------------------------
+13.2 Rule jtlin.r1 clause # 1 passed
+------------------------------
+15.3 Rule jtlin.r1 clause # 2 passed
+15.3 Rule jtlin.r1 clause # 3 passed
+15.3 Rule jtlin.r1 deactivated
+------------------------------
+15.6 Rule dff.flip activated
+15.6 Rule dff.flip clause # 1 passed
+15.6 Rule dff.flip deactivated
+------------------------------
+21.7 Rule inclk activated
+21.7 Rule inclk clause # 1 passed
+21.7 Rule inclk deactivated
+------------------------------
+21.9 Rule jtlclk.r1 activated
+------------------------------
+23.1 Rule jtlclk.r1 clause # 1 passed
+------------------------------
+25.2 Rule jtlclk.r1 clause # 2 passed
+25.2 Rule jtlclk.r1 clause # 3 passed
+25.2 Rule jtlclk.r1 deactivated
+------------------------------
+25.6 Rule dff.clock activated
+25.6 Rule dff.clock clause # 1 passed
+25.6 Rule dff.clock deactivated
+25.6 Rule dff.flop1 activated
+------------------------------
+33.2 Rule dff.flop1 clause # 1 passed
+33.2 Rule dff.flop1 clause # 2 passed
+33.2 Rule dff.flop1 clause # 3 passed
+33.2 Rule dff.flop1 deactivated
+------------------------------
+34.0 Rule rout activated
+34.0 Rule rout clause # 1 passed
+34.0 Rule rout deactivated
+34.0: invalid INC for junction j1 in jtl:.jtlout
+34.0 Rule jtlout.r1 activated
+34.0 Rule jtlout.r1 clause # 1 passed
+HDL script failed
+Current rules status:
+Rule jtlout.r1 active clause # 2
+dff.clock : |||||||||||||||||||||||||||||||||||||||||||||||||||*|||||||||||||||
+dff.flip  : |||||||||||||||||||||||||||||||*|||||||||||||||||||||||||||||||||||
+dff.flop1 : |||||||||||||||||||||||||||||||||||||||||||||||||||****************
+dff.init  : ||***********||||||||||||||||||||||||||||||||||||||||||||||||||||||
+inclk     : |||||||||||||||||||||||||||||||||||||||||||*|||||||||||||||||||||||
+inp1      : |||||||||||||||||||||||*|||||||||||||||||||||||||||||||||||||||||||
+jtlclk.r1 : |||||||||||||||||||||||||||||||||||||||||||********||||||||||||||||
+jtlin.r1  : |||||||||||||||||||||||********||||||||||||||||||||||||||||||||||||
+jtlout.r1 : |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+rout      : |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Circuit does not work in the initial point
+Find margins for xj
+Test initial point 1.00
+------------------------------
+0.7 Rule dff.init activated
+0.7 Rule dff.init clause # 1 passed
+------------------------------
+5.7 Rule dff.init clause # 2 passed
+5.7 Rule dff.init deactivated
+------------------------------
+11.8 Rule inp1 activated
+11.8 Rule inp1 clause # 1 passed
+11.8 Rule inp1 deactivated
+------------------------------
+12.0 Rule jtlin.r1 activated
+------------------------------
+13.0 Rule jtlin.r1 clause # 1 passed
+------------------------------
+15.1 Rule jtlin.r1 clause # 2 passed
+15.1 Rule jtlin.r1 clause # 3 passed
+15.1 Rule jtlin.r1 deactivated
+------------------------------
+15.4 Rule dff.flip activated
+15.4 Rule dff.flip clause # 1 passed
+15.4 Rule dff.flip deactivated
+------------------------------
+21.8 Rule inclk activated
+21.8 Rule inclk clause # 1 passed
+21.8 Rule inclk deactivated
+------------------------------
+22.0 Rule jtlclk.r1 activated
+------------------------------
+23.2 Rule jtlclk.r1 clause # 1 passed
+------------------------------
+25.4 Rule jtlclk.r1 clause # 2 passed
+25.4 Rule jtlclk.r1 clause # 3 passed
+25.4 Rule jtlclk.r1 deactivated
+------------------------------
+25.7 Rule dff.clock activated
+25.7 Rule dff.clock clause # 1 passed
+25.7 Rule dff.clock deactivated
+25.7 Rule dff.flop1 activated
+------------------------------
+33.6 Rule dff.flop1 clause # 1 passed
+33.6 Rule dff.flop1 clause # 2 passed
+33.6 Rule dff.flop1 clause # 3 passed
+33.6 Rule dff.flop1 deactivated
+------------------------------
+34.3 Rule rout activated
+34.3 Rule rout clause # 1 passed
+34.3 Rule rout deactivated
+34.3: invalid INC for junction j1 in jtl:.jtlout
+34.3 Rule jtlout.r1 activated
+34.3 Rule jtlout.r1 clause # 1 passed
+HDL script failed
+Current rules status:
+Rule jtlout.r1 active clause # 2
+dff.clock : |||||||||||||||||||||||||||||||||||||||||||||||||||*||||||||||||||||
+dff.flip  : ||||||||||||||||||||||||||||||*|||||||||||||||||||||||||||||||||||||
+dff.flop1 : |||||||||||||||||||||||||||||||||||||||||||||||||||****************|
+dff.init  : |***********||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+inclk     : |||||||||||||||||||||||||||||||||||||||||||*||||||||||||||||||||||||
+inp1      : |||||||||||||||||||||||*||||||||||||||||||||||||||||||||||||||||||||
+jtlclk.r1 : |||||||||||||||||||||||||||||||||||||||||||********|||||||||||||||||
+jtlin.r1  : |||||||||||||||||||||||*******||||||||||||||||||||||||||||||||||||||
+jtlout.r1 : ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+rout      : ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Circuit does not work in the initial point
+***************************************
+LOG STARTED: Wed, 25 Apr 2018 16:01:57
+Find margins for xi
+Test initial point 1.00
+------------------------------
+1.0 Rule dff.init activated
+1.0 Rule dff.init clause # 1 passed
+------------------------------
+6.0 Rule dff.init clause # 2 passed
+6.0 Rule dff.init deactivated
+------------------------------
+11.8 Rule inp1 activated
+11.8 Rule inp1 clause # 1 passed
+11.8 Rule inp1 deactivated
+------------------------------
+12.0 Rule jtlin.r1 activated
+------------------------------
+13.2 Rule jtlin.r1 clause # 1 passed
+------------------------------
+15.3 Rule jtlin.r1 clause # 2 passed
+15.3 Rule jtlin.r1 clause # 3 passed
+15.3 Rule jtlin.r1 deactivated
+------------------------------
+15.6 Rule dff.flip activated
+15.6 Rule dff.flip clause # 1 passed
+15.6 Rule dff.flip deactivated
+------------------------------
+21.7 Rule inclk activated
+21.7 Rule inclk clause # 1 passed
+21.7 Rule inclk deactivated
+------------------------------
+21.9 Rule jtlclk.r1 activated
+------------------------------
+23.1 Rule jtlclk.r1 clause # 1 passed
+------------------------------
+25.2 Rule jtlclk.r1 clause # 2 passed
+25.2 Rule jtlclk.r1 clause # 3 passed
+25.2 Rule jtlclk.r1 deactivated
+------------------------------
+25.6 Rule dff.clock activated
+25.6 Rule dff.clock clause # 1 passed
+25.6 Rule dff.clock deactivated
+25.6 Rule dff.flop1 activated
+------------------------------
+33.2 Rule dff.flop1 clause # 1 passed
+33.2 Rule dff.flop1 clause # 2 passed
+33.2 Rule dff.flop1 clause # 3 passed
+33.2 Rule dff.flop1 deactivated
+------------------------------
+34.0 Rule rout activated
+34.0 Rule rout clause # 1 passed
+34.0 Rule rout deactivated
+34.0: invalid INC for junction j1 in jtl:.jtlout
+34.0 Rule jtlout.r1 activated
+34.0 Rule jtlout.r1 clause # 1 passed
+HDL script failed
+Current rules status:
+Rule jtlout.r1 active clause # 2
+dff.clock : |||||||||||||||||||||||||||||||||||||||||||||||||||*|||||||||||||||
+dff.flip  : |||||||||||||||||||||||||||||||*|||||||||||||||||||||||||||||||||||
+dff.flop1 : |||||||||||||||||||||||||||||||||||||||||||||||||||****************
+dff.init  : ||***********||||||||||||||||||||||||||||||||||||||||||||||||||||||
+inclk     : |||||||||||||||||||||||||||||||||||||||||||*|||||||||||||||||||||||
+inp1      : |||||||||||||||||||||||*|||||||||||||||||||||||||||||||||||||||||||
+jtlclk.r1 : |||||||||||||||||||||||||||||||||||||||||||********||||||||||||||||
+jtlin.r1  : |||||||||||||||||||||||********||||||||||||||||||||||||||||||||||||
+jtlout.r1 : |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+rout      : |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Circuit does not work in the initial point
+Find margins for xj
+Test initial point 1.00
+------------------------------
+0.7 Rule dff.init activated
+0.7 Rule dff.init clause # 1 passed
+------------------------------
+5.7 Rule dff.init clause # 2 passed
+5.7 Rule dff.init deactivated
+------------------------------
+11.8 Rule inp1 activated
+11.8 Rule inp1 clause # 1 passed
+11.8 Rule inp1 deactivated
+------------------------------
+12.0 Rule jtlin.r1 activated
+------------------------------
+13.0 Rule jtlin.r1 clause # 1 passed
+------------------------------
+15.1 Rule jtlin.r1 clause # 2 passed
+15.1 Rule jtlin.r1 clause # 3 passed
+15.1 Rule jtlin.r1 deactivated
+------------------------------
+15.4 Rule dff.flip activated
+15.4 Rule dff.flip clause # 1 passed
+15.4 Rule dff.flip deactivated
+------------------------------
+21.8 Rule inclk activated
+21.8 Rule inclk clause # 1 passed
+21.8 Rule inclk deactivated
+------------------------------
+22.0 Rule jtlclk.r1 activated
+------------------------------
+23.2 Rule jtlclk.r1 clause # 1 passed
+------------------------------
+25.4 Rule jtlclk.r1 clause # 2 passed
+25.4 Rule jtlclk.r1 clause # 3 passed
+25.4 Rule jtlclk.r1 deactivated
+------------------------------
+25.7 Rule dff.clock activated
+25.7 Rule dff.clock clause # 1 passed
+25.7 Rule dff.clock deactivated
+25.7 Rule dff.flop1 activated
+------------------------------
+33.6 Rule dff.flop1 clause # 1 passed
+33.6 Rule dff.flop1 clause # 2 passed
+33.6 Rule dff.flop1 clause # 3 passed
+33.6 Rule dff.flop1 deactivated
+------------------------------
+34.3 Rule rout activated
+34.3 Rule rout clause # 1 passed
+34.3 Rule rout deactivated
+34.3: invalid INC for junction j1 in jtl:.jtlout
+34.3 Rule jtlout.r1 activated
+34.3 Rule jtlout.r1 clause # 1 passed
+HDL script failed
+Current rules status:
+Rule jtlout.r1 active clause # 2
+dff.clock : |||||||||||||||||||||||||||||||||||||||||||||||||||*||||||||||||||||
+dff.flip  : ||||||||||||||||||||||||||||||*|||||||||||||||||||||||||||||||||||||
+dff.flop1 : |||||||||||||||||||||||||||||||||||||||||||||||||||****************|
+dff.init  : |***********||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+inclk     : |||||||||||||||||||||||||||||||||||||||||||*||||||||||||||||||||||||
+inp1      : |||||||||||||||||||||||*||||||||||||||||||||||||||||||||||||||||||||
+jtlclk.r1 : |||||||||||||||||||||||||||||||||||||||||||********|||||||||||||||||
+jtlin.r1  : |||||||||||||||||||||||*******||||||||||||||||||||||||||||||||||||||
+jtlout.r1 : ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+rout      : ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Circuit does not work in the initial point

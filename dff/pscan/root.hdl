@@ -12,11 +12,11 @@ INTERNAL
 	pclk=0.85+psfq(tseq/10,4,20);
 
 rule inp1(inc(P1))
-	set(jtl0.IN);
+	set(jtlin.IN);
 
 rule inclk(inc(PCLK))
-	set(jtl2.IN);
+	set(jtlclk.IN);
 
 rule rout(GET(dff.OUT))
-	set(jtl1.IN);
+	set(jtlout.IN);
 }
