@@ -17,24 +17,24 @@ rule init(tcurr<5)
 xst=0,
 tcurr>5;
 
-rule a1( get(1)  and  xst eq 0)
+rule a1( get(OUT1)  and  xst eq 0)
 xst=1,
 inc(j1),
-set(2),set(3),
+set(OUT2),set(IN),
 [inc(j2),inc(j3)],
 xst=0;
 
-rule a2( get(2)  and xst eq 0)
+rule a2( get(OUT2)  and xst eq 0)
 xst=1,
 inc(j2),
-set(1),set(3),
+set(OUT1),set(IN),
 [inc(j1),inc(j3)],
 xst=0;
 
-rule a3( get(3)  and xst eq 0)
+rule a3( get(IN)  and xst eq 0)
 xst=1,
 inc(j3),
-set(1),set(2),
+set(OUT1),set(OUT2),
 [inc(j1),inc(j2)],
 xst=0;
 

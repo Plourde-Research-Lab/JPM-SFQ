@@ -1,13 +1,14 @@
 circuit jtl()
 {
 parameter
-	i1 = 1.8,
-	j1 = 1.0,
-	j2 = 1.0;
+	i1 = 3,
+	l1 = 0.75,
+	j1 = 2;
 
 external
-	xj1 = 1.0,
-	xj2 = 1.0;
+	xj = 1.0,
+	xl = 1.0,
+	xi = 1.0;
 
 rule r1(get(IN))
 	inc(j1),

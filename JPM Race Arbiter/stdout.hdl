@@ -1,6 +1,6 @@
 circuit stdout()
 {
-	rule out (get(1))
+	rule out (get(in))
 		inc(j1),
 		inc(j2),
 		inc(j3),

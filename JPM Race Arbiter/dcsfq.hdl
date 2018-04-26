@@ -30,13 +30,10 @@ external
 	xlj3=1,
 	xlq1=1;
 
-value
-	val1 = i(l1) > imin;
-
-rule go(val1 and xst0==0)
+rule go(get(IN))
 	xst0=1,
 	inc(j2),
-	set(m1.IN),
+	set(m1.in),
 	inc(j3),
 	xst0=0;
 }

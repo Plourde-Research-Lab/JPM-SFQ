@@ -1,25 +1,32 @@
 PARAMETER
-	tseq=400,
+	tseq=2000,
 	wbc=5.6, wvg = 4.13, wvrat = 0.7, wrrat = 0.1,
-	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0,
-	IJPM=0;
-
-INTERNAL
-	IJPM=0,
-	LJPM=1,
-	L1=1,
-	JB1=1,
-	JB2=1;
+	xi = 1.0, xl = 1.0, xr = 1.0, xj=1;
 
 circuit root()
 {
+PARAMETER
+	ica=0.008,
+	itrig=1,
+	LJPM=385,
+	R=15,
+	LJTL=16,
+	J1=0.016,
+	M1=5,
+	p=4,td=50;
+
 INTERNAL
-	tp=tseq/4,
-	p1=0.85+psfq(tp,4,10);
+	tp=tseq/p,
+	p1=0.85+psfq(tp,4,50),
+	IJPM=copysign(ica, sin(3.14*(tcurr-td)/tp));
 
-rule inp1(inc(P1))
-	set(dcsfq.IN);
+EXTERNAL
+	xst=0;
 
-rule rout(GET(dff.OUT))
-	set(jtlout.IN);
+freeze j1, j21;
+
+rule trig(inc(p1))
+	set(in.in);
+
+
 }

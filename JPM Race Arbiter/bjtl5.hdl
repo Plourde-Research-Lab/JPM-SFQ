@@ -1,6 +1,16 @@
 circuit bjtl5()
 {
 
-rule r1(get(IN))
+PARAMETER
+	l1=16,
+	j1=0.016;
+
+EXTERNAL
+	xl=1.0,
+	xj=1.0;
+
+freeze j1,j2,j3,j4,j5;
+
+rule r1(GET(IN))
 	set(OUT);
 }
