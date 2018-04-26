@@ -1,0 +1,26 @@
+.exec
+
+set ljpm=1n
+set ljtl=41p
+set k1=0.01
+set k2=0.01
+set ibias=0
+set rterm=0
+source -c root.cir
+.endc
+
+.control
+set ljpm=1n
+set ljtl=41p
+set k1=0.01
+set k2=0.01
+set ibias=0
+set rterm=0
+
+set value1=rterm
+
+sweep 10 50 10
+*tran 1p 20n
+plot v(7) v(16)
+write rterm.out
+.endc
