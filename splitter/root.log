@@ -1,0 +1,100 @@
+***************************************
+LOG STARTED: Mon, 09 Apr 2018 16:20:33
+***************************************
+LOG STARTED: Mon, 09 Apr 2018 16:21:04
+***************************************
+LOG STARTED: Wed, 25 Apr 2018 15:00:40
+Find margins for xi
+Test initial point 1.00
+------------------------------
+1.0 Rule spl.init activated
+1.0 Rule spl.init clause # 1 passed
+------------------------------
+2.0 Rule dcsfq.go activated
+2.0 Rule dcsfq.go clause # 1 passed
+------------------------------
+6.0 Rule spl.init clause # 2 passed
+6.0 Rule spl.init deactivated
+------------------------------
+53.2 Rule dcsfq.go clause # 2 passed
+53.2 Rule dcsfq.go clause # 3 passed
+------------------------------
+53.5 Rule dcsfq.m1.go activated
+------------------------------
+60.0 Rule dcsfq.go clause # 4 passed
+60.0 Rule dcsfq.go clause # 5 passed
+60.0 Rule dcsfq.go deactivated
+------------------------------
+60.7 Rule dcsfq.go activated
+60.7 Rule dcsfq.go clause # 1 passed
+------------------------------
+63.5 Rule dcsfq.m1.go clause # 1 passed
+63.5 Rule dcsfq.m1.go clause # 2 passed
+------------------------------
+64.1 Rule spl.a3 activated
+64.1 Rule spl.a3 clause # 1 passed
+------------------------------
+67.3 Rule dcsfq.m1.go clause # 3 passed
+67.3 Rule dcsfq.m1.go deactivated
+------------------------------
+71.9 Rule spl.a3 clause # 2 passed
+71.9 Rule spl.a3 clause # 3 passed
+71.9 Rule spl.a3 clause # 4 passed
+------------------------------
+76.5 Rule spl.a3 clause # 5 expression # 1 passed
+76.5 Rule spl.a3 clause # 5 expression # 2 passed
+76.5 Rule spl.a3 clause # 6 passed
+76.5 Rule spl.a3 deactivated
+------------------------------
+303.4 Rule dcsfq.go clause # 2 passed
+303.4 Rule dcsfq.go clause # 3 passed
+------------------------------
+303.7 Rule dcsfq.m1.go activated
+------------------------------
+310.6 Rule dcsfq.go clause # 4 passed
+310.6 Rule dcsfq.go clause # 5 passed
+310.6 Rule dcsfq.go deactivated
+------------------------------
+311.3 Rule dcsfq.go activated
+311.3 Rule dcsfq.go clause # 1 passed
+------------------------------
+314.3 Rule dcsfq.m1.go clause # 1 passed
+314.3 Rule dcsfq.m1.go clause # 2 passed
+------------------------------
+314.9 Rule spl.a3 activated
+314.9 Rule spl.a3 clause # 1 passed
+------------------------------
+318.1 Rule dcsfq.m1.go clause # 3 passed
+318.1 Rule dcsfq.m1.go deactivated
+------------------------------
+322.7 Rule spl.a3 clause # 2 passed
+322.7 Rule spl.a3 clause # 3 passed
+322.7 Rule spl.a3 clause # 4 passed
+------------------------------
+327.4 Rule spl.a3 clause # 5 expression # 1 passed
+327.4 Rule spl.a3 clause # 5 expression # 2 passed
+327.4 Rule spl.a3 clause # 6 passed
+327.4 Rule spl.a3 deactivated
+----------------------------
+There are active rules at the END
+Current rules status:
+Rule dcsfq.go active clause # 2
+dcsfq.go    : ***************************************************************||
+dcsfq.m1.go : ||||||||||****|||||||||||||||||||||||||||||||||||||||||||||||****
+spl.a3      : ||||||||||||****|||||||||||||||||||||||||||||||||||||||||||||||**
+spl.init    : **|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Circuit does not work in the initial point
+Find margins for xj
+Test initial point 1.00
+------------------------------
+1.0 Rule spl.init activated
+1.0 Rule spl.init clause # 1 passed
+------------------------------
+6.0 Rule spl.init clause # 2 passed
+6.0 Rule spl.init deactivated
+------------------------------
+53.2: invalid INC for junction j2 in dcsfq:.dcsfq
+HDL script failed
+Current rules status:
+spl.init : |||||||||||*********************************************************
+Circuit does not work in the initial point
