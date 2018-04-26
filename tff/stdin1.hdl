@@ -1,0 +1,5 @@
+CIRCUIT stdin1()
+{
+rule go(get(2))
+	set(m1.1);
+}

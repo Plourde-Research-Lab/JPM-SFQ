@@ -1,0 +1,10 @@
+CIRCUIT stdout1()
+{
+PARAMETER
+	l1=1.5;
+external
+	xdummy = 1.0;
+
+rule term(get(mt1.2))
+	xdummy=1;
+}

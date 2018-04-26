@@ -1,0 +1,39 @@
+# Global parameters
+tseq	1000.0
+wbc	5.6
+wrrat	0.1
+wvg	4.13
+wvrat	0.7
+xi	1.0
+xj	1.0
+xl	1.0
+xr	1.0
+# tff parameters
+tff.i1	1.61
+tff.j1	1.49
+tff.j2	2.46
+tff.j3	1.31
+tff.j4	1.0
+tff.j5	2.04
+tff.l1	2.15
+tff.l2	1.8
+tff.l3	0.65
+tff.l4	0.2
+tff.l5	0.04
+tff.lj1	0.19
+tff.lj2	0.14
+tff.lj3	0.1
+tff.lj4	0.1
+tff.lj5	0.09
+tff.lq1	0.01
+# stdout1 parameters
+stdout1.l1	1.5
+# jtl parameters
+jtl.i1	3.0
+jtl.j1	2.0
+jtl.l1	0.75
+# jtl1 parameters
+jtl1.i1	3.0
+jtl1.j1	2.0
+jtl1.l1	0.75
+jtl1.l3	1.5
