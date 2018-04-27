@@ -12,6 +12,6 @@ CIRCUIT jtl0()
 		xj=1.0;
 
 	RULE GO(GET(IN))
-		[INC(J1),INC(J2)],
-		SET(OUT);
+		SET(OUT),
+		[INC(J1),INC(J2)];
 }

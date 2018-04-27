@@ -1,5 +1,5 @@
 # Global parameters
-tseq	400.0
+tseq	1000.0
 wbc	5.6
 wrrat	0.1
 wvg	4.13
@@ -7,7 +7,7 @@ wvrat	0.7
 xi	1.0
 xj	1.0
 xl	1.0
-xr	1.0
+xm	1.0
 # dcsfq parameters
 dcsfq.i2	2.01
 dcsfq.imin	0.1
@@ -29,7 +29,7 @@ jtl0.j2	2.0
 jtl0.l1	0.75
 jtl0.l3	1.5
 # jtl1 parameters
-jtl1.i1	0.128
+jtl1.i1	0.192
 jtl1.j1	0.08
 jtl1.l1	2.0
 # jtl2 parameters
@@ -48,9 +48,11 @@ bjtl5.j1	0.016
 bjtl5.l1	16.0
 # root parameters
 root.ica	0.008
+root.itrig	1.0
 root.j1	0.016
 root.ljpm	385.0
 root.ljtl	16.0
 root.m1	5.0
-root.p	4.0
+root.p	2.0
 root.r	15.0
+root.td	50.0

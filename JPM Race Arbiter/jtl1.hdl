@@ -9,9 +9,7 @@ CIRCUIT jtl1()
 		xj=1.0,
 		xl=1;
 
-	freeze j2;
-
-	RULE GO(INC(J1))
-		INC(J2),
-		SET(OUT);
+	RULE GO(GET(IN))
+		SET(OUT),
+		[INC(J1),INC(J2)];
 }

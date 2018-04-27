@@ -9,7 +9,7 @@ EXTERNAL
 	xl=1.0,
 	xj=1.0;
 
-freeze j1,j2,j3,j4,j5;
+freeze j1,j2,j3,j4;
 
 rule r1(GET(IN))
 	set(OUT);
