@@ -1,0 +1,31 @@
+PARAMETER
+	tseq=400,
+	wbc=5.6, wvg = 4.13, wvrat = 0.7, wrrat = 0.1,
+	xi = 1.0, xl = 1.0, xr = 1.0, xj=1;
+
+circuit root()
+{
+PARAMETER
+	R=15,
+	p=4,
+  td1=50,
+  td2=60;
+
+INTERNAL
+	tp=tseq/p,
+	p1=0.85+psfq(tseq,4,td1),
+  p2=0.85+psfq(tseq,4,td2);
+
+EXTERNAL
+	xst=0;
+
+rule trig1(inc(p1))
+	set(in1.in);
+
+rule trig2(inc(p2))
+  set(in2.in);
+
+rule detect(inc(p1))
+  inc(btl2.j2),
+  inc(btl22.j2);
+}

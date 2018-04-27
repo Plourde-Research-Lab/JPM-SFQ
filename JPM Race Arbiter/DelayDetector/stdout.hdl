@@ -1,0 +1,9 @@
+circuit stdout()
+{
+	rule out (get(in))
+		inc(j1),
+		inc(j2),
+		inc(j3),
+		inc(j4);
+
+}
