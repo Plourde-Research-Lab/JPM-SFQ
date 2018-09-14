@@ -17,6 +17,4 @@ rule inp1(inc(P1))
 rule inclk(inc(PCLK))
 	set(jtlclk.IN);
 
-rule rout(GET(dff.OUT))
-	set(jtlout.IN);
 }

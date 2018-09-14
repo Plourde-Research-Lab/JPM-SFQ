@@ -1,0 +1,9 @@
+CIRCUIT stdout()
+{
+external
+	xdummy = 1.0;
+
+rule term(get(mt1.2))
+	xdmm=1,
+	xdummy=1;
+}

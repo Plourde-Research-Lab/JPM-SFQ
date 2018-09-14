@@ -1,0 +1,26 @@
+(Symbol root);
+($Id:$);
+(PHYSICAL);
+(RESOLUTION 1000);
+9 root;
+DS 0 1 1;
+DF;
+E
+(ELECTRICAL);
+(RESOLUTION 1000);
+5 11 X 0 subckt;
+9 root;
+DS 0 1 1;
+(SymbolCall merger);
+5 10 1 2 -20000 -27000 X0OUT;
+5 10 2 1 -39000 -30000 X0IN2;
+5 10 3 0 -39000 -24000 X0IN1;
+5 11 X 0 subckt;
+1 Bound -39000 -32000 -20000 -22000;
+9 merger;
+C 0 T -25000 -27000;
+L NAME;
+5 16 X 0 11;
+94 <<X0>> -25250 30350 320 1275 1000;
+DF;
+E

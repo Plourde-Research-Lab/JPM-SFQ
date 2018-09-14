@@ -1,5 +1,11 @@
-# xic 4.3.1 Darwin x86_64 03/22/2018 18:16 GMT crash log, pid: 53497
-cell: RA top: RA mode: 1
+# xic 4.3.1 Darwin x86_64 08/26/2018 12:31 GMT crash log, pid: 2863
+cell: sfqdc top: sfqdc mode: 1
 cmd: MAIN level: 1
-Logfiles retained in /var/folders/t_/y5t63zxn3fn4b4gdqlc2wh4m0000gn/T/xic.53497.
+Logfiles retained in /var/folders/t_/y5t63zxn3fn4b4gdqlc2wh4m0000gn/T/xic.2863.
 Dumping modified cells...
+merger saved.
+splitter saved.
+dff saved.
+dcsfq saved.
+sfqdc saved.
+All modified cells have been dumped in ./panic.2863.

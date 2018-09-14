@@ -1,0 +1,15 @@
+circuit bjtl5()
+{
+
+PARAMETER
+	J1=0.016,
+	L1=16.0;
+
+EXTERNAL
+	XJ1=1,
+	XL1=1;
+
+rule go(get(IN))
+	[inc(j1), inc(j2), inc(j3), inc(j4), inc(j5)],
+	set(OUT);
+}

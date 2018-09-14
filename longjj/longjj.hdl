@@ -1,0 +1,26 @@
+PARAMETER
+	TSEQ      = 1000.00,
+	wbc=5.6, wvg = 4.13, wvrat = 0.7, wrrat = 0.01,
+	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0;
+
+circuit longjj()
+{
+
+INTERNAL
+	tp=tseq,
+	p1=0.85+psfq(tp,4,50);
+
+
+#rule m1go(inc(p1))
+#	set(IN.IN);
+
+#rule M1MTL1( get(IN.OUT) )
+#	set(TL1.IN);
+#
+#rule TL1TL2(get(TL1.OUT))
+#	set(TL2.IN);
+
+#rule TL2OUT(get(TL2.OUT))
+#	set(OUT.IN);
+
+}

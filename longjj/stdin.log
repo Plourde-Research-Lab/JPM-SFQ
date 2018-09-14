@@ -1,0 +1,12 @@
+***************************************
+LOG STARTED: Thu, 18 Jan 2018 16:31:05
+TestVector d1: 01, tu=100.0, per=2, r=1, s=100.0, pd=5.0
+TestVector d2: 101, tu=100.0, per=3, r=1, s=100.0, pd=5.0
+***************************************
+LOG STARTED: Thu, 18 Jan 2018 16:31:22
+TestVector d1: 01, tu=100.0, per=2, r=1, s=100.0, pd=5.0
+TestVector d2: 101, tu=100.0, per=3, r=1, s=100.0, pd=5.0
+***************************************
+LOG STARTED: Fri, 19 Jan 2018 09:56:59
+TestVector d1: 01, tu=100.0, per=2, r=1, s=100.0, pd=5.0
+TestVector d2: 101, tu=100.0, per=3, r=1, s=100.0, pd=5.0

@@ -1,0 +1,26 @@
+CIRCUIT diode()
+{
+PARAMETER
+  I1=4.1,
+  J3=1.79,
+  J4=2.01,
+  J5=2.01,
+  LP3=0.05,
+  LP4=0.25,
+  LP5=0.25,
+  LP6=0.01,
+  LP7=0.01,
+  LT2=0.75,
+  LT3=1,
+  LT4=0.75;
+
+EXTERNAL
+	xj=1,
+  xi=1,
+  xl=1;
+
+rule go(get(IN))
+  inc(J5),
+  inc(J4),
+  set(OUT);
+}

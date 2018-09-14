@@ -1,0 +1,23 @@
+
+
+circuit stdout()
+{
+PARAMETER
+	i1=2.8,
+	j1=2,
+	r1=0.5,
+	l2=0.75,
+	l3=0.75,
+	l4=1.5,
+	l5=0.75,
+	l6=0.75,
+	l7=2,
+	r0=10.0;
+
+	rule out (get(in))
+		inc(j1),
+		inc(j2),
+		inc(j3),
+		inc(j4);
+
+}

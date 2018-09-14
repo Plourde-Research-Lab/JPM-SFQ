@@ -1,0 +1,37 @@
+PARAMETER
+	tseq=2000,
+	wbc=5.6, wvg = 4.13, wvrat = 0.7, wrrat = 0.1,
+	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0, xm=1.0,
+	xci=-1,
+	L1=0.6,
+	J1=0.4;
+
+circuit root()
+{
+PARAMETER
+  IC=0.35,
+  LJPM=15,
+  ijpma=0.2,
+  R=0.5,
+  M1=0.1,
+  p=2,
+  td=50,
+	c1 = 2;
+
+INTERNAL
+	tp=tseq/p,
+	ptrig=psfq(tp,10,td),
+	preset=psfq(tp,10,td+tp/2),
+	pd=psfq(tseq, 10, tseq),
+	IJPM=copysign(ijpma, sin(3.14*(tcurr)/(tseq/2)));
+
+EXTERNAL
+	xst = 0,
+	xr=0,
+	lw=0,
+	rw=0;
+
+FREEZE
+	j1,j2,j3,j4;
+
+}

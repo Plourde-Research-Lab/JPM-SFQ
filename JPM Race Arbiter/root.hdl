@@ -35,11 +35,11 @@ rule prop2(get(tl21.out))
 	set(tl23.in);
 
 rule lw(i(IJPM) > 0 and inc(p1))
-	inc(btl22.j2),
-	inc(btl2.j2);
+	inc(btl21.j2),
+	inc(btl1.j2);
 
 rule rw(i(IJPM) < 0 and inc(p1))
-	inc(btl2.j2),
-	inc(btl22.j2);
+	inc(btl1.j2),
+	inc(btl21.j2);
 
 }

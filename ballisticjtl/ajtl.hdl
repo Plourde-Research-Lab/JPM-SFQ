@@ -1,0 +1,19 @@
+circuit ajtl()
+{
+
+PARAMETER
+  L1=2,
+	J1=0.08,
+  I1=0.15,
+  L2=2,
+  J2=0.08,
+  L3=2;
+
+EXTERNAL
+	XJ1=1,
+	XL1=1;
+
+rule r1(get(IN))
+	[inc(j1), inc(j2)],
+	set(OUT);
+}

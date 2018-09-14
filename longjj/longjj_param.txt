@@ -1,0 +1,13 @@
+# Global parameters
+tseq	1000.0
+wbc	5.6
+wrrat	0.1
+wvg	4.13
+wvrat	0.7
+xi	1.0
+xj	1.0
+xl	1.0
+xr	1.0
+# ujtl parameters
+ujtl.j1	1.0
+ujtl.l1	1.0

@@ -1,0 +1,40 @@
+CIRCUIT MRG()
+{
+PARAMETER
+  I1=4.1,
+  J1=2.01,
+  J2=1.79,
+  J3=1.79,
+  J4=2.01,
+  J5=2.01,
+  LP1=0.01,
+  LP2=0.25,
+  LP3=0.05,
+  LP4=0.25,
+  LP5=0.25,
+  LP6=0.01,
+  LP7=0.01,
+  LT1=0.75,
+  LT2=0.75,
+  LT3=1,
+  LT4=0.75;
+
+EXTERNAL
+	xj=1,
+  xi=1,
+  xl=1,
+	xst=0;
+
+rule in1(get(IN1))
+  inc(J1),
+  inc(J3),
+  inc(J4),
+  set(OUT);
+
+
+rule in2(get(IN2))
+  inc(J5),
+  inc(J2),
+  inc(J4),
+  set(OUT);
+}

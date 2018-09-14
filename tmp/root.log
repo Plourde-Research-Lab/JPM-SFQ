@@ -1,0 +1,346 @@
+***************************************
+LOG STARTED: Wed, 19 Apr 2017 18:25:44
+------------------------------
+1.0 Rule m2.init activated
+1.0 Rule m2.init clause # 1 passed
+1.0 Rule m2.init clause # 2 passed
+------------------------------
+6.0 Rule m2.init clause # 3 passed
+6.0 Rule m2.init deactivated
+------------------------------
+402.2 Rule .in1 activated
+402.2 Rule .in1 clause # 1 passed
+402.2 Rule .in1 deactivated
+------------------------------
+402.4 Rule m1.go activated
+402.4 Rule m1.go clause # 1 passed
+402.4 Rule m1.go deactivated
+------------------------------
+402.7 Rule m1.m1.go activated
+------------------------------
+406.3 Rule m1.m1.go clause # 1 passed
+406.3 Rule m1.m1.go clause # 2 passed
+------------------------------
+406.8 Rule m1.m2.go activated
+------------------------------
+410.5 Rule m1.m1.go clause # 3 passed
+410.5 Rule m1.m1.go deactivated
+------------------------------
+414.2 Rule m1.m2.go clause # 1 passed
+414.2 Rule m1.m2.go clause # 2 passed
+------------------------------
+414.6 Rule mt1.go activated
+------------------------------
+417.8 Rule m1.m2.go clause # 3 passed
+417.8 Rule m1.m2.go deactivated
+------------------------------
+421.5 Rule mt1.go clause # 1 passed
+421.5 Rule mt1.go clause # 2 passed
+------------------------------
+421.9 Rule mt2.go activated
+------------------------------
+425.1 Rule mt1.go clause # 3 passed
+425.1 Rule mt1.go deactivated
+------------------------------
+428.7 Rule mt2.go clause # 1 passed
+428.7 Rule mt2.go clause # 2 passed
+------------------------------
+429.2 Rule .error activated
+429.2 Rule mdrv1.in activated
+------------------------------
+432.4 Rule mt2.go clause # 3 passed
+432.4 Rule mt2.go deactivated
+------------------------------
+436.9 Rule mdrv1.in clause # 1 passed
+436.9 Rule mdrv1.in clause # 2 passed
+------------------------------
+437.5 Rule m2.in20 activated
+437.5 Rule m2.in20 clause # 1 passed
+437.5 Rule m2.in20 clause # 2 passed
+------------------------------
+438.0 Rule .m2_52 activated
+438.0 Rule .m2_52 clause # 1 passed
+438.0 Rule .m2_52 deactivated
+------------------------------
+438.4 Rule m2.in11 activated
+438.4 Rule m2.in11 clause # 1 passed
+------------------------------
+442.3 Rule mdrv1.in clause # 3 expression # 1 passed
+442.3 Rule mdrv1.in clause # 3 expression # 2 passed
+442.3 Rule mdrv1.in deactivated
+------------------------------
+472.4 Rule m2.in20 clause # 3 passed
+------------------------------
+514.5 Rule m2.in11 clause # 2 passed
+514.5 Rule m2.in11 clause # 3 passed
+------------------------------
+514.6 Rule m3.mt1.go activated
+------------------------------
+519.6 Rule m2.in11 clause # 4 passed
+------------------------------
+525.3 Rule m3.mt1.go clause # 1 passed
+525.3 Rule m3.mt1.go clause # 2 passed
+------------------------------
+525.5 Rule m3.term activated
+525.5 Rule m3.term clause # 1 passed
+525.5 Rule m3.term clause # 2 passed
+525.5 Rule m3.term deactivated
+------------------------------
+529.0 Rule m3.mt1.go clause # 3 passed
+529.0 Rule m3.mt1.go deactivated
+------------------------------
+902.3 Rule .in1 activated
+902.3 Rule .in1 clause # 1 passed
+902.3 Rule .in1 deactivated
+------------------------------
+902.6 Rule m1.go activated
+902.6 Rule m1.go clause # 1 passed
+902.6 Rule m1.go deactivated
+------------------------------
+902.9 Rule m1.m1.go activated
+------------------------------
+906.6 Rule m1.m1.go clause # 1 passed
+906.6 Rule m1.m1.go clause # 2 passed
+------------------------------
+907.1 Rule m1.m2.go activated
+------------------------------
+910.4 Rule m1.m1.go clause # 3 passed
+910.4 Rule m1.m1.go deactivated
+------------------------------
+914.0 Rule m1.m2.go clause # 1 passed
+914.0 Rule m1.m2.go clause # 2 passed
+------------------------------
+914.5 Rule mt1.go activated
+------------------------------
+917.6 Rule m1.m2.go clause # 3 passed
+917.6 Rule m1.m2.go deactivated
+------------------------------
+921.2 Rule mt1.go clause # 1 passed
+921.2 Rule mt1.go clause # 2 passed
+------------------------------
+921.7 Rule mt2.go activated
+------------------------------
+924.9 Rule mt1.go clause # 3 passed
+924.9 Rule mt1.go deactivated
+------------------------------
+929.1 Rule mt2.go clause # 1 passed
+929.1 Rule mt2.go clause # 2 passed
+------------------------------
+929.5 Rule mdrv1.in activated
+------------------------------
+932.7 Rule mt2.go clause # 3 passed
+932.7 Rule mt2.go deactivated
+------------------------------
+936.6 Rule mdrv1.in clause # 1 passed
+936.6 Rule mdrv1.in clause # 2 passed
+------------------------------
+942.0 Rule mdrv1.in clause # 3 expression # 1 passed
+942.0 Rule mdrv1.in clause # 3 expression # 2 passed
+942.0 Rule mdrv1.in deactivated
+------------------------------
+1105.1 Rule m2.in11 clause # 5 passed
+1105.1 Rule m2.in11 clause # 6 passed
+1105.1 Rule m2.in11 clause # 7 passed
+1105.1 Rule m2.in11 deactivated
+------------------------------
+1402.3 Rule .in1 activated
+1402.3 Rule .in1 clause # 1 passed
+1402.3 Rule .in1 deactivated
+------------------------------
+1402.6 Rule m1.go activated
+1402.6 Rule m1.go clause # 1 passed
+1402.6 Rule m1.go deactivated
+------------------------------
+1402.8 Rule m1.m1.go activated
+------------------------------
+1406.5 Rule m1.m1.go clause # 1 passed
+1406.5 Rule m1.m1.go clause # 2 passed
+------------------------------
+1407.0 Rule m1.m2.go activated
+1407.0 Rule m2.in20 clause # 4 passed
+1407.0 Rule m2.in20 clause # 5 passed
+1407.0 Rule m2.in20 deactivated
+------------------------------
+1410.3 Rule m1.m1.go clause # 3 passed
+1410.3 Rule m1.m1.go deactivated
+------------------------------
+1413.9 Rule m1.m2.go clause # 1 passed
+1413.9 Rule m1.m2.go clause # 2 passed
+------------------------------
+1414.4 Rule mt1.go activated
+------------------------------
+1417.5 Rule m1.m2.go clause # 3 passed
+1417.5 Rule m1.m2.go deactivated
+------------------------------
+1421.2 Rule mt1.go clause # 1 passed
+1421.2 Rule mt1.go clause # 2 passed
+------------------------------
+1421.7 Rule mt2.go activated
+------------------------------
+1425.4 Rule mt1.go clause # 3 passed
+1425.4 Rule mt1.go deactivated
+------------------------------
+1429.0 Rule mt2.go clause # 1 passed
+1429.0 Rule mt2.go clause # 2 passed
+------------------------------
+1429.5 Rule mdrv1.in activated
+------------------------------
+1432.7 Rule mt2.go clause # 3 passed
+1432.7 Rule mt2.go deactivated
+------------------------------
+1436.6 Rule mdrv1.in clause # 1 passed
+1436.6 Rule mdrv1.in clause # 2 passed
+------------------------------
+1437.2 Rule m2.in20 activated
+1437.2 Rule m2.in20 clause # 1 passed
+1437.2 Rule m2.in20 clause # 2 passed
+------------------------------
+1437.7 Rule .m2_52 activated
+1437.7 Rule .m2_52 clause # 1 passed
+1437.7 Rule .m2_52 deactivated
+------------------------------
+1438.2 Rule m2.in11 activated
+1438.2 Rule m2.in11 clause # 1 passed
+------------------------------
+1442.6 Rule mdrv1.in clause # 3 expression # 1 passed
+1442.6 Rule mdrv1.in clause # 3 expression # 2 passed
+1442.6 Rule mdrv1.in deactivated
+------------------------------
+1468.3 Rule m2.in20 clause # 3 passed
+------------------------------
+1515.9 Rule m2.in11 clause # 2 passed
+1515.9 Rule m2.in11 clause # 3 passed
+------------------------------
+1516.0 Rule m3.mt1.go activated
+------------------------------
+1521.2 Rule m2.in11 clause # 4 passed
+------------------------------
+1526.9 Rule m3.mt1.go clause # 1 passed
+1526.9 Rule m3.mt1.go clause # 2 passed
+------------------------------
+1527.0 Rule m3.term activated
+1527.0 Rule m3.term clause # 1 passed
+1527.0 Rule m3.term clause # 2 passed
+1527.0 Rule m3.term deactivated
+------------------------------
+1530.6 Rule m3.mt1.go clause # 3 passed
+1530.6 Rule m3.mt1.go deactivated
+------------------------------
+2099.4 Rule m2.in11 clause # 5 passed
+2099.4 Rule m2.in11 clause # 6 passed
+2099.4 Rule m2.in11 clause # 7 passed
+2099.4 Rule m2.in11 deactivated
+------------------------------
+2401.3 Rule m2.in20 clause # 4 passed
+2401.3 Rule m2.in20 clause # 5 passed
+2401.3 Rule m2.in20 deactivated
+----------------------------
+There are active rules at the END
+Current rules status:
+Rule .error active clause # 1
+.error    : ||||||||||||*||||||||||||||||||||||||||||||||||||||||||||||||||||||
+.in1      : |||||||||||*|||||||||||||*|||||||||||||*|||||||||||||||||||||||||||
+.m2_52    : ||||||||||||*|||||||||||||||||||||||||||*||||||||||||||||||||||||||
+m1.go     : |||||||||||*|||||||||||||*|||||||||||||*|||||||||||||||||||||||||||
+m1.m1.go  : |||||||||||*|||||||||||||*|||||||||||||*|||||||||||||||||||||||||||
+m1.m2.go  : |||||||||||*|||||||||||||*|||||||||||||**||||||||||||||||||||||||||
+m2.in11   : ||||||||||||********************||||||||********************|||||||
+m2.in20   : ||||||||||||*******************************************************
+m2.init   : *||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+m3.mt1.go : ||||||||||||||*|||||||||||||||||||||||||||**|||||||||||||||||||||||
+m3.term   : ||||||||||||||*||||||||||||||||||||||||||||*|||||||||||||||||||||||
+mdrv1.in  : ||||||||||||*|||||||||||||*|||||||||||||*||||||||||||||||||||||||||
+mt1.go    : |||||||||||**||||||||||||**|||||||||||||*||||||||||||||||||||||||||
+mt2.go    : |||||||||||**|||||||||||||*|||||||||||||*||||||||||||||||||||||||||
+***************************************
+LOG STARTED: Wed, 25 Apr 2018 14:49:42
+Find margins for xj
+Test initial point 1.00
+------------------------------
+1.0 Rule m2.init activated
+1.0 Rule m2.init clause # 1 passed
+1.0 Rule m2.init clause # 2 passed
+------------------------------
+6.0 Rule m2.init clause # 3 passed
+6.0 Rule m2.init deactivated
+OK
+m2.init : |||||||||||***********************************************************
+Test max left margin 0.60
+------------------------------
+1.0 Rule m2.init activated
+1.0 Rule m2.init clause # 1 passed
+1.0 Rule m2.init clause # 2 passed
+------------------------------
+6.0 Rule m2.init clause # 3 passed
+6.0 Rule m2.init deactivated
+------------------------------
+18.4: invalid INC for junction j1 in jtl1:.mt1
+HDL script failed
+Current rules status:
+m2.init : |||||||||||***********************************************************
+Do not work
+Check value 0.73
+------------------------------
+1.0 Rule m2.init activated
+1.0 Rule m2.init clause # 1 passed
+1.0 Rule m2.init clause # 2 passed
+------------------------------
+6.0 Rule m2.init clause # 3 passed
+6.0 Rule m2.init deactivated
+------------------------------
+45.5: invalid INC for junction j2 in jtl1:.m1.m2
+45.5: invalid INC for junction j1 in jtl1:.mt1
+45.5: invalid INC for junction j2 in jtl1:.mt1
+HDL script failed
+Current rules status:
+m2.init : |||||||||||**********************************************************
+Do not work
+Check value 0.82
+------------------------------
+1.0 Rule m2.init activated
+1.0 Rule m2.init clause # 1 passed
+1.0 Rule m2.init clause # 2 passed
+------------------------------
+6.0 Rule m2.init clause # 3 passed
+6.0 Rule m2.init deactivated
+OK
+m2.init : |||||||||||***********************************************************
+Works
+Check value 0.76
+------------------------------
+1.0 Rule m2.init activated
+1.0 Rule m2.init clause # 1 passed
+1.0 Rule m2.init clause # 2 passed
+------------------------------
+6.0 Rule m2.init clause # 3 passed
+6.0 Rule m2.init deactivated
+OK
+m2.init : |||||||||||***********************************************************
+Works
+Check value 0.74
+------------------------------
+1.0 Rule m2.init activated
+1.0 Rule m2.init clause # 1 passed
+1.0 Rule m2.init clause # 2 passed
+------------------------------
+6.0 Rule m2.init clause # 3 passed
+6.0 Rule m2.init deactivated
+------------------------------
+89.6: invalid INC for junction j2 in jtl1:.mt1
+HDL script failed
+Current rules status:
+m2.init : |||||||||||***********************************************************
+Do not work
+Found margin 0.75
+Test max right margin 1.40
+------------------------------
+1.0 Rule m2.init activated
+1.0 Rule m2.init clause # 1 passed
+1.0 Rule m2.init clause # 2 passed
+------------------------------
+6.0 Rule m2.init clause # 3 passed
+6.0 Rule m2.init deactivated
+OK
+m2.init : |||||||||||***********************************************************
+Works
+Parameter xj, value 1.00, margins [0.25,0.40]

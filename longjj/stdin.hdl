@@ -1,0 +1,19 @@
+circuit stdin()
+{
+
+	freeze j1;
+
+	external
+		xst=0;
+
+	rule init(tcurr < 5)
+		xst = 0,
+		tcurr > 5;
+
+	rule input (get(in))
+		inc(j2),
+		inc(j3),
+		set(2),
+		inc(j4);
+
+}

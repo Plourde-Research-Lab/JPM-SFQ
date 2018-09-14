@@ -1,0 +1,15 @@
+PARAMETER
+	tseq=400,
+	wbc=5.6, wvg = 4.13, wvrat = 0.7, wrrat = 0.1,
+	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0,
+	r1=15;
+
+circuit root()
+{
+INTERNAL
+	tp=tseq/2,
+	p1=0.85+psfq(tseq,4,50);
+
+rule go(inc(p1))
+	set(dcsfq.in);
+}

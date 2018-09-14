@@ -1,0 +1,30 @@
+CIRCUIT drv01()
+{
+PARAMETER
+	i1=4.5,
+	j4=2.0,
+	j5=2.0, vj5=2,
+	L3=0.7,
+	L4=0.7,
+	L6=1.0,
+	r1=0.1,
+	J1=2, vj1=30,
+	J2=2, vj2=30,
+	L1=1.5,
+	Lj2=0.1,
+	LM1=0.43;
+
+EXTERNAL
+	xj1=1.0,xj2=1.0,xj3=1.0,xj4=1,xj5=1,xj6=1,
+	xl1=1,xl2=1,xl6=1,xl7=1,
+	xlm1=1,xlm2=1;
+
+freeze
+	j1,j2,j3;
+
+rule in( get(3) )
+inc(j4),
+set(1),
+[inc(j5),inc(j6)];
+
+}

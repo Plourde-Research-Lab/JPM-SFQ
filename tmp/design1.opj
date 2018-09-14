@@ -1,0 +1,51 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\design1.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\design1.dsn")
+      (Path "Design Resources" ".\design1.dsn" "root")
+      (Path "Design Resources" ".\design1.dsn" "DRV01")
+      (Path "Design Resources" ".\design1.dsn" "JTL")
+      (Path "Design Resources" ".\design1.dsn" "JTL1")
+      (Path "Design Resources" ".\design1.dsn" "mon33")
+      (Path "Design Resources" ".\design1.dsn" "STDIN1")
+      (Path "Design Resources" ".\design1.dsn" "STDOUT")
+      (Select "Design Resources" ".\design1.dsn" "DRV01" "DRV01"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 569"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 52 1639 52 664")
+        (Scroll "-348 -8")
+        (Zoom "118")
+        (Occurrence "/"))
+      (Path "F:\CIR\SKT\RF\MON33\V2\TMP\DESIGN1.DSN")
+      (Schematic "root")
+      (Page "ROOT"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 78 1665 78 690")
+        (Scroll "-197 0")
+        (Zoom "118")
+        (Occurrence "/MDRV1"))
+      (Path "F:\CIR\SKT\RF\MON33\V2\TMP\DESIGN1.DSN")
+      (Schematic "DRV01")
+      (Page "DRV01"))))

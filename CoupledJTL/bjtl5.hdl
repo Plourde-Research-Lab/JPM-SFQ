@@ -9,8 +9,8 @@ PARAMETER
 EXTERNAL
 	XJ1=1,
 	XL1=1;
+freeze j1, j2, j3, j4, j5;
 
-#rule r1(get(IN))
-#	inc(j1),
-#	set(OUT);
+rule r1(get(IN))
+	set(OUT);
 }

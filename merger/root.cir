@@ -1,0 +1,30 @@
+*                                               Revised: Thursday, March 29, 2018
+* Z:\CHIP-DESIGN\SFQ\JTL\DESIGN4.DSN            Revision:
+*
+*
+*
+*
+*
+P1 1 0 P1
+P2 2 0 P2
+XMRG 1 2 3 MRG
+R1 3 0 1
+.SUBCKT MRG IN1 IN2 OUT
+J1 6 5 J(J1*xj)
+J2 4 7 J(J2*xj)
+J3 4 11 J(J3*xj)
+J4 10 12 J(J4*xj)
+J5 13 14 J(J5*xj)
+I1 0 8 I1*xi
+LP1 0 5 LP1*xl
+LP2 7 6 LP2*xl
+LP3 8 9 LP3*xl
+LP4 4 9 LP4*xl
+LP5 11 13 LP5*xl
+LP6 0 12 LP6*xl
+LP7 0 14 LP7*xl
+LT1 IN1 6 LT1*xl
+LT2 10 OUT LT2*xl
+LT3 9 10 LT3*xl
+LT4 IN2 13 LT4*xl
+.ENDS

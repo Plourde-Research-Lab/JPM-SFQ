@@ -10903,3 +10903,744 @@ xj	[0.16,0.27]	(required 0.30)
 LOG STARTED: Fri, 27 Apr 2018 09:17:12
 ***************************************
 LOG STARTED: Fri, 27 Apr 2018 09:18:21
+***************************************
+LOG STARTED: Fri, 27 Apr 2018 10:43:26
+***************************************
+LOG STARTED: Tue, 19 Jun 2018 13:24:21
+***************************************
+LOG STARTED: Tue, 19 Jun 2018 13:26:32
+***************************************
+LOG STARTED: Tue, 19 Jun 2018 13:27:02
+***************************************
+LOG STARTED: Thu, 21 Jun 2018 10:54:12
+Calculate initial margins
+Calculate margins for parameter xj
+Margins for parameter xj [0.02,0.27], required 0.25
+Parameters to change: 
+xm = 4.00 range [0.50,4.00]
+Change step 0.500
+Optimizing parameter xj, value 1.00, parameter change step 0.5
+Initial margins [0.02,0.27], required 0.25
+Parameter xm, initial value 4.00, changing to 4.00
+Parameter xj old margins [0.02,0.27], new margins [0.02,0.27]
+No improvements, set parameter xm value back to 4.00
+Parameter xm, initial value 4.00, changing to 2.00
+Parameter xj old margins [0.02,0.27], new margins [0.16,0.27]
+Other margins are fine
+New margins are better, keep parameter xm value 2.00
+--------------------------------
+Parameters:
+xm	1.00 -> 2.00
+--------------------------------
+Margins:
+xj	[0.16,0.27]	(required 0.25)
+--------------------------------
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.27], required 0.25
+Change step 0.250
+Optimizing parameter xj, value 1.00, parameter change step 0.25
+Initial margins [0.16,0.27], required 0.25
+Parameter xm, initial value 2.00, changing to 2.50
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xm, initial value 2.00, changing to 1.50
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.27], required 0.25
+Change step 0.100
+Optimizing parameter xj, value 1.00, parameter change step 0.1
+Initial margins [0.16,0.27], required 0.25
+Parameter xm, initial value 2.00, changing to 2.20
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xm, initial value 2.00, changing to 1.80
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.27], required 0.25
+Change step 0.050
+Optimizing parameter xj, value 1.00, parameter change step 0.05
+Initial margins [0.16,0.27], required 0.25
+Parameter xm, initial value 2.00, changing to 2.10
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xm, initial value 2.00, changing to 1.90
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.27], required 0.25
+Optimization finished
+--------------------------------
+Parameters:
+xm	1.00 -> 2.00
+--------------------------------
+Margins:
+xj	[0.16,0.27]	(required 0.25)
+--------------------------------
+Calculate initial margins
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.27], required 0.25
+Parameters to change: 
+xm = 2.00 range [0.50,4.00]
+xi = 1.00 range [0.50,1.50]
+Change step 0.500
+Optimizing parameter xj, value 1.00, parameter change step 0.5
+Initial margins [0.16,0.27], required 0.25
+Parameter xm, initial value 2.00, changing to 3.00
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xm, initial value 2.00, changing to 1.00
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xi, initial value 1.00, changing to 1.50
+Parameter xj old margins [0.16,0.27], new margins [0.00,0.00]
+No improvements, set parameter xi value back to 1.00
+Parameter xi, initial value 1.00, changing to 0.50
+Parameter xj old margins [0.16,0.27], new margins [0.00,0.00]
+No improvements, set parameter xi value back to 1.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.27], required 0.25
+Change step 0.250
+Optimizing parameter xj, value 1.00, parameter change step 0.25
+Initial margins [0.16,0.27], required 0.25
+Parameter xm, initial value 2.00, changing to 2.50
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xm, initial value 2.00, changing to 1.50
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xi, initial value 1.00, changing to 1.25
+Parameter xj old margins [0.16,0.27], new margins [0.05,0.35]
+No improvements, set parameter xi value back to 1.00
+Parameter xi, initial value 1.00, changing to 0.75
+Parameter xj old margins [0.16,0.27], new margins [0.07,0.18]
+No improvements, set parameter xi value back to 1.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.27], required 0.25
+Change step 0.100
+Optimizing parameter xj, value 1.00, parameter change step 0.1
+Initial margins [0.16,0.27], required 0.25
+Parameter xm, initial value 2.00, changing to 2.20
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xm, initial value 2.00, changing to 1.80
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xi, initial value 1.00, changing to 1.10
+Parameter xj old margins [0.16,0.27], new margins [0.12,0.31]
+No improvements, set parameter xi value back to 1.00
+Parameter xi, initial value 1.00, changing to 0.90
+Parameter xj old margins [0.16,0.27], new margins [0.22,0.23]
+No improvements, set parameter xi value back to 1.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.27], required 0.25
+Change step 0.050
+Optimizing parameter xj, value 1.00, parameter change step 0.05
+Initial margins [0.16,0.27], required 0.25
+Parameter xm, initial value 2.00, changing to 2.10
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xm, initial value 2.00, changing to 1.90
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.27]
+No improvements, set parameter xm value back to 2.00
+Parameter xi, initial value 1.00, changing to 1.05
+Parameter xj old margins [0.16,0.27], new margins [0.14,0.28]
+No improvements, set parameter xi value back to 1.00
+Parameter xi, initial value 1.00, changing to 0.95
+Parameter xj old margins [0.16,0.27], new margins [0.19,0.25]
+Other margins are fine
+New margins are better, keep parameter xi value 0.95
+--------------------------------
+Parameters:
+xm	1.00 -> 2.00
+xi	1.00 -> 0.95
+--------------------------------
+Margins:
+xj	[0.19,0.25]	(required 0.25)
+--------------------------------
+Calculate margins for parameter xj
+Margins for parameter xj [0.19,0.25], required 0.25
+Optimization finished
+--------------------------------
+Parameters:
+xm	1.00 -> 2.00
+xi	1.00 -> 0.95
+--------------------------------
+Margins:
+xj	[0.19,0.25]	(required 0.25)
+--------------------------------
+***************************************
+LOG STARTED: Thu, 21 Jun 2018 15:44:04
+***************************************
+LOG STARTED: Thu, 21 Jun 2018 15:45:13
+***************************************
+LOG STARTED: Thu, 21 Jun 2018 15:45:55
+Calculate initial margins
+Calculate margins for parameter xj
+Margins for parameter xj [0.05,0.25], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.11], required 0.30
+Parameters to change: 
+xm = 10.00 range [0.50,1.50]
+xi = 0.95 range [0.50,1.50]
+Change step 0.500
+Optimizing parameter xj, value 1.00, parameter change step 0.5
+Initial margins [0.05,0.25], required 0.3
+Parameter xm, initial value 10.00, changing to 1.50
+Parameter xj old margins [0.05,0.25], new margins [0.19,0.25]
+Margins for Parameter xl did not decreased
+Other margins are fine
+New margins are better, keep parameter xm value 1.50
+--------------------------------
+Parameters:
+xm	1.00 -> 1.50
+xi	1.00 -> 0.95
+--------------------------------
+Margins:
+xj	[0.19,0.25]	(required 0.30)
+xl	[0.40,0.11]	(required 0.30)
+--------------------------------
+Parameter xi, initial value 0.95, changing to 1.42
+Parameter xj old margins [0.19,0.25], new margins [0.00,0.00]
+No improvements, set parameter xi value back to 0.95
+Parameter xi, initial value 0.95, changing to 0.50
+Parameter xj old margins [0.19,0.25], new margins [0.00,0.00]
+No improvements, set parameter xi value back to 0.95
+Calculate margins for parameter xj
+Margins for parameter xj [0.19,0.25], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.40], required 0.30
+Parameter xl, value 1.00 margins [0.40,0.40], required 0.30 - no need to optimize
+Change step 0.250
+Optimizing parameter xj, value 1.00, parameter change step 0.25
+Initial margins [0.19,0.25], required 0.3
+Parameter xm, initial value 1.50, changing to 1.50
+Parameter xj old margins [0.19,0.25], new margins [0.19,0.25]
+No improvements, set parameter xm value back to 1.50
+Parameter xm, initial value 1.50, changing to 1.12
+Calculate initial margins
+Calculate margins for parameter xj
+Margins for parameter xj [0.01,0.40], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.40], required 0.30
+Parameters to change: 
+xm = 1.12 range [2.00,10.00]
+xi = 0.95 range [0.50,1.50]
+Change step 0.500
+Optimizing parameter xj, value 0.82, parameter change step 0.5
+Initial margins [0.01,0.40], required 0.3
+Parameter xm, initial value 1.12, changing to 1.69
+Parameter xj old margins [0.01,0.40], new margins [0.01,0.40]
+No improvements, set parameter xm value back to 1.12
+Parameter xm, initial value 1.12, changing to 2.00
+Parameter xj old margins [0.01,0.40], new margins [0.01,0.40]
+No improvements, set parameter xm value back to 1.12
+Parameter xi, initial value 0.95, changing to 1.42
+Parameter xj old margins [0.01,0.40], new margins [0.00,0.00]
+No improvements, set parameter xi value back to 0.95
+Parameter xi, initial value 0.95, changing to 0.50
+Parameter xj old margins [0.01,0.40], new margins [0.32,0.18]
+No improvements, set parameter xi value back to 0.95
+Calculate margins for parameter xj
+Margins for parameter xj [0.01,0.40], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.40], required 0.30
+Parameter xl, value 1.00 margins [0.40,0.40], required 0.30 - no need to optimize
+Change step 0.250
+Optimizing parameter xj, value 0.82, parameter change step 0.25
+Initial margins [0.01,0.40], required 0.3
+Parameter xm, initial value 1.12, changing to 1.41
+Parameter xj old margins [0.01,0.40], new margins [0.01,0.40]
+No improvements, set parameter xm value back to 1.12
+Parameter xm, initial value 1.12, changing to 2.00
+Parameter xj old margins [0.01,0.40], new margins [0.01,0.40]
+No improvements, set parameter xm value back to 1.12
+Parameter xi, initial value 0.95, changing to 1.19
+Parameter xj old margins [0.01,0.40], new margins [0.00,0.00]
+No improvements, set parameter xi value back to 0.95
+Parameter xi, initial value 0.95, changing to 0.71
+Parameter xj old margins [0.01,0.40], new margins [0.16,0.40]
+Margins for Parameter xl did not decreased
+Other margins are fine
+New margins are better, keep parameter xi value 0.71
+--------------------------------
+Parameters:
+xm	1.00 -> 1.12
+xi	1.00 -> 0.71
+--------------------------------
+Margins:
+xj	[0.16,0.40]	(required 0.30)
+xl	[0.40,0.40]	(required 0.30)
+--------------------------------
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.40], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.38], required 0.30
+Parameter xl, value 1.00 margins [0.40,0.38], required 0.30 - no need to optimize
+Change step 0.100
+Optimizing parameter xj, value 0.82, parameter change step 0.1
+Initial margins [0.16,0.40], required 0.3
+Parameter xm, initial value 1.12, changing to 1.24
+Parameter xj old margins [0.16,0.40], new margins [0.16,0.40]
+No improvements, set parameter xm value back to 1.12
+Parameter xm, initial value 1.12, changing to 2.00
+Parameter xj old margins [0.16,0.40], new margins [0.16,0.40]
+No improvements, set parameter xm value back to 1.12
+Parameter xi, initial value 0.71, changing to 0.78
+Parameter xj old margins [0.16,0.40], new margins [0.11,0.40]
+No improvements, set parameter xi value back to 0.71
+Parameter xi, initial value 0.71, changing to 0.64
+Parameter xj old margins [0.16,0.40], new margins [0.21,0.34]
+Margins for Parameter xl did not decreased
+Other margins are fine
+New margins are better, keep parameter xi value 0.64
+--------------------------------
+Parameters:
+xm	1.00 -> 1.12
+xi	1.00 -> 0.64
+--------------------------------
+Margins:
+xj	[0.21,0.34]	(required 0.30)
+xl	[0.40,0.38]	(required 0.30)
+--------------------------------
+Calculate margins for parameter xj
+Margins for parameter xj [0.21,0.34], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.34], required 0.30
+Parameter xl, value 1.00 margins [0.40,0.34], required 0.30 - no need to optimize
+Change step 0.050
+Optimizing parameter xj, value 0.82, parameter change step 0.05
+Initial margins [0.21,0.34], required 0.3
+Parameter xm, initial value 1.12, changing to 1.18
+Parameter xj old margins [0.21,0.34], new margins [0.21,0.34]
+No improvements, set parameter xm value back to 1.12
+Parameter xm, initial value 1.12, changing to 2.00
+Parameter xj old margins [0.21,0.34], new margins [0.21,0.34]
+No improvements, set parameter xm value back to 1.12
+Parameter xi, initial value 0.64, changing to 0.67
+Parameter xj old margins [0.21,0.34], new margins [0.18,0.37]
+No improvements, set parameter xi value back to 0.64
+Parameter xi, initial value 0.64, changing to 0.61
+Parameter xj old margins [0.21,0.34], new margins [0.23,0.29]
+No improvements, set parameter xi value back to 0.64
+Calculate margins for parameter xj
+Margins for parameter xj [0.21,0.34], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.34], required 0.30
+Parameter xl, value 1.00 margins [0.40,0.34], required 0.30 - no need to optimize
+Optimization finished
+--------------------------------
+Parameters:
+xm	1.00 -> 1.12
+xi	1.00 -> 0.64
+--------------------------------
+Margins:
+xj	[0.21,0.34]	(required 0.30)
+xl	[0.40,0.34]	(required 0.30)
+--------------------------------
+Parameter xj old margins [0.19,0.25], new margins [0.18,0.09]
+No improvements, set parameter xm value back to 1.50
+Parameter xi, initial value 0.64, changing to 0.80
+Parameter xj old margins [0.19,0.25], new margins [0.27,0.19]
+No improvements, set parameter xi value back to 0.64
+Parameter xi, initial value 0.64, changing to 0.50
+Parameter xj old margins [0.19,0.25], new margins [0.00,0.00]
+No improvements, set parameter xi value back to 0.64
+Calculate margins for parameter xj
+Margins for parameter xj [0.35,0.09], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.19], required 0.30
+Optimizing parameter xl, value 1.00, parameter change step 0.25
+Initial margins [0.40,0.19], required 0.3
+Parameter xm, initial value 1.50, changing to 1.50
+Parameter xl old margins [0.40,0.19], new margins [0.40,0.19]
+No improvements, set parameter xm value back to 1.50
+Parameter xm, initial value 1.50, changing to 1.12
+Parameter xl old margins [0.40,0.19], new margins [0.40,0.19]
+No improvements, set parameter xm value back to 1.50
+Parameter xi, initial value 0.64, changing to 0.80
+Parameter xl old margins [0.40,0.19], new margins [0.40,0.40]
+Margins for Parameter xj decreased
+No improvements, set parameter xi value back to 0.64
+Parameter xi, initial value 0.64, changing to 0.50
+Parameter xl old margins [0.40,0.19], new margins [0.00,0.00]
+No improvements, set parameter xi value back to 0.64
+Calculate margins for parameter xj
+Margins for parameter xj [0.35,0.09], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.19], required 0.30
+Change step 0.100
+Optimizing parameter xj, value 1.00, parameter change step 0.1
+Initial margins [0.35,0.09], required 0.3
+Parameter xm, initial value 1.50, changing to 1.50
+Parameter xj old margins [0.35,0.09], new margins [0.35,0.09]
+No improvements, set parameter xm value back to 1.50
+Parameter xm, initial value 1.50, changing to 1.35
+Parameter xj old margins [0.35,0.09], new margins [0.35,0.09]
+No improvements, set parameter xm value back to 1.50
+Parameter xi, initial value 0.64, changing to 0.71
+Parameter xj old margins [0.35,0.09], new margins [0.32,0.14]
+Margins for Parameter xl did not decreased
+Other margins are fine
+New margins are better, keep parameter xi value 0.71
+--------------------------------
+Parameters:
+xm	1.00 -> 1.50
+xi	1.00 -> 0.71
+--------------------------------
+Margins:
+xj	[0.32,0.14]	(required 0.30)
+xl	[0.40,0.19]	(required 0.30)
+--------------------------------
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.14], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.37], required 0.30
+Parameter xl, value 1.00 margins [0.40,0.37], required 0.30 - no need to optimize
+Change step 0.050
+Optimizing parameter xj, value 1.00, parameter change step 0.05
+Initial margins [0.32,0.14], required 0.3
+Parameter xm, initial value 1.50, changing to 1.50
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xm value back to 1.50
+Parameter xm, initial value 1.50, changing to 1.42
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xm value back to 1.50
+Parameter xi, initial value 0.71, changing to 0.74
+Parameter xj old margins [0.32,0.14], new margins [0.29,0.18]
+No improvements, set parameter xi value back to 0.71
+Parameter xi, initial value 0.71, changing to 0.67
+Parameter xj old margins [0.32,0.14], new margins [0.34,0.11]
+No improvements, set parameter xi value back to 0.71
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.14], required 0.30
+Calculate margins for parameter xl
+Margins for parameter xl [0.40,0.37], required 0.30
+Parameter xl, value 1.00 margins [0.40,0.37], required 0.30 - no need to optimize
+Optimization finished
+--------------------------------
+Parameters:
+xm	1.00 -> 1.50
+xi	1.00 -> 0.71
+--------------------------------
+Margins:
+xj	[0.32,0.14]	(required 0.30)
+xl	[0.40,0.37]	(required 0.30)
+--------------------------------
+Calculate initial margins
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.14], required 0.30
+Parameters to change: 
+xm = 1.50 range [2.00,10.00]
+xi = 0.71 range [0.50,1.50]
+xl = 1.00 range [0.50,1.50]
+Change step 0.500
+Optimizing parameter xj, value 1.00, parameter change step 0.5
+Initial margins [0.32,0.14], required 0.3
+Parameter xm, initial value 1.50, changing to 2.25
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xm value back to 1.50
+Parameter xm, initial value 1.50, changing to 2.00
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xm value back to 1.50
+Parameter xi, initial value 0.71, changing to 1.06
+Parameter xj old margins [0.32,0.14], new margins [0.14,0.29]
+No improvements, set parameter xi value back to 0.71
+Parameter xi, initial value 0.71, changing to 0.50
+Parameter xj old margins [0.32,0.14], new margins [0.00,0.00]
+No improvements, set parameter xi value back to 0.71
+Parameter xl, initial value 1.00, changing to 1.50
+Parameter xj old margins [0.32,0.14], new margins [0.00,0.00]
+No improvements, set parameter xl value back to 1.00
+Parameter xl, initial value 1.00, changing to 0.50
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.03]
+No improvements, set parameter xl value back to 1.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.14], required 0.30
+Change step 0.250
+Optimizing parameter xj, value 1.00, parameter change step 0.25
+Initial margins [0.32,0.14], required 0.3
+Parameter xm, initial value 1.50, changing to 1.88
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xm value back to 1.50
+Parameter xm, initial value 1.50, changing to 2.00
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xm value back to 1.50
+Parameter xi, initial value 0.71, changing to 0.89
+Parameter xj old margins [0.32,0.14], new margins [0.22,0.23]
+No improvements, set parameter xi value back to 0.71
+Parameter xi, initial value 0.71, changing to 0.53
+Parameter xj old margins [0.32,0.14], new margins [0.00,0.00]
+No improvements, set parameter xi value back to 0.71
+Parameter xl, initial value 1.00, changing to 1.25
+Parameter xj old margins [0.32,0.14], new margins [0.31,0.03]
+No improvements, set parameter xl value back to 1.00
+Parameter xl, initial value 1.00, changing to 0.75
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.09]
+No improvements, set parameter xl value back to 1.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.14], required 0.30
+Change step 0.100
+Optimizing parameter xj, value 1.00, parameter change step 0.1
+Initial margins [0.32,0.14], required 0.3
+Parameter xm, initial value 1.50, changing to 1.65
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xm value back to 1.50
+Parameter xm, initial value 1.50, changing to 2.00
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xm value back to 1.50
+Parameter xi, initial value 0.71, changing to 0.78
+Parameter xj old margins [0.32,0.14], new margins [0.28,0.19]
+No improvements, set parameter xi value back to 0.71
+Parameter xi, initial value 0.71, changing to 0.64
+Parameter xj old margins [0.32,0.14], new margins [0.35,0.08]
+No improvements, set parameter xi value back to 0.71
+Parameter xl, initial value 1.00, changing to 1.10
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.09]
+No improvements, set parameter xl value back to 1.00
+Parameter xl, initial value 1.00, changing to 0.90
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xl value back to 1.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.14], required 0.30
+Change step 0.050
+Optimizing parameter xj, value 1.00, parameter change step 0.05
+Initial margins [0.32,0.14], required 0.3
+Parameter xm, initial value 1.50, changing to 1.58
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xm value back to 1.50
+Parameter xm, initial value 1.50, changing to 2.00
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.14]
+No improvements, set parameter xm value back to 1.50
+Parameter xi, initial value 0.71, changing to 0.75
+Parameter xj old margins [0.32,0.14], new margins [0.29,0.18]
+No improvements, set parameter xi value back to 0.71
+Parameter xi, initial value 0.71, changing to 0.67
+Parameter xj old margins [0.32,0.14], new margins [0.34,0.12]
+No improvements, set parameter xi value back to 0.71
+Parameter xl, initial value 1.00, changing to 1.05
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.12]
+No improvements, set parameter xl value back to 1.00
+Parameter xl, initial value 1.00, changing to 0.95
+Parameter xj old margins [0.32,0.14], new margins [0.32,0.15]
+Other margins are fine
+New margins are better, keep parameter xl value 0.95
+--------------------------------
+Parameters:
+xm	1.00 -> 1.50
+xi	1.00 -> 0.71
+xl	1.00 -> 0.95
+--------------------------------
+Margins:
+xj	[0.32,0.15]	(required 0.30)
+--------------------------------
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.15], required 0.30
+Optimization finished
+--------------------------------
+Parameters:
+xm	1.00 -> 1.50
+xi	1.00 -> 0.71
+xl	1.00 -> 0.95
+--------------------------------
+Margins:
+xj	[0.32,0.15]	(required 0.30)
+--------------------------------
+***************************************
+LOG STARTED: Thu, 21 Jun 2018 16:17:18
+***************************************
+LOG STARTED: Thu, 21 Jun 2018 16:28:15
+Calculate initial margins
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.27], required 0.30
+Parameters to change: 
+jtl1.i1 = 0.13 range [0.10,0.50]
+jtl1.j1 = 0.08 range [0.05,0.20]
+jtl1.l1 = 2.00 range [0.10,5.00]
+Change step 0.500
+Optimizing parameter xj, value 1.00, parameter change step 0.5
+Initial margins [0.16,0.27], required 0.3
+Parameter jtl1.i1, initial value 0.13, changing to 0.19
+Parameter xj old margins [0.16,0.27], new margins [0.16,0.28]
+Other margins are fine
+New margins are better, keep parameter jtl1.i1 value 0.19
+--------------------------------
+Parameters:
+jtl1.i1	0.13 -> 0.19
+--------------------------------
+Margins:
+xj	[0.16,0.28]	(required 0.30)
+--------------------------------
+Parameter jtl1.j1, initial value 0.08, changing to 0.12
+Parameter xj old margins [0.16,0.28], new margins [0.00,0.00]
+No improvements, set parameter jtl1.j1 value back to 0.08
+Parameter jtl1.j1, initial value 0.08, changing to 0.05
+Parameter xj old margins [0.16,0.28], new margins [0.00,0.00]
+No improvements, set parameter jtl1.j1 value back to 0.08
+Parameter jtl1.l1, initial value 2.00, changing to 3.00
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.l1 value back to 2.00
+Parameter jtl1.l1, initial value 2.00, changing to 1.00
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.l1 value back to 2.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.28], required 0.30
+Change step 0.250
+Optimizing parameter xj, value 1.00, parameter change step 0.25
+Initial margins [0.16,0.28], required 0.3
+Parameter jtl1.i1, initial value 0.19, changing to 0.24
+Parameter xj old margins [0.16,0.28], new margins [0.00,0.00]
+No improvements, set parameter jtl1.i1 value back to 0.19
+Parameter jtl1.i1, initial value 0.19, changing to 0.14
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.27]
+No improvements, set parameter jtl1.i1 value back to 0.19
+Parameter jtl1.j1, initial value 0.08, changing to 0.10
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.j1 value back to 0.08
+Parameter jtl1.j1, initial value 0.08, changing to 0.06
+Parameter xj old margins [0.16,0.28], new margins [0.00,0.00]
+No improvements, set parameter jtl1.j1 value back to 0.08
+Parameter jtl1.l1, initial value 2.00, changing to 2.50
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.l1 value back to 2.00
+Parameter jtl1.l1, initial value 2.00, changing to 1.50
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.l1 value back to 2.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.28], required 0.30
+Change step 0.100
+Optimizing parameter xj, value 1.00, parameter change step 0.1
+Initial margins [0.16,0.28], required 0.3
+Parameter jtl1.i1, initial value 0.19, changing to 0.21
+Parameter xj old margins [0.16,0.28], new margins [0.00,0.00]
+No improvements, set parameter jtl1.i1 value back to 0.19
+Parameter jtl1.i1, initial value 0.19, changing to 0.17
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.i1 value back to 0.19
+Parameter jtl1.j1, initial value 0.08, changing to 0.09
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.j1 value back to 0.08
+Parameter jtl1.j1, initial value 0.08, changing to 0.07
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.j1 value back to 0.08
+Parameter jtl1.l1, initial value 2.00, changing to 2.20
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.l1 value back to 2.00
+Parameter jtl1.l1, initial value 2.00, changing to 1.80
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.l1 value back to 2.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.28], required 0.30
+Change step 0.050
+Optimizing parameter xj, value 1.00, parameter change step 0.05
+Initial margins [0.16,0.28], required 0.3
+Parameter jtl1.i1, initial value 0.19, changing to 0.20
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.i1 value back to 0.19
+Parameter jtl1.i1, initial value 0.19, changing to 0.18
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.i1 value back to 0.19
+Parameter jtl1.j1, initial value 0.08, changing to 0.08
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.j1 value back to 0.08
+Parameter jtl1.j1, initial value 0.08, changing to 0.08
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.j1 value back to 0.08
+Parameter jtl1.l1, initial value 2.00, changing to 2.10
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.l1 value back to 2.00
+Parameter jtl1.l1, initial value 2.00, changing to 1.90
+Parameter xj old margins [0.16,0.28], new margins [0.16,0.28]
+No improvements, set parameter jtl1.l1 value back to 2.00
+Calculate margins for parameter xj
+Margins for parameter xj [0.16,0.28], required 0.30
+Optimization finished
+--------------------------------
+Parameters:
+jtl1.i1	0.13 -> 0.19
+--------------------------------
+Margins:
+xj	[0.16,0.28]	(required 0.30)
+--------------------------------
+***************************************
+LOG STARTED: Thu, 21 Jun 2018 16:56:40
+***************************************
+LOG STARTED: Thu, 21 Jun 2018 16:57:55
+***************************************
+LOG STARTED: Mon, 25 Jun 2018 11:03:26
+***************************************
+LOG STARTED: Mon, 25 Jun 2018 12:01:03
+***************************************
+LOG STARTED: Mon, 25 Jun 2018 12:01:46
+Calculate initial margins
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.15], required 0.30
+Parameters to change: 
+jtl1.i1 = 0.12 range [0.10,10.00]
+Change step 0.500
+Optimizing parameter xj, value 1.00, parameter change step 0.5
+Initial margins [0.32,0.15], required 0.3
+Parameter jtl1.i1, initial value 0.12, changing to 0.18
+Parameter xj old margins [0.32,0.15], new margins [0.32,0.16]
+Other margins are fine
+New margins are better, keep parameter jtl1.i1 value 0.18
+--------------------------------
+Parameters:
+jtl1.i1	0.13 -> 0.18
+--------------------------------
+Margins:
+xj	[0.32,0.16]	(required 0.30)
+--------------------------------
+Calculate margins for parameter xj
+Calculate initial margins
+Calculate margins for parameter xj
+Parameter xj does not have margins
+Margins for parameter xj [0.00,0.00], required 0.30
+ERROR: some parameter(s) does not have margins. Circuit does not work in initial point
+Margins for parameter xj [0.32,0.16], required 0.30
+Change step 0.250
+Optimizing parameter xj, value 1.00, parameter change step 0.25
+Initial margins [0.32,0.16], required 0.3
+Parameter jtl1.i1, initial value 0.18, changing to 0.22
+Parameter xj old margins [0.32,0.16], new margins [0.00,0.00]
+No improvements, set parameter jtl1.i1 value back to 0.18
+Parameter jtl1.i1, initial value 0.18, changing to 0.14
+Parameter xj old margins [0.32,0.16], new margins [0.32,0.16]
+No improvements, set parameter jtl1.i1 value back to 0.18
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.16], required 0.30
+Change step 0.100
+Optimizing parameter xj, value 1.00, parameter change step 0.1
+Initial margins [0.32,0.16], required 0.3
+Parameter jtl1.i1, initial value 0.18, changing to 0.20
+Parameter xj old margins [0.32,0.16], new margins [0.32,0.16]
+No improvements, set parameter jtl1.i1 value back to 0.18
+Parameter jtl1.i1, initial value 0.18, changing to 0.16
+Parameter xj old margins [0.32,0.16], new margins [0.32,0.16]
+No improvements, set parameter jtl1.i1 value back to 0.18
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.16], required 0.30
+Change step 0.050
+Optimizing parameter xj, value 1.00, parameter change step 0.05
+Initial margins [0.32,0.16], required 0.3
+Parameter jtl1.i1, initial value 0.18, changing to 0.19
+Parameter xj old margins [0.32,0.16], new margins [0.32,0.16]
+No improvements, set parameter jtl1.i1 value back to 0.18
+Parameter jtl1.i1, initial value 0.18, changing to 0.17
+Parameter xj old margins [0.32,0.16], new margins [0.32,0.16]
+No improvements, set parameter jtl1.i1 value back to 0.18
+Calculate margins for parameter xj
+Margins for parameter xj [0.32,0.16], required 0.30
+Optimization finished
+--------------------------------
+Parameters:
+jtl1.i1	0.13 -> 0.18
+--------------------------------
+Margins:
+xj	[0.32,0.16]	(required 0.30)
+--------------------------------
+***************************************
+LOG STARTED: Wed, 11 Jul 2018 11:46:36
+***************************************
+LOG STARTED: Fri, 27 Jul 2018 14:52:47

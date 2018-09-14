@@ -1,0 +1,15 @@
+circuit bjtl()
+{
+
+PARAMETER
+	J1=1,
+	L1=1;
+
+EXTERNAL
+	XJ1=0.016,
+	XL1=16;
+
+rule r1(get(IN))
+	inc(j1),
+	set(OUT);
+}

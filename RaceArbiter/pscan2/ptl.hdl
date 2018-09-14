@@ -1,0 +1,15 @@
+CIRCUIT ptl()
+{
+PARAMETER
+	J1=0.4,
+	L1=0.6,
+  LJ1=0.001;
+
+EXTERNAL
+	XJ=1,
+	XL=1;
+
+rule r1(get(IN))
+	inc(j1),
+	set(OUT);
+}

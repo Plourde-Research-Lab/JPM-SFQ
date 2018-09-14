@@ -1,0 +1,43 @@
+
+	rule trig(inc(ptrig))
+		set(trigdc.in),
+		xst=1;
+
+	rule reset(inc(preset))
+		set(resetdc.in),
+		xr=1;
+
+	rule lw(xst eq 1 and IJPM > 0)
+		xst=0,
+		lw=1,
+		inc(jtldata.j2),
+		inc(jtlclk.j2),
+		inc(jtlout.j2),
+		inc(jtlclk.j2);
+
+	rule rw(xst eq 1 and IJPM < 0)
+		xst=0,
+		rw=1,
+		inc(jtlclk.j2),
+		inc(jtldata.j2),
+		inc(jtlclk.j2),
+		inc(jtlout.j2);
+
+	rule trigclk(inc(ptrig))
+		set(in1.in);
+
+	rule prop1(get(btl1.out))
+		inc(j1),
+		set(btl2.in);
+
+	rule prop11(get(btl2.out))
+		inc(j2),
+		set(jtlclk.in);
+
+	rule prop2(get(btl3.out))
+		inc(j3),
+		set(btl4.in);
+
+	rule prop22(get(btl4.out))
+		inc(j4),
+		set(jtldata.in);

@@ -1,0 +1,18 @@
+PARAMETER
+	tseq=1000,
+	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0;
+
+circuit root()
+{
+
+INTERNAL
+	tp=tseq/4,
+	p1=0.85+psfq(tp,4,50),
+  p2=0.85+psfq(tp,4,80);
+
+rule trig1(inc(p1))
+  set(mrg.in1);
+
+rule trig2(inc(p2))
+  set(mrg.in2);
+}

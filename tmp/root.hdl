@@ -1,0 +1,29 @@
+parameter
+	tseq=4000, imax=4, dt=500,
+	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0, xdmm=1;
+
+internal
+	p1 = 0.85 + psfq(tseq, 5, 400) + psfq(tseq, 5, 400+dt)+ psfq(tseq, 5, 400+2*dt);
+
+CIRCUIT root(){
+
+parameter
+	i1=3.3, L1=100, rl1=0.3;
+external 
+	xi1=1, xl1=1, xrl1=1,t1=0;
+
+rule in1(inc(p1))
+set(m1.2);
+
+rule m2_52 (get(m2.5))
+set(m2.2);
+
+rule error (get(mt2.2) and xdmm == 0)
+1==0;
+
+rule result (get(mt2.2) and xdmm == 1)
+t1=tcurr,
+tcurr>t1,
+xdmm=0;
+
+}

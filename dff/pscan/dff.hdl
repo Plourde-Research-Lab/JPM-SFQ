@@ -23,8 +23,6 @@ rule init(Tcurr<5)
 RULE flip(GET(IN))
   xst=1;
 
-RULE clock(GET(CLK))
-  xclk=1;
 
 RULE flop0(GET(CLK) and xst eq 0)
   inc(j1),

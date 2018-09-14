@@ -1,0 +1,16 @@
+CIRCUIT ptl5()
+{
+  PARAMETER
+    LJ1=0.001;
+
+  EXTERNAL
+  	XJ=1,
+  	XL=1;
+
+  FREEZE
+    j0,j1,j2,j3;
+
+  rule r1(get(IN))
+    inc(j4),
+  	set(OUT);
+}

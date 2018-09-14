@@ -10,7 +10,6 @@ external
 	xj2 = 1.0;
 
 rule r1(get(IN))
-	inc(j1),
-	inc(j2),
-	set(OUT);
+	set(OUT),
+	[inc(j1),inc(j2)];
 }

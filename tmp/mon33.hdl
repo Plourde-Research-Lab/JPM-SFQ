@@ -1,0 +1,55 @@
+CIRCUIT mon33()
+{
+parameter 
+J1         =   2.0,
+Vj1         =   0.50,
+J2         =   1.55,
+Vj2         =   0.50,
+J3         =   1.12,
+Vj3         =   1.00,
+I2         =   1.0,  # 2.0
+Lin1=15,
+lin2=15,
+Lm1=0.9, #0.6
+aLm=0.9,
+L2         =   0.93,
+L3         =   0.46,
+L4         =   2,
+Lj1	   =   0.1,
+LJ2        =   0.15,
+LJ3        =   0.16,
+imin=0.5,
+imax=1.0;
+
+external
+xi2=1,xj1=1,xj2=1,xj3=1,xl1=1,xl2=1,xl3=1,xl4=1,xst1=0,xst2=0;
+
+rule init(tcurr<5)
+xst1=0, xst2=0, 
+tcurr>5;
+
+rule in10 (get(2) and xst2 eq 0)
+	xst1=1, set(3),
+	i(Lin1)>imax,
+	i(Lin1)<imin,
+	xst1=0;
+
+rule in11 (get(2) and xst2 eq 1)
+	set(3), 
+	inc(j2), set(1),
+	inc(j3), 
+	inc(j1), xst1=0, xst2=0;
+
+rule in20 (get(4) and xst1 eq 0)
+	xst2=1, set(5),
+	i(Lin2)>imax,
+	i(Lin2)<imin,
+	xst2=0;
+
+rule in21 (get(4) and xst1 eq 1)
+	set(5), 
+	inc(j2), set(1),
+	inc(j3), 
+	inc(j1), xst1=0, xst2=0;
+
+}
