@@ -1,0 +1,36 @@
+PARAMETER
+	tseq=500,
+	wbc=5.6, wvg = 4.13, wvrat = 0.7, wrrat = 0.1,
+	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0, xm=1.0,
+	xci=-1,
+	L1=0.54,
+	J1=0.4,
+	LJ1=0.001;
+
+circuit jpm()
+{
+PARAMETER
+  JJPM=0.2,
+  LJPM=15,
+  CS=15,
+  p=2,
+  td=50,
+	c1 = 2,
+  IJPMA = 0.3,
+	IJPM=0;
+
+INTERNAL
+
+	I1=IJPMA*tcurr/tseq;
+
+EXTERNAL
+	xst = 0,
+	xr=0,
+	lw=0,
+	rw=0;
+
+FREEZE
+	j1,j2,j3,j4;
+
+
+}

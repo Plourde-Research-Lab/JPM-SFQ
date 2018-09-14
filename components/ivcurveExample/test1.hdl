@@ -1,0 +1,11 @@
+PARAMETER
+	xi = 1.0, xj = 1.0, xl = 1.0,
+	xr = 1.0, rsjn_vg = 4.3, rsjn_n = 10,
+	tseq = 700;
+
+CIRCUIT test1()
+{
+	PARAMETER
+	j1 = 1.0,
+	i1 = 0.5;
+}

@@ -1,0 +1,23 @@
+CIRCUIT sw()
+{
+PARAMETER
+	imin=0.5,
+	j1=1.6,
+	j2=2.0,
+	l1=0.5,
+	l2=0.1,
+	l3=2.0;
+EXTERNAL
+	xj1=1.0,
+	xj2=1.0,
+	xj3=1.0;
+
+VALUE
+	ithresh=i(li1)>imin;
+
+RULE pass(GET(m1.2) and ithresh)
+INC(J2),SET(m2.1);
+
+RULE np(GET(m1.2) and ! ithresh)
+INC(J1);
+}

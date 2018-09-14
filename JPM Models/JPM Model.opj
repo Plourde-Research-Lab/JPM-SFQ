@@ -1,0 +1,151 @@
+(ExpressProject "Design8"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\jpm.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (RootChangedForceReNetlist "x")
+    (Netlist_TAB "5")
+    (SPICE_Netlist_File "CaptureJPM.CIR")
+    (SPICE_Net_Names "TRUE")
+    (SPICE_Unconnected_Pins "FALSE")
+    (SPICE_View_Output_Netlist_File "TRUE")
+    (SPICE_Subckt_Parameters "0")
+    (SPICE_Part_Value "{Value}")
+    (SPICE_Map_File "JPM MODEL.MAP")
+    (SPICE_View_Output_Map_File "FALSE"))
+  (Folder "Outputs"
+    (File ".\jpm model.cir"
+      (Type "Report"))
+    (File ".\jpm.cir"
+      (Type "Report"))
+    (File ".\capturejpm.cir"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (I
+      (FullPartName "I.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (L4
+      (FullPartName "L4.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (MUTUAL_IND
+      (FullPartName "MUTUAL_IND.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "D:\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (L2
+      (FullPartName "L2.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "D:\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "D:\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (L1
+      (FullPartName "L1.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (TL
+      (FullPartName "TL.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (L3
+      (FullPartName "L3.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (JUNCTION
+      (FullPartName "JUNCTION.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\jpm.dsn")
+      (Path "Design Resources" ".\jpm.dsn" "Capture JPM")
+      (Path "Design Resources" ".\jpm.dsn" "CaptureCavity")
+      (Path "Design Resources" ".\jpm.dsn" "Coupled JPM")
+      (Path "Design Resources" ".\jpm.dsn" "JPM")
+      (Path "Outputs")
+      (Select "Design Resources" ".\jpm.dsn" "JPM" "JPM"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 650"))
+      (Tab 0))
+    (Doc
+      (Type "TextFile")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 52 1394 52 511"))
+      (Path "Z:\Chip-Design\SFQ\JPM Model\CaptureJPM.CIR")
+      (Scroll "0"))
+    (Doc
+      (Type "TextFile")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 130 1582 130 819"))
+      (Path "Z:\Chip-Design\SFQ\JPM Model\JPM MODEL.CIR")
+      (Scroll "0"))
+    (Doc
+      (Type "TextFile")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 182 2357 182 871"))
+      (Path "Z:\Chip-Design\SFQ\JPM Model\JPM.CIR")
+      (Scroll "0"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 78 1420 78 537")
+        (Scroll "-162 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JPM MODEL\JPM.DSN")
+      (Schematic "Capture JPM")
+      (Page "CaptureJPM"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 130 1472 130 589")
+        (Scroll "-162 0")
+        (Zoom "100"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JPM MODEL\JPM.DSN")
+      (Schematic "CaptureCavity")
+      (Page "Capture Cavity"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 156 1498 156 615")
+        (Scroll "-162 0")
+        (Zoom "100"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JPM MODEL\JPM.DSN")
+      (Schematic "Coupled JPM")
+      (Page "Coupled JPM"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 182 1524 182 641")
+        (Scroll "-162 0")
+        (Zoom "100"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JPM MODEL\JPM.DSN")
+      (Schematic "JPM")
+      (Page "JPM")))
+  (ISPCBBASICLICENSE "false")
+  (MPSSessionName "caleb"))

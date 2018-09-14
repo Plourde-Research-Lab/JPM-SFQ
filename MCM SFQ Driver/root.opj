@@ -1,0 +1,128 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\root.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify)
+    (Netlist_TAB "5")
+    (SPICE_Netlist_File "ROOT.CIR")
+    (SPICE_Net_Names "TRUE")
+    (SPICE_Unconnected_Pins "FALSE")
+    (SPICE_View_Output_Netlist_File "FALSE")
+    (SPICE_Subckt_Parameters "0")
+    (SPICE_Part_Value "{Value}")
+    (SPICE_Map_File "ROOT.MAP")
+    (SPICE_View_Output_Map_File "FALSE"))
+  (Folder "Outputs"
+    (File ".\root.cir"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (JTL
+      (FullPartName "JTL.Normal")
+      (LibraryName "G:\CIR\SFQDC\DCSFQ\DCSFQ.OLB")
+      (DeviceIndex "0"))
+    (L1
+      (FullPartName "L1.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (JT
+      (FullPartName "JT.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\RSFQ.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (L2
+      (FullPartName "L2.Normal")
+      (LibraryName "G:\CIR\SFQDC\DCSFQ\DCSFQ.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (SPL
+      (FullPartName "SPL.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\RSFQ.OLB")
+      (DeviceIndex "0"))
+    (I
+      (FullPartName "I.Normal")
+      (LibraryName "F:\PSCAN\ORC\ESP\SDT\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\root.dsn")
+      (Path "Design Resources" ".\root.dsn" "ROOT")
+      (Path "Design Resources" ".\root.dsn" "dcsfq")
+      (Path "Design Resources" ".\root.dsn" "JTL")
+      (Path "Design Resources" ".\root.dsn" "JTL1")
+      (Path "Design Resources" ".\root.dsn" "jtl2")
+      (Path "Design Resources" ".\root.dsn" "JTLB")
+      (Path "Design Resources" ".\root.dsn" "PTL")
+      (Path "Design Resources" ".\root.dsn" "SPL1")
+      (Path "Design Resources" ".\root.dsn" "sr")
+      (Path "Outputs")
+      (Select "Design Resources" ".\root.dsn"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 58 725 34 1085"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 161 2258 35 1060")
+        (Scroll "-102 0")
+        (Zoom "174")
+        (Occurrence "/"))
+      (Path "F:\RELEASE\RETICLES\R052\CIR\ROOT.DSN")
+      (Schematic "ROOT")
+      (Page "ROOT"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 572 2669 48 930")
+        (Scroll "-190 215")
+        (Zoom "172")
+        (Occurrence "/Mt1"))
+      (Path "F:\RELEASE\RETICLES\R052\CIR\ROOT.DSN")
+      (Schematic "jtl2")
+      (Page "JTL2"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 130 2223 130 1008")
+        (Scroll "-188 0")
+        (Zoom "172")
+        (Occurrence "/M4"))
+      (Path "F:\RELEASE\RETICLES\R052\CIR\ROOT.DSN")
+      (Schematic "sw")
+      (Page "sw"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 130 1717 130 1019")
+        (Scroll "0 0")
+        (Zoom "172")
+        (Occurrence "/M3"))
+      (Path "F:\RELEASE\RETICLES\R052\CIR\ROOT.DSN")
+      (Schematic "SPL1")
+      (Page "SPL1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 545 2019 91 973")
+        (Scroll "0 0")
+        (Zoom "172")
+        (Occurrence "/M1"))
+      (Path "F:\RELEASE\RETICLES\R052\CIR\ROOT.DSN")
+      (Schematic "dcsfq")
+      (Page "dcsfq")))
+  (MPSSessionName "alex")
+  (ISPCBBASICLICENSE "false"))

@@ -1,0 +1,6 @@
+CIRCUIT bjtl5()
+{
+
+  rule r1(get(IN))
+  	set(OUT);
+}

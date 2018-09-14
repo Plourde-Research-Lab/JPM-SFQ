@@ -1,0 +1,133 @@
+(ExpressProject "JTL"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "c:\cadence\spb_17.2\tools\capture\library\jjdevice.olb"
+        (Type "Schematic Library"))
+      (File "c:\cadence\spb_17.2\tools\capture\library\rsfq.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\jtl.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "5")
+    (PSPICE_Output_File "JTLSCHEMATIC1.NET")
+    (PSPICE_View_Output "TRUE")
+    (PSPICE_Subcircuit_Format "FALSE")
+    (PSPICE_Do_DRC_Markers "FALSE")
+    (PSPICE_Net_Name_Pref "TRUE")
+    (PSPICE_Hier_Format "FALSE")
+    (PSPICE_Hier_Descend "FALSE")
+    (PSPICE_Hier_DoNot_Descend "FALSE")
+    (PSPICE_Alt_Template "PSpiceTemplate")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (PSPICE_DoNot_Show_WarningDlg "TRUE")
+    (Hier_Subckt_Products "LVS,PSpice,LVS")
+    (Hier_Subckt_Settings_PSpice_Subckt_Call
+       "X_<RefDes> <PinList> <SubcktName> PARAMS: <ParamList>")
+    (Hier_Subckt_Settings_PSpice_Subckt_Header
+       ".SUBCKT <SubcktName> <PinList> PARAMS: <ParamList>")
+    (Hier_Subckt_Settings_PSpice_Subckt_Trailer ".ENDS")
+    (Hier_Subckt_Settings_PSpice_Subckt_Call_Param "<Param>=<Value>")
+    (Hier_Subckt_Settings_PSpice_Subckt_Header_Param "<Param>=<Value>")
+    (Hier_Subckt_Settings_PSpice_Subckt_Param_Ref "{<Param>}")
+    (Hier_Subckt_Settings_PSpice_Global_Net_Prefix "$G_")
+    (Hier_Subckt_Settings_LVS_Subckt_Call
+       "X_<RefDes> <PinList> <SubcktName> <ParamList>")
+    (Hier_Subckt_Settings_LVS_Subckt_Header
+       ".SUBCKT <SubcktName> <PinList> <ParamList>")
+    (Hier_Subckt_Settings_LVS_Subckt_Trailer ".ENDS <SubcktName>")
+    (Hier_Subckt_Settings_LVS_Subckt_Call_Param "<Param>=<Value>")
+    (Hier_Subckt_Settings_LVS_Subckt_Header_Param "<Param>=<Value>")
+    (Hier_Subckt_Settings_LVS_Subckt_Param_Ref "<Param>")
+    (SPICE_Netlist_File "JTL.CIR")
+    (SPICE_Net_Names "TRUE")
+    (SPICE_Unconnected_Pins "FALSE")
+    (SPICE_View_Output_Netlist_File "TRUE")
+    (SPICE_Subckt_Parameters "0")
+    (SPICE_Part_Value "{Value}")
+    (SPICE_Map_File "JTL.MAP")
+    (SPICE_View_Output_Map_File "FALSE"))
+  (Folder "Outputs"
+    (File ".\jtl.cir"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (GND
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (L1
+      (FullPartName "L1.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (I
+      (FullPartName "I.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (J
+      (FullPartName "J.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (DCSFQ
+      (FullPartName "DCSFQ.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\RSFQ.OLB")
+      (DeviceIndex "0"))
+    (STDOUT
+      (FullPartName "STDOUT.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\RSFQ.OLB")
+      (DeviceIndex "0"))
+    (JTL
+      (FullPartName "JTL.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\RSFQ.OLB")
+      (DeviceIndex "0"))
+    (STDIN
+      (FullPartName "STDIN.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\RSFQ.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "C:\Cadence\SPB_17.2\tools\capture\library")
+  (MPSSessionName "caleb")
+  (ISPCBBASICLICENSE "false")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "Z:\Chip-Design\SFQ\JTL\jtl.dsn")
+      (Path "Design Resources" "Z:\Chip-Design\SFQ\JTL\jtl.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library"
+         "c:\cadence\spb_17.2\tools\capture\library\jjdevice.olb")
+      (Path "Design Resources" "Library"
+         "c:\cadence\spb_17.2\tools\capture\library\rsfq.olb")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 665"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 50 2207 50 753")
+        (Scroll "0 0")
+        (Zoom "270")
+        (Occurrence "/"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JTL\JTL.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "JTL"))
+    (Doc
+      (Type "TextFile")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 150 2332 150 808"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JTL\JTL.CIR")
+      (Scroll "0"))))

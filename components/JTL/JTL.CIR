@@ -1,0 +1,14 @@
+* JTL                                           Revised: Friday, January 19, 2018
+* Z:\CHIP-DESIGN\SFQ\JTL\JTL.DSN                Revision: 
+* 
+* 
+* 
+* 
+* 
+0 0 0 
+L1 N00361 2 L1
+L2 1 N00361 L1
+I1 N00361 0 I
+J1 1 0 J
+J2 2 0 J
+.END

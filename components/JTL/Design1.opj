@@ -1,0 +1,26 @@
+(ExpressProject "Design1"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\design1.dsn"
+      (Type "Schematic Design")))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (MPSSessionName "caleb")
+  (PartMRUSelector)
+  (ISPCBBASICLICENSE "false")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\design1.dsn")
+      (Path "Design Resources" ".\design1.dsn" "root")
+      (Path "Design Resources" ".\design1.dsn" "MJTL")
+      (Select "Design Resources" ".\design1.dsn" "root" "ROOT"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 650"))
+      (Tab 0))))

@@ -1,0 +1,76 @@
+# Global parameters
+dt	148.0
+ia	2.0
+id	2.0
+imax	4.0
+tseq	400.0
+wbc	5.6
+wrrat	0.1
+wvg	4.13
+wvrat	0.7
+xi	1.0
+xj	1.0
+xl	1.0
+xr	1.0
+# trx parameters
+trx.i1	1.2
+trx.j1	2.0
+trx.l1	1.5
+trx.l2	0.3
+trx.rq	0.6
+trx.vj1	2.0
+# ptl parameters
+ptl.c1	0.38
+ptl.l1	0.15
+# jtl2 parameters
+jtl2.i1	4.0
+jtl2.j1	3.0
+jtl2.j2	2.0
+jtl2.l0	1.0
+jtl2.l1	0.5
+jtl2.l2	0.75
+jtl2.l3	0.1
+# sw parameters
+sw.imin	0.5
+sw.j1	1.6
+sw.j2	2.0
+sw.l1	0.5
+sw.l2	0.1
+sw.l3	2.0
+# jtl parameters
+jtl.i1	3.0
+jtl.j1	2.0
+jtl.l1	0.75
+# spl1 parameters
+spl1.i1	4.5
+spl1.j1	2.0
+spl1.j2	2.0
+spl1.j3	2.0
+spl1.l1	0.7
+spl1.l2	1.5
+# dcsfq parameters
+dcsfq.i2	2.01
+dcsfq.imin	0.1
+dcsfq.j1	1.64
+dcsfq.j2	1.12
+dcsfq.j3	1.8
+dcsfq.l1	1.12
+dcsfq.l2	0.85
+dcsfq.l3	1.5
+dcsfq.l4	1.5
+dcsfq.lj1	0.1
+dcsfq.lj2	0.3
+dcsfq.lj3	0.04
+dcsfq.lq1	1.2
+# jtl1 parameters
+jtl1.i1	3.0
+jtl1.j1	2.0
+jtl1.l1	0.75
+jtl1.l3	1.5
+# root parameters
+root.c1	0.29
+root.c2	0.29
+root.i2	1.5
+root.i3	0.0
+root.l1	6.5
+root.l2	6.5

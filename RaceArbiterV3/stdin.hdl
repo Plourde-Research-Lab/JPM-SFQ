@@ -1,0 +1,11 @@
+circuit stdin()
+{
+	freeze j1;
+	external
+		xst=0;
+	rule init(tcurr < 5)
+		xst = 0,
+		tcurr > 5;
+	rule input (get(IN))
+		set(M1.IN);
+}

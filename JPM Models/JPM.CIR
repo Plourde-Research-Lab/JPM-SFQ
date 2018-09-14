@@ -1,0 +1,12 @@
+*                                               Revised: Tuesday, August 28, 2018
+* Z:\CHIP-DESIGN\SFQ\JPM MODEL\JPM.DSN          Revision:
+*
+*
+*
+*
+*
+IJPM N00469 N00628 IJPM
+LJPM N00628 0 LJPM
+CS N00469 0 CS
+JJPM N00469 0 JT(JJPM*xj)
+.END

@@ -1,0 +1,1 @@
+[[], [["ljpm", "e", "I"], ["preset", "e", "V"], ["ptrig", "e", "V"], ["jtlclk.j2", "e", "V"], ["jtldata.j2", "e", "V"], ["jtlout.j2", "e", "V"], ["ibias", "e", "I"], ["jjpm", "e", "I"]], [], ["I(ibias)", "I(ljpm)", "I(jjpm)"], [[0, ["I(ljpm)"]], [0, ["V(preset)", "V(ptrig)"]], [0, ["V(jtlclk.j2)", "V(jtldata.j2)"]], [0, ["V(jtlout.j2)"]]]]

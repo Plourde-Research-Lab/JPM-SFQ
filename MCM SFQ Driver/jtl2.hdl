@@ -1,0 +1,26 @@
+CIRCUIT jtl2()
+{
+PARAMETER
+	i1=4.0,
+	j1=3.0,
+	j2=2.0,
+	l0=1.0,
+	l1=0.5,
+	l2=0.75,
+	l3=0.1;
+EXTERNAL
+	xa=0,
+	xi1=1.0,
+	xj1=1.0,
+	xj2=1.0;
+
+RULE GO1(GET(1) and xa eq 0)
+xa=1,
+INC(J1),SET(2),
+INC(J2),xa=0;
+
+RULE GO2(GET(2) and xa eq 0)
+xa=1,
+INC(J2),SET(1),
+INC(J1),xa=0;
+}

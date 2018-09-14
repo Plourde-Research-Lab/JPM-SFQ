@@ -1,0 +1,7 @@
+circuit capturecavity()
+{
+PARAMETER
+  Ll=1.7,
+  Cl=0.5;
+
+}

@@ -1,0 +1,67 @@
+(ExpressProject "Design4"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\design4.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (L4
+      (FullPartName "L4.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName
+         "E:\PROGRAMS\ORCAD_17_2_LITE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (L2
+      (FullPartName "L2.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (L3
+      (FullPartName "L3.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "caleb")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "Z:\Chip-Design\SFQ\JTL\design4.dsn")
+      (Path "Design Resources" "Z:\Chip-Design\SFQ\JTL\design4.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources" "Z:\Chip-Design\SFQ\JTL\design4.dsn" "DFF")
+      (Path "Design Resources" "Z:\Chip-Design\SFQ\JTL\design4.dsn" "JTL"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 420"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 -86 1550 66 525")
+        (Scroll "-134 1")
+        (Zoom "136")
+        (Occurrence "/"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JTL\DESIGN4.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 208 1550 208 667")
+        (Scroll "-162 0")
+        (Zoom "100"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JTL\DESIGN4.DSN")
+      (Schematic "JTL")
+      (Page "jtl")))
+  (ISPCBBASICLICENSE "false"))

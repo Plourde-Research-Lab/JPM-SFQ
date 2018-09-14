@@ -1,0 +1,158 @@
+(ExpressProject "Design6"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\jpm race arbiter.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "5")
+    (SPICE_Netlist_File "root.cir")
+    (SPICE_Net_Names "TRUE")
+    (SPICE_Unconnected_Pins "FALSE")
+    (SPICE_View_Output_Netlist_File "TRUE")
+    (SPICE_Subckt_Parameters "0")
+    (SPICE_Part_Value "{Value}")
+    (SPICE_Map_File "JPM RACE ARBITER.MAP")
+    (SPICE_View_Output_Map_File "FALSE")
+    (Board_sim_option "VHDL_flow"))
+  (Folder "Outputs"
+    (File ".\root.cir"
+      (Type "Report"))
+    (File ".\root2.cir"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (MUTUAL_IND
+      (FullPartName "MUTUAL_IND.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "D:\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (I
+      (FullPartName "I.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (J
+      (FullPartName "J.Normal")
+      (LibraryName "G:\CIR\ADC\PCOUNTER\V0\4BIT\TMP\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "D:\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (CAPACITOR
+      (FullPartName "CAPACITOR.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (P
+      (FullPartName "P.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "D:\ORCAD7\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "D:\ORCAD7\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (L1
+      (FullPartName "L1.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (JUNCTION
+      (FullPartName "JUNCTION.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (L2
+      (FullPartName "L2.Normal")
+      (LibraryName "G:\CIR\ADC\PCOUNTER\V0\4BIT\TMP\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (L3
+      (FullPartName "L3.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (L4
+      (FullPartName "L4.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (STDOUT
+      (FullPartName "STDOUT.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\RSFQ.OLB")
+      (DeviceIndex "0"))
+    (JTL
+      (FullPartName "JTL.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\RSFQ.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-L
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "Z:\Chip-Design\SFQ\JPM Race Arbiter\jpm race arbiter.dsn")
+      (Path "Design Resources"
+         "Z:\Chip-Design\SFQ\JPM Race Arbiter\jpm race arbiter.dsn" "ROOT")
+      (Path "Design Resources"
+         "Z:\Chip-Design\SFQ\JPM Race Arbiter\jpm race arbiter.dsn" "MRG")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "Z:\Chip-Design\SFQ\JPM Race Arbiter\jpm race arbiter.dsn"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 436"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 26 1368 26 485")
+        (Scroll "-201 0")
+        (Zoom "92")
+        (Occurrence "/"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JPM RACE ARBITER\JPM RACE ARBITER.DSN")
+      (Schematic "ROOT")
+      (Page "ROOT"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 78 1420 78 537")
+        (Scroll "-162 0")
+        (Zoom "100")
+        (Occurrence "/DFF"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JPM RACE ARBITER\JPM RACE ARBITER.DSN")
+      (Schematic "DFF")
+      (Page "DFF"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 52 1394 52 511")
+        (Scroll "-162 0")
+        (Zoom "100")
+        (Occurrence "/MRG1"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JPM RACE ARBITER\JPM RACE ARBITER.DSN")
+      (Schematic "MRG")
+      (Page "MRG"))
+    (Doc
+      (Type "TextFile")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 130 1472 130 589"))
+      (Path "Z:\CHIP-DESIGN\SFQ\JPM RACE ARBITER\root.cir")
+      (Scroll "0")))
+  (ISPCBBASICLICENSE "false")
+  (MPSSessionName "caleb"))
