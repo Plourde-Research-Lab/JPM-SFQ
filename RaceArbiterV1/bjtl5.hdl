@@ -2,8 +2,8 @@ circuit bjtl5()
 {
 
 PARAMETER
-	l1=16,
-	j1=0.016;
+	l1=0.6,
+	j1=0.4;
 
 EXTERNAL
 	xl=1.0,

@@ -1,9 +1,9 @@
 CIRCUIT jtl2()
 {
 	PARAMETER
-		i1=0.144,
-		j1=0.08,
-		l1=20;
+		i1=1.5,
+		j1=2,
+		l1=0.75;
 	EXTERNAL
 		xi=1.0,
 		xj=1.0,
