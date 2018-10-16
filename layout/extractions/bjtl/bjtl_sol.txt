@@ -1,0 +1,22 @@
+InductEx v4.30 Free (14 March 2015). Copyright 2003-2015 Coenrad Fourie
+bjtl.GDS -i bjtl/bjtl.inp -l ixman5.ldf -w bjtl\bjtl -th 
+Spice netlist bjtl.cir read. Totals: L = 1, k = 0, P = 1.
+GDS file bjtl.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+1 structures read. Reduced 5 objects to 4 polygons and 2 terminals.
+Techfile ixman5.ldf read: Units in 1E-0006 m. AbsMin=0.001 GapMax=2
+DIAG preconditioner.
+FastHenry version 3.1wr+su64 found.
+Total unique loops identified in netlist = 1
+Terminal blocks = 2; Labels = 2; Extracted Ports = 1
+
+Port                  Positive terminal    Negative terminal
+P1                    M2,   polygon;       M2,   polygon.
+Minimum filaments in FastHenry = 451
+
+Impedance   Inductance [pH]     Resistance [Ohm]  AbsDiff   PercDiff
+Name      Design    Extracted Design    Extracted (L only)  (L only)
+L1        41.0000   41.0665   --        --        +0.0665   +0.16%
+Deallocating memory.
+Cycles found in 0.003 seconds.
+SVD solution in 0.017 seconds.
+Job finished in 0.533 seconds.

@@ -1,0 +1,15 @@
+InductEx v4.30 Free (14 March 2015). Copyright 2003-2015 Coenrad Fourie
+strips.GDS -fh -i strips/strips.inp -w strips/strips -l ixman5.ldf 
+Spice netlist strips.cir read. Totals: L = 2, k = 1, P = 2.
+GDS file strips.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+1 structures read. Reduced 7 objects to 4 polygons and 4 terminals.
+Techfile ixman5.ldf read: Units in 1E-0006 m. AbsMin=0.001 GapMax=2
+DIAG preconditioner.
+FastHenry version 3.1wr+su64 found.
+Total unique loops identified in netlist = 2
+Terminal blocks = 4; Labels = 4; Extracted Ports = 2
+
+Port                  Positive terminal    Negative terminal
+P1                    M1,   polygon;       M1,   polygon.
+P2                    M1,   polygon;       M1,   polygon.
+(45) Cannot link "+" Terminal of Port P1 to a layout figure.

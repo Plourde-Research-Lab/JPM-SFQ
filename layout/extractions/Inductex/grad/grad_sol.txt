@@ -1,0 +1,15 @@
+InductEx v4.30 Free (14 March 2015). Copyright 2003-2015 Coenrad Fourie
+Gradiometer.GDS -fh -i grad\grad.inp -w grad\grad -l ixman5.ldf 
+Spice netlist Gradiometer.cir read. Totals: L = 1, k = 0, P = 1.
+GDS file Gradiometer.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+1 structures read. Reduced 14 objects to 13 polygons and 2 terminals.
+WARNING: 1 boundaries, paths and/or text labels with DATATYPE > 0 or TEXTTYPE > 0 ignored.
+Techfile ixman5.ldf read: Units in 1E-0006 m. AbsMin=0.001 GapMax=2
+DIAG preconditioner.
+FastHenry version 3.1wr+su64 found.
+Total unique loops identified in netlist = 1
+Terminal blocks = 2; Labels = 2; Extracted Ports = 1
+
+Port                  Positive terminal    Negative terminal
+P1                    M2,   polygon;       M1,   polygon.
+(45) Cannot link "+" Terminal of Port P1 to a layout figure.
