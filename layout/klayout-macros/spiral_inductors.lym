@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description/>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>import pya
+import math
+import numpy as np
+
+mu_0 = 1.2566370614359173e-06
+
+"""
+This sample PCell implements a library called "MyLib" with a single PCell that
+draws a circle. It demonstrates the basic implementation techniques for a PCell
+and how to use the "guiding shape" feature to implement a handle for the circle
+radius.
+
+NOTE: after changing the code, the macro needs to be rerun to install the new
+implementation. The macro is also set to "auto run" to install the PCell
+when KLayout is run.
+"""
+
+class SquareSpiral(pya.PCellDeclarationHelper):
+  """
+  The PCell declaration for the circle
+  """
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(SquareSpiral, self).__init__()
+
+    # declare the parameters
+    self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(6, 0))
+    self.param("il", self.TypeLayer, "Terminal Layer", default=pya.LayerInfo(63,0))
+
+    self.param("n", self.TypeInt, "Number of turns", default = 3)
+    self.param("w", self.TypeDouble, "Trace Width", default = 2.0)
+    self.param("s", self.TypeDouble, "Trace spacing", default = 2.0)
+    self.param("dout", self.TypeDouble, "Outer Distance", default = 42)
+
+    self.param("path", self.TypeShape, "", default = pya.Path.new())
+
+    # this hidden parameter is used to determine whether the radius has changed
+    # or the "s" handle has been moved
+    #self.param("ru", self.TypeDouble, "Radius", default = 0.0, hidden = True)
+
+    self.param("din", self.TypeDouble, "Inner Distance", readonly = True)
+    self.param("davg", self.TypeDouble, "Average Distance", readonly = True)
+    self.param("fill_ratio", self.TypeDouble, "Fill Ratio", readonly=True)
+    self.param("L", self.TypeDouble, "Inductance (pH)", readonly = True)
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "Inductor"
+
+  def coerce_parameters_impl(self):
+  
+    self.din = self.dout - 2* (self.n*self.w + (self.n - 1)*self.s)
+    self.davg = 0.5*(self.din + self.dout)
+    self.fill_ratio = (self.dout - self.din)/(self.dout + self.din)
+    self.L = 2.34 * mu_0 * (self.n**2 * self.davg)/(1 + 2.75*self.fill_ratio) * 1e6
+    
+
+  def can_create_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we can use any shape which
+    # has a finite bounding box
+    return False
+
+  def produce_impl(self):
+
+    # This is the main part of the implementation: create the layout
+
+    # fetch the parameters
+    dbu = self.layout.dbu
+    
+    
+    # compute the circle
+    pts = []
+
+    for i in np.arange(self.n):
+
+        # Top left
+        x = -1*((self.din/2 - self.w) + i*(self.s + self.w))
+        y = (self.din/2 + self.w/2) + i*(self.s + self.w)
+        pts.append(pya.Point.new(x/dbu, y/dbu))
+        # Top right
+        x = (self.din/2) + i*(self.s + self.w)
+        y = (self.din/2 + self.w/2) + i*(self.s + self.w)
+        pts.append(pya.Point.new(x/dbu, y/dbu))
+        # Bottom right
+        x = (self.din/2) + i*(self.s + self.w)
+        y = -1*((self.din/2 + self.w/2) + i*(self.s + self.w))
+        pts.append(pya.Point.new(x/dbu, y/dbu))
+        # Bottom left
+        x = -1*((self.din/2 + i*(self.s + self.w) + self.s))
+        y = -1*((self.din/2 + self.w/2) + i*(self.s + self.w))
+        pts.append(pya.Point.new(x/dbu, y/dbu))
+
+    # Last point
+    x = -1*((self.din/2 + i*(self.s + self.w) + self.s))
+    y = (self.din/2 + self.w) + i*(self.s + self.w)
+    pts.append(pya.Point.new(x/dbu, y/dbu))
+
+    # create the shape
+    self.cell.shapes(self.l_layer).insert(pya.Path.new(pts, self.w/dbu))
+
+    # create inductex terminals
+    
+    #Temrinal 1
+    
+    # Terminal 2
+    
+
+
+class SpiralInductors(pya.Library):
+  """
+  The library where we will put the PCell into
+  """
+
+  def __init__(self):
+
+    # Set the description
+    self.description = "Spiral Inductors"
+
+    # Create the PCell declarations
+    self.layout().register_pcell("SquareSpiral", SquareSpiral())
+    # That would be the place to put in more PCells ...
+
+    # Register us with the name "MyLib".
+    # If a library with that name already existed, it will be replaced then.
+    self.register("SpiralInductors")
+
+
+# Instantiate and register the library
+SpiralInductors()
+</text>
+</klayout-macro>

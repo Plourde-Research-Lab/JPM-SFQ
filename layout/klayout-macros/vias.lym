@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description/>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>import pya
+import math
+
+"""
+This sample PCell implements a library called "MyLib" with a single PCell that
+draws a circle. It demonstrates the basic implementation techniques for a PCell 
+and how to use the "guiding shape" feature to implement a handle for the circle
+radius.
+
+NOTE: after changing the code, the macro needs to be rerun to install the new
+implementation. The macro is also set to "auto run" to install the PCell 
+when KLayout is run.
+"""
+
+class Via_M2_M1(pya.PCellDeclarationHelper):
+  """
+  The PCell declaration for the circle
+  """
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(Via_M2_M1, self).__init__()
+
+    # declare the parameters
+    #self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
+    self.param("s", self.TypeDouble, "Size", default = 2)
+    self.param("l2", self.TypeLayer, "Layer2", default=pya.LayerInfo(6,0))
+    self.param("l1", self.TypeLayer, "Layer1", default=pya.LayerInfo(1,0))
+    self.param("d1", self.TypeLayer, "Dielectric", default=pya.LayerInfo(3,0))
+    #self.param("r", self.TypeDouble, "Radius", default = 0.1)
+    #self.param("n", self.TypeInt, "Number of points", default = 64)     
+    # this hidden parameter is used to determine whether the radius has changed
+    # or the "s" handle has been moved
+    #self.param("ru", self.TypeDouble, "Radius", default = 0.0, hidden = True)
+    #self.param("rd", self.TypeDouble, "Double radius", readonly = True)
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "Via(s=" + str(self.s) + ", M2-M1)"
+  
+  def coerce_parameters_impl(self):
+  
+    # We employ coerce_parameters_impl to decide whether the handle or the 
+    # numeric parameter has changed (by comparing against the effective 
+    # radius ru) and set ru to the effective radius. We also update the 
+    # numerical value or the shape, depending on which on has not changed.
+    pass
+  
+  def can_create_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we can use any shape which 
+    # has a finite bounding box
+    return self.shape.is_box()
+  
+  def parameters_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we set r and l from the shape's 
+    # bounding box width and layer
+    self.s = self.shape.bbox().width() * self.layout.dbu
+  
+  def transformation_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we use the center of the shape's
+    # bounding box to determine the transformation
+    return pya.Trans(self.shape.bbox().center())
+  
+  def produce_impl(self):
+  
+    # This is the main part of the implementation: create the layout
+
+    # fetch the parameters
+    s_dbu = self.s / self.layout.dbu
+    d_dbu = (self.s+1)/self.layout.dbu
+    s2_dbu = (self.s+2)/self.layout.dbu
+    
+    # create the Top Electrode
+    self.cell.shapes(self.l2_layer).insert(pya.Box.new(-s_dbu/2., -s_dbu/2. , s_dbu/2, s_dbu/2))
+
+    # create the Dielectric Via
+    self.cell.shapes(self.d1_layer).insert(pya.Box.new(-d_dbu/2, -d_dbu/2, d_dbu/2, d_dbu/2))
+    
+    # create the Bottom Electrode
+    self.cell.shapes(self.l1_layer).insert(pya.Box.new(-s2_dbu/2, -s2_dbu/2, s2_dbu/2, s2_dbu/2))
+
+class Via_M3_M2(pya.PCellDeclarationHelper):
+  """
+  The PCell declaration for the circle
+  """
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(Via_M3_M2, self).__init__()
+
+    # declare the parameters
+    #self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
+    self.param("s", self.TypeDouble, "Size", default = 2)
+    self.param("l2", self.TypeLayer, "Layer2", default=pya.LayerInfo(10,0))
+    self.param("l1", self.TypeLayer, "Layer1", default=pya.LayerInfo(6,0))
+    self.param("d1", self.TypeLayer, "Dielectric", default=pya.LayerInfo(8,0))
+    #self.param("r", self.TypeDouble, "Radius", default = 0.1)
+    #self.param("n", self.TypeInt, "Number of points", default = 64)     
+    # this hidden parameter is used to determine whether the radius has changed
+    # or the "s" handle has been moved
+    #self.param("ru", self.TypeDouble, "Radius", default = 0.0, hidden = True)
+    #self.param("rd", self.TypeDouble, "Double radius", readonly = True)
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "Via(s=" + str(self.s) + ", M3-M2)"
+  
+  def coerce_parameters_impl(self):
+  
+    # We employ coerce_parameters_impl to decide whether the handle or the 
+    # numeric parameter has changed (by comparing against the effective 
+    # radius ru) and set ru to the effective radius. We also update the 
+    # numerical value or the shape, depending on which on has not changed.
+    pass
+  
+  def can_create_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we can use any shape which 
+    # has a finite bounding box
+    return self.shape.is_box()
+  
+  def parameters_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we set r and l from the shape's 
+    # bounding box width and layer
+    self.s = self.shape.bbox().width() * self.layout.dbu
+  
+  def transformation_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we use the center of the shape's
+    # bounding box to determine the transformation
+    return pya.Trans(self.shape.bbox().center())
+  
+  def produce_impl(self):
+  
+    # This is the main part of the implementation: create the layout
+
+    # fetch the parameters
+    s_dbu = self.s / self.layout.dbu
+    d_dbu = (self.s+1)/self.layout.dbu
+    s2_dbu = (self.s+2)/self.layout.dbu
+    
+    # create the Top Electrode
+    self.cell.shapes(self.l2_layer).insert(pya.Box.new(-s_dbu/2., -s_dbu/2. , s_dbu/2, s_dbu/2))
+
+    # create the Dielectric Via
+    self.cell.shapes(self.d1_layer).insert(pya.Box.new(-d_dbu/2, -d_dbu/2, d_dbu/2, d_dbu/2))
+    
+    # create the Bottom Electrode
+    self.cell.shapes(self.l1_layer).insert(pya.Box.new(-s2_dbu/2, -s2_dbu/2, s2_dbu/2, s2_dbu/2))
+
+class Vias(pya.Library):
+  """
+  The library where we will put the PCell into 
+  """
+
+  def __init__(self):
+  
+    # Set the description
+    self.description = "Vias"
+    
+    # Create the PCell declarations
+    self.layout().register_pcell("Via M2-M1", Via_M2_M1())
+    self.layout().register_pcell("Via M3-M2", Via_M3_M2())
+    
+    # That would be the place to put in more PCells ...
+    
+    # Register us with the name "MyLib".
+    # If a library with that name already existed, it will be replaced then.
+    self.register("Vias")
+
+
+# Instantiate and register the library
+Vias()
+</text>
+</klayout-macro>
