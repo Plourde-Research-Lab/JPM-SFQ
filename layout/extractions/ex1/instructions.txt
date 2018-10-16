@@ -1,0 +1,34 @@
+Name:     Example 1 (Section 8.2 in InductEx User Manual)
+Author:   CJ Fourie
+Level:    Easy
+Last mod: 30 August 2017
+
+This example shows the calculation of a simple straight microstrip line. Execute InductEx with:
+
+>inductex lman1.gds -l ixman1.ldf -i lman1.inp -fh
+
+The solution file (sol_ffh.txt) is included. Your results should match this.
+
+You can vary parameters in the layer definition file (ixman1.ldf) and observe the effects on calculations results.
+
+The above command runs InductEx with the FFH engine, which processes cuboid meshes.
+
+You can run the same example with the TetraHenry engine to use a tetrahedral mesh. For this,
+Gmsh has to be installed and available on the path.
+
+>inductex lman1.gds -l ixman1.ldf -i lman1.geo -th
+
+The solution file is included as sol_tth.txt.
+
+Finally, this example contains demonstrations of parameter sweeps defined in the .control block of the netlist file,
+lman1_sweep.cir. InductEx uses the name of the layout file as default for the netlist file. If the names differ,
+the netlist file has to be specified with -n command line parameter:
+
+>inductex lman1.gds -l ixman1.ldf -i lman1.inp -fh -n lman1_sweep.cir
+
+The solution file is included as sol_sweep.txt
+
+You can uncomment the other sweep statements to investigate these.
+
+
+

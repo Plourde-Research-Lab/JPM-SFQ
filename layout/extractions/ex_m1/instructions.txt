@@ -1,0 +1,31 @@
+Name:     Example "Moderate 1" : Inductance-only demo for splitter in Hypres 4.5 kA/cm2 process
+Author:   CJ Fourie
+Level:    Moderate
+Last mod: 29 September 2013
+
+This example shows the calculation the self inductances of an RSFQ cell. Execute InductEx (which requires "inductex.exe" and "fasthenry.exe" in the PATH or in the same directory, with:
+
+>inductex Hyp_split_demo.gds -l h4k5.ldf -i split.inp -fh
+
+
+The solution file (sol.txt) is included. Your results should match this.
+
+Note that we set the design value of the dc bias inductance (Lib1), which is a "don't care" value
+in this layout, to 0. InductEx then ignores it when calculating "PercDiff", the percentage difference
+between design and extracted values. Also, in the layer definition file "h4k5.ldf", we set 
+ "GPOverhang =  5.0"
+to show how the moats are handled during modelling. The ground plane extends around any moats that
+"penetrate" into the GPOverhang zone around conductive layers. In this example, resistance is neglected
+and the resistors are therefore not segmented (but metal flow over resistors are respected - see the 
+attached 3D rendering).
+
+The IDensity parameter on layer I1C also sets the Josephson junction area definition layer, and its
+critical current density. Josephson junction critical currents are thus calculated.
+
+To generate the 3D rendering included in this example zip file, use "inp2dxf.exe" (which should
+be in the PATH or in the same directory) with:
+
+>inp2dxf split.inp split.dxf -h 5
+
+(You can use any name for the DXF file. The "-h" parameter sets the vertical dimension scaling,
+which we set to 5 here to make the thin-films thicker for viewing.)

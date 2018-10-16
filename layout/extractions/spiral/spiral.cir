@@ -1,6 +1,6 @@
 * spice netlist for InductEx4 user manual example 5
 * Inductors
-L1     1   2   1000
+LSpiral     1   2   
 * Ports
 P1     1   2
 .end

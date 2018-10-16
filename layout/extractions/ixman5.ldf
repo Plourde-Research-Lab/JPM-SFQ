@@ -9,7 +9,6 @@ GPOverhang        =  5.0
 ProcessHasGroundPlane = TRUE
 BlankAllCutsGP    =  FALSE
 ZSegsToEC         =  TRUE
-JoinShortSegments =  TRUE
 LastDieLayerOrder =  10
 GPLayer           =  30
 BlankAllLayer     =  60

@@ -1,14 +1,16 @@
-InductEx v4.30 Free (14 March 2015). Copyright 2003-2015 Coenrad Fourie
-InductorTest.GDS -fh -i test/test.inp -w test/test 
+InductEx v5.05.18 (20 September 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse Wi, until 29 Oct 2018. [Basic with Visualization]
+InductorTest.GDS -w test -fh 
+Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=2
 Spice netlist InductorTest.cir read. Totals: L = 1, k = 0, P = 1.
+Total unique loops identified in netlist = 1
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
 GDS file InductorTest.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
 3 structures read. Reduced 4 objects to 3 polygons and 2 terminals.
-Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=2
-DIAG preconditioner.
-FastHenry version 3.1wr+su64 found.
-Total unique loops identified in netlist = 1
+Top level structure is "INDUCTORTEST".
 Terminal blocks = 2; Labels = 2; Extracted Ports = 1
 
 Port                  Positive terminal    Negative terminal
 P1                    M3,   polygon;       M3,   polygon.
-(45) Cannot link "+" Terminal of Port P1 to a layout figure.
+(45) Cannot link "+" Terminal of Port p1 to a layout figure.

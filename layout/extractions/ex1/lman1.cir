@@ -1,0 +1,10 @@
+* Title: spice netlist for InductEx user manual example 1
+* Author: Coenrad Fourie
+* Last mod: 13 April 2017
+**********************************************************
+* Inductors
+L1     1   2   3.897
+* Ports
+P1     1   0
+P2     2   0
+.end

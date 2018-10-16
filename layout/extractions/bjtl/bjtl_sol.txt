@@ -1,22 +1,19 @@
-InductEx v4.30 Free (14 March 2015). Copyright 2003-2015 Coenrad Fourie
-bjtl.GDS -i bjtl/bjtl.inp -l ixman5.ldf -w bjtl\bjtl -th 
+InductEx v5.05.18 (20 September 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse Wi, until 29 Oct 2018. [Basic with Visualization]
+bjtl.GDS -l ..\h4k5.ldf -i bjtl.inp -w bjtl -fh 
+Techfile ..\h4k5.ldf read: Units in 1E-0006 m. AbsMin=0.001 GapMax=2
 Spice netlist bjtl.cir read. Totals: L = 1, k = 0, P = 1.
+Total unique loops identified in netlist = 1
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
 GDS file bjtl.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
 1 structures read. Reduced 5 objects to 4 polygons and 2 terminals.
-Techfile ixman5.ldf read: Units in 1E-0006 m. AbsMin=0.001 GapMax=2
-DIAG preconditioner.
-FastHenry version 3.1wr+su64 found.
-Total unique loops identified in netlist = 1
+Top level structure is "BALLISTICJTL".
 Terminal blocks = 2; Labels = 2; Extracted Ports = 1
 
 Port                  Positive terminal    Negative terminal
 P1                    M2,   polygon;       M2,   polygon.
-Minimum filaments in FastHenry = 451
+(45) Cannot link "+" Terminal of Port p1 to a layout figure.
 
-Impedance   Inductance [pH]     Resistance [Ohm]  AbsDiff   PercDiff
-Name      Design    Extracted Design    Extracted (L only)  (L only)
-L1        41.0000   41.0665   --        --        +0.0665   +0.16%
-Deallocating memory.
-Cycles found in 0.003 seconds.
-SVD solution in 0.017 seconds.
-Job finished in 0.533 seconds.
+WARNINGS:
+"JoinShortSegments" option in LDF deprecated since v5.06. (In ..\h4k5.ldf, line 22.)

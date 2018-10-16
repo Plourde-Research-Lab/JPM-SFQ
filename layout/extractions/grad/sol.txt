@@ -1,0 +1,18 @@
+InductEx v5.05.18 (20 September 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse Wi, until 29 Oct 2018. [Basic with Visualization]
+Gradiometer.GDS -fh 
+Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=2
+Spice netlist Gradiometer.cir read. Totals: L = 3, k = 1, P = 3.
+Total unique loops identified in netlist = 3
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
+GDS file Gradiometer.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+4 structures read. Reduced 19 objects to 9 polygons and 6 terminals.
+Top level structure is "SPIRAL".
+Terminal blocks = 6; Labels = 6; Extracted Ports = 3
+
+Port                  Positive terminal    Negative terminal
+P1                    M1,   polygon;       M1,   polygon.
+P2                    M2,   polygon;       M2,   polygon.
+P4                    M1,   polygon;       M1,   polygon.
+(45) Cannot link "-" Terminal of Port p2 to a layout figure.
