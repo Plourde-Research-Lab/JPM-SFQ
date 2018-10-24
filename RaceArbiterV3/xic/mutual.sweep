@@ -1,12 +1,8 @@
-.exec
-source -c root.cir
-.endc
-
 .control
-
+source -c root.cir
 set ic=-1u
 set value1=k1
 sweep .01 .1 .01 tran 1p 10n
-plot v(12) v(13)
-write mutual.out
+*plot v(12) v(13)
+write mutual.dat v(12,13)
 .endc

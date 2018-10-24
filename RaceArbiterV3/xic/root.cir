@@ -54,7 +54,7 @@ LT2 3 5 50p
 LT3 5 OUT 100p
 .ends JTL
 
-.control
-set ic=value1
-sweep
+.exec
+set ic=0
+set k1=0.063
 .endc
