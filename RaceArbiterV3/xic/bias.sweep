@@ -2,7 +2,7 @@
 source -c root.cir
 set k1=0.063
 set value1=ic
-sweep 0 -2u -0.25u tran 1p 10n
+sweep 0 -1.5u -0.25u tran 1p 3n
 *plot v(12) v(13)
-write bias.dat v(12) v(13)
+write bias.dat v(1) v(15)
 .endc
