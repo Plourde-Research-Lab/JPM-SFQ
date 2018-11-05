@@ -1,0 +1,35 @@
+InductEx v5.05.01 Mac OSX 64-bit (22 May 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse, until 29 Oct 2018. [Basic with Visualization]
+Coupling.GDS -l ../ixman5.ldf -fh 
+WARNING: LastDieLayerOrder exceeds layer total. Check LDF file.
+Techfile ../ixman5.ldf read: Units in 1E-6 m. AbsMin=0.001 GapMax=2
+Spice netlist Coupling.cir read. Totals: L = 2, k = 1, P = 2.
+Total unique loops identified in netlist = 2
+Using FFH with DIAG preconditioner.
+FFH version 1.201su_64 found.
+GDS file Coupling.GDS read: db units in 1E-9 m, 0.001 units per user unit.
+4 structures read. Reduced 8 objects to 5 polygons and 4 terminals.
+WARNING: 2 boundaries, paths and/or text labels with DATATYPE > 0 or TEXTTYPE > 0 ignored.
+Terminal blocks = 4; Labels = 4; Extracted Ports = 2
+
+Port                  Positive terminal    Negative terminal
+P1                    M2,   polygon;       M2,   polygon.
+P2                    M1,   polygon;       M1,   polygon.
+Minimum filaments in FFH = 1360
+
+SVD info: Condition nr. = 8.337; unknowns = 5; rank = 5. 
+
+Impedance  Inductance [pH]     Resistance [Ohm]   AbsDiff   PercDiff
+Name      Design    Extracted Design    Extracted (L only)  (L only)
+L1        227.000   254.413   --        --        +27.413   +12.08%
+L2        28.0000   31.1489   --        --        +3.1489   +11.25%
+
+Mutual Inductance [pH]                               Coupling factor
+Name      Design    Extracted AbsDiff   PercDiff            k
+M1        +57.401   -5.4132   -62.814   +109.43%            -0.0608   
+Deallocating memory.
+Cycles found in 0.640 seconds.
+SVD solution in 0.021 seconds.
+Job finished in 1.218 seconds.
+
+WARNING: Your license expires in 13 days.

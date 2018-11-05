@@ -1,0 +1,113 @@
+# Veusz saved document (version 3.0.1)
+# Saved at 2018-10-24T21:19:38.802287
+
+AddImportPath(u'/Users/caleb/Development/JPM-SFQ/RaceArbiterV3/xic')
+ImportFileCSV(u'sweepdata.csv', headermode=u'1st', linked=True, rowsignore=1, skipwhitespace=True)
+ImportFileCSV(u'sweepdata.csv', linked=True)
+ImportFileCSV(u'bias.csv', delimiter=u' ', linked=True)
+ImportString(u'`Bias Separation`(numeric)','''
+4.800000e-11
+6.700000e-11
+9.700000e-11
+1.590000e-10
+3.140000e-10
+1.190000e-09
+3.590000e-09
+-1.300000e-11
+-8.000000e-12
+''')
+ImportString(u'Coupling(numeric)','''
+1.000000e-02
+2.000000e-02
+3.000000e-02
+4.000000e-02
+5.000000e-02
+6.000000e-02
+7.000000e-02
+8.000000e-02
+9.000000e-02
+1.000000e-01
+''')
+ImportString(u'`Coupling Separation`(numeric)','''
+4.500000e-11
+9.000000e-11
+1.370000e-10
+1.860000e-10
+2.390000e-10
+2.960000e-10
+3.590000e-10
+4.300000e-10
+5.140000e-10
+6.140000e-10
+''')
+ImportString(u'`\ufeffBias`(numeric)','''
+0.000000e+00
+2.500000e-01
+5.000000e-01
+7.500000e-01
+1.000000e+00
+1.250000e+00
+1.500000e+00
+1.750000e+00
+2.000000e+00
+''')
+Set('colorTheme', u'default-latest')
+Set('StyleSheet/axis-function/autoRange', u'next-tick')
+Add('page', name=u'page1', autoadd=False)
+To(u'page1')
+Set('width', u'21.244cm')
+Set('height', u'15.318cm')
+Add('grid', name=u'grid1', autoadd=False)
+To(u'grid1')
+Set('columns', 1)
+Add('graph', name=u'graph1', autoadd=False)
+To(u'graph1')
+Set('leftMargin', u'0cm')
+Set('rightMargin', u'0cm')
+Set('topMargin', u'0cm')
+Set('bottomMargin', u'0cm')
+Add('axis', name=u'x', autoadd=False)
+To(u'x')
+Set('label', u'Coupling Constant (k)')
+Set('min', -0.01)
+Set('max', 1.6)
+To('..')
+Add('axis', name=u'y', autoadd=False)
+To(u'y')
+Set('label', u'\\Delta \\tau (ns)')
+Set('min', -0.1)
+Set('direction', u'vertical')
+Set('lowerPosition', 0.0)
+To('..')
+Add('xy', name=u'xy1', autoadd=False)
+To(u'xy1')
+Set('markerSize', u'5pt')
+Set('color', u'auto')
+Set('thinfactor', 1)
+Set('xData', u'col1')
+Set('yData', u'col2*1e9')
+Set('hide', False)
+Set('labels', u'col1')
+Set('scalePoints', [])
+Set('errorStyle', u'none')
+Set('PlotLine/hide', True)
+Set('Label/hide', True)
+To('..')
+To('..')
+Add('graph', name=u'graph2', autoadd=False)
+To(u'graph2')
+Add('axis', name=u'x', autoadd=False)
+Add('axis', name=u'y', autoadd=False)
+To(u'y')
+Set('direction', u'vertical')
+To('..')
+Add('xy', name=u'xy1', autoadd=False)
+To(u'xy1')
+Set('markerSize', u'5pt')
+Set('xData', u'Coupling')
+Set('yData', u'Coupling Separation')
+Set('PlotLine/hide', True)
+To('..')
+To('..')
+To('..')
+To('..')

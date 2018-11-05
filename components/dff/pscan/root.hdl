@@ -1,20 +1,22 @@
 PARAMETER
-	TSEQ      = 400.00,
-	XI = 1.0,
-	XJ = 1.0,
-	XL = 1.0;
+	TSEQ = 1000.00,
+	XI   = 1.0,
+	XJ   = 1.0,
+	XL   = 1.0;
 
 circuit root()
 {
+PARAMETER
+	state = 0;
+
 INTERNAL
 	tp=tseq/4,
-	p1=0.85+psfq(tseq/5,4,10),
-	pclk=0.85+psfq(tseq/10,4,20);
+	p1=0.85+psfq(tp,4,50),
+	pclk=0.85+psfq(tp/2,4,50);
 
 rule inp1(inc(P1))
-	set(jtlin.IN);
+	set(in.IN);
 
 rule inclk(inc(PCLK))
-	set(jtlclk.IN);
-
+	set(clk.IN);
 }

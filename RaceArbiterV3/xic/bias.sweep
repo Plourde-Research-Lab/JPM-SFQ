@@ -1,0 +1,8 @@
+.control
+source -c root.cir
+set k1=0.063
+set value1=ic
+sweep 0u -0.9u -0.1u tran 1p 3n
+*plot v(12) v(13)
+write bias.dat v(1) v(15)
+.endc

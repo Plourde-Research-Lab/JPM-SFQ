@@ -1,0 +1,34 @@
+PARAMETER
+	tseq=2000,
+	wbc=5.6, wvg = 4.13, wvrat = 0.7, wrrat = 0.1,
+	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0, xm=1.0;
+
+circuit root()
+{
+PARAMETER
+  I1 = 0.1,
+  I2 = 0.1,
+  J0 = 1,
+  J1 = 1,
+  J2 = 1,
+  LC = 1,
+  LJPM = 1,
+  IJPMA = 0.2,
+  LT1 = 1,
+  LT2 = 1,
+  M1 = 0.01;
+
+INTERNAL
+  p=4,
+  td = 10,
+	tp=tseq/p,
+	p0=psfq(tp,10,td),
+	I0=copysign(ijpma, sin(3.14*(tcurr)/(tseq/2)));
+
+EXTERNAL
+	xst = 0,
+	xr=0,
+	lw=0,
+	rw=0;
+
+}

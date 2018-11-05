@@ -1,0 +1,8 @@
+# xic 4.3.1 Darwin x86_64 10/24/2018 14:08 GMT crash log, pid: 14828
+cell: root top: root mode: 1
+cmd: MAIN level: 1
+Logfiles retained in /var/folders/t_/y5t63zxn3fn4b4gdqlc2wh4m0000gn/T/xic.14828.
+Dumping modified cells...
+root saved.
+JTL1 saved.
+All modified cells have been dumped in ./panic.14828.
