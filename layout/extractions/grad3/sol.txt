@@ -1,0 +1,28 @@
+InductEx v5.05.18 (20 September 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse Wi, until 29 Oct 2018. [Basic with Visualization]
+grad.GDS -fh 
+Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=1
+Spice netlist grad.cir read. Totals: L = 1, k = 0, P = 1.
+Total unique loops identified in netlist = 1
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
+GDS file grad.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+5 structures read. Reduced 22 objects to 11 polygons and 2 terminals.
+Top level structure is "GRADIOMETERV3".
+Terminal blocks = 2; Labels = 2; Extracted Ports = 1
+
+Port                  Positive terminal    Negative terminal
+P1                    M1,   line along x;  M1,   line along x;
+Minimum filaments in FFH = 21619
+
+Single impedance.
+
+Impedance  Inductance [pH]     Resistance [Ohm]   AbsDiff   PercDiff
+Name      Design    Extracted Design    Extracted (L only)  (L only)
+LJPM      1000.00   962.677   --        --        -37.322   -3.73%
+Deallocating memory.
+Cycles found in 0.574 seconds.
+SVD solution in 0.143 seconds.
+Job finished in 22.408 seconds.
+
+WARNING: Your license expires in 11 days.

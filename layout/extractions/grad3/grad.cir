@@ -1,0 +1,6 @@
+* spice netlist 
+* Inductors
+LJPM      1   2   1000
+* Ports
+P1     1   2
+.end

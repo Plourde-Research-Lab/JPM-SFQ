@@ -1,0 +1,16 @@
+InductEx v5.05.18 (20 September 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse Wi, until 29 Oct 2018. [Basic with Visualization]
+Gradiometer.GDS -fh 
+Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=0.75
+Spice netlist Gradiometer.cir read. Totals: L = 2, k = 1, P = 2.
+Total unique loops identified in netlist = 2
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
+GDS file Gradiometer.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+5 structures read. Reduced 16 objects to 9 polygons and 4 terminals.
+Top level structure is "GRAD".
+1 boundaries, paths and/or text labels with DATATYPE > 0 or TEXTTYPE > 0 ignored.
+No terminal object found to match port p1 negative terminal (layer M1)
+No terminal object found to match port p4 negative terminal (layer M1)
+Terminal blocks = 4; Labels = 4; Extracted Ports = 0
+(43) Extracted ports do not match number of ports in circuit file. Job aborted
