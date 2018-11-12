@@ -164,6 +164,98 @@ class Via_M3_M2(pya.PCellDeclarationHelper):
     # create the Bottom Electrode
     self.cell.shapes(self.l1_layer).insert(pya.Box.new(-s2_dbu/2, -s2_dbu/2, s2_dbu/2, s2_dbu/2))
 
+
+class Via_M3_M0(pya.PCellDeclarationHelper):
+  """
+  The PCell declaration for the circle
+  """
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(Via_M3_M0, self).__init__()
+
+    # declare the parameters
+    #self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
+    self.param("s", self.TypeDouble, "Length", default = 2.0)
+    self.param("l_m0", self.TypeLayer, "M0 Layer", default=pya.LayerInfo(30,0), hidden=True)
+    self.param("l_m1", self.TypeLayer, "M1 Layer", default=pya.LayerInfo(1,0), hidden=True)
+    self.param("l_m2", self.TypeLayer, "M2 Layer", default=pya.LayerInfo(6,0), hidden=True)
+    self.param("l_m3", self.TypeLayer, "M3 Layer", default=pya.LayerInfo(10,0), hidden=True)
+    self.param("l_i0", self.TypeLayer, "I0 Layer", default=pya.LayerInfo(31,0), hidden=True)
+    self.param("l_i1", self.TypeLayer, "I1 Layer", default=pya.LayerInfo(3,0), hidden=True)
+    self.param("l_i2", self.TypeLayer, "I2 Layer", default=pya.LayerInfo(8,0), hidden=True)
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "Via(s={} M3-M0)".format(self.s)
+  
+  def coerce_parameters_impl(self):
+  
+    # We employ coerce_parameters_impl to decide whether the handle or the 
+    # numeric parameter has changed (by comparing against the effective 
+    # radius ru) and set ru to the effective radius. We also update the 
+    # numerical value or the shape, depending on which on has not changed.
+    pass
+  
+  def can_create_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we can use any shape which 
+    # has a finite bounding box
+    return self.shape.is_box()
+  
+  def parameters_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we set r and l from the shape's 
+    # bounding box width and layer
+    # self.s = self.shape.bbox().width() * self.layout.dbu
+    pass
+  
+  def transformation_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we use the center of the shape's
+    # bounding box to determine the transformation
+    return pya.Trans(self.shape.bbox().center())
+  
+  def produce_impl(self):
+  
+    # This is the main part of the implementation: create the layout
+    dbu = self.layout.dbu
+    
+    # fetch the parameters
+    
+    l = self.s/2
+    
+    # I0 Via
+    
+    pts = [pya.Point.new(-l/dbu, 0), pya.Point.new(l/dbu, 0)]
+    path = pya.Path(pts, 1.0/dbu)
+    self.cell.shapes(self.l_i0_layer).insert(path)
+    
+    # I1 Via
+    l += 0.4/2
+    pts = [pya.Point.new(-l/dbu, 0), pya.Point.new(l/dbu, 0)]
+    path = pya.Path(pts, 1.4/dbu)
+    self.cell.shapes(self.l_i1_layer).insert(path)    
+    
+    # I2 Via
+    l += 0.4/2
+    pts = [pya.Point.new(-l/dbu, 0), pya.Point.new(l/dbu, 0)]
+    path = pya.Path(pts, 1.8/dbu)
+    self.cell.shapes(self.l_i2_layer).insert(path)    
+    
+    #Metal Contact
+    l += 0.5
+    mpts = [pya.Point.new(-l/dbu, 0), pya.Point.new(l/dbu, 0)]
+    mpath = pya.Path(mpts, 2.8/dbu)
+    
+      # M1 Contact
+    self.cell.shapes(self.l_m1_layer).insert(mpath)
+        
+    # M2 Contact
+    self.cell.shapes(self.l_m2_layer).insert(mpath)    
+ 
+     # M3 Contact
+    self.cell.shapes(self.l_m3_layer).insert(mpath)  
+
+
 class Vias(pya.Library):
   """
   The library where we will put the PCell into 
@@ -177,6 +269,7 @@ class Vias(pya.Library):
     # Create the PCell declarations
     self.layout().register_pcell("Via M2-M1", Via_M2_M1())
     self.layout().register_pcell("Via M3-M2", Via_M3_M2())
+    self.layout().register_pcell("Via M3-M0", Via_M3_M0())
     
     # That would be the place to put in more PCells ...
     

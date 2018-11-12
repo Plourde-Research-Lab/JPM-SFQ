@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description/>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>import pya
+
+# PCell template
+# This macro template provides the framework for a PCell library
+
+# It is recommended to put PCell code into namespaces.
+# TODO: change the module name
+
+# The PCell declaration
+# Each PCell must provide a declaration. It is recommended to use the PCell name as the class name.
+# TODO: change the class name
+class MeanderInductor(pya.PCellDeclarationHelper):
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(MeanderInductor, self).__init__()
+
+    self.param("lyr", self.TypeLayer, "Metal Layer", default=pya.LayerInfo(6,0), hidden=True)
+    self.param("dx", self.TypeDouble, "X-size of inductor (um)", default=20.0)
+    self.param("dy", self.TypeDouble, "Max Y-size of inductor (um)", default=20.0)
+    self.param("L", self.TypeDouble, "Expected Inductance (pH)", default=50.0)
+    self.param("w", self.TypeDouble, "Inductor Width (um)", default=1.0)
+    self.param("s", self.TypeDouble, "Inductor Gap (um)", default=1.0)
+    self.param("Ll", self.TypeDouble, "Inductance/length at 1um width (pH/um)", default=0.73)
+    
+    self.param("l", self.TypeDouble, "Inductor Length (um)", readonly=True)    
+    self.param("n", self.TypeInt, "Number of Meanders", readonly=True)
+    self.param("h", self.TypeDouble, "Height of Meanders (um)", readonly=True)
+    
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "L={:.3f}pH".format(self.L)
+  
+  def coerce_parameters_impl(self):
+    # TODO: use x to access parameter x and set_x to modify it's value 
+  
+    self.l = self.L/self.Ll
+    
+    h = 2*self.dy
+    dx = self.dx
+    
+    ylen = self.l - dx
+    
+    n = 0
+    
+    while (h &gt; self.dy):
+      n += 1
+      h = ylen/(2*n)
+      
+    self.n = n
+    self.h = h
+    
+  def produce_impl(self):
+    # TODO: produce the cell content 
+    # i.e. self.cell().shapes(self.l_layer).insert(pya.Polygon(...))
+    
+    dbu = self.layout.dbu
+    
+    pts = []
+    
+    ## First half of inductor
+    xl = -self.dx/2
+    pts.append(pya.Point.new(xl/dbu, 0))
+    
+    x0 = -self.n/2 * (self.s + self.w)
+    
+    pts.append(pya.Point.new(x0/dbu, 0))
+    
+    for i in range(self.n):
+      x1 = x0 + i*(self.w + self.s)
+      x2 = x0 + (i+1)*(self.w + self.w)
+      
+      if i % 2 == 0:
+        pts.append(pya.Point.new(x1/dbu, self.h/dbu))
+        pts.append(pya.Point.new(x2/dbu, self.h/dbu))
+      else:
+        pts.append(pya.Point.new(x1/dbu, -self.h/dbu))
+        pts.append(pya.Point.new(x2/dbu, -self.h/dbu))
+    
+    x0r = self.n/2*(self.s + self.w)
+    pts.append(pya.Point.new(x0r/dbu, 0))
+    
+    xr = self.dx/2
+    pts.append(pya.Point.new(xr/dbu ,0))
+    
+    inductor = pya.Path(pts, self.w/dbu)
+    self.cell.shapes(self.lyr_layer).insert(inductor)
+    
+  # optional:
+  # def can_create_from_shape_impl(self):
+  #   TODO: determine if we have a shape that we can use to derive the 
+  #   PCell parameters from and return true in that case
+  # 
+  # optional:
+  # def parameters_from_shape_impl(self):
+  #   TODO: change parameters using set_x to reflect the parameter for the
+  #   given shape
+  # 
+  # optional:
+  # def transformation_from_shape_impl(self):
+  #   TODO: return a RBA::Trans object for the initial transformation of
+  #   the instance
+  
+# TODO: add more PCell classes ..
+
+# The PCell library declaration
+# A PCell library must be declared by deriving a custom class from RBA::Library.
+# The main purpose of this class is to provide the PCell declarations and to register itself
+# with a proper name.
+# TODO: change the class name
+class MeanderInductors(pya.Library):
+
+  def __init__(self):
+  
+    # TODO: change the description
+    self.description = "Meander Inductor library"
+    
+    # register the PCell declarations
+    # TODO: change the names
+    self.layout().register_pcell("MeanderInductor", MeanderInductor())
+    # TODO: register more PCell declarations
+    
+    # register our library with the name "PCellLib"
+    # TODO: change the library name
+    self.register("MeanderInductors")
+    
+# instantiate and register the library
+# TODO: change the library name
+MeanderInductors()
+
+</text>
+</klayout-macro>

@@ -16,7 +16,6 @@
  <dsl-interpreter-name/>
  <text>import pya
 import math
-import numpy as np
 
 mu_0 = 1.2566370614359173e-06
 
@@ -89,7 +88,7 @@ class SquareSpiral(pya.PCellDeclarationHelper):
     # compute the circle
     pts = []
 
-    for i in np.arange(self.n):
+    for i in range(self.n):
 
         # Top left
         x = -1*((self.din/2 - self.w) + i*(self.s + self.w))
