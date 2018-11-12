@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description/>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>import pya
+from math import sqrt
+
+
+pi = 3.14159
+h = 6.63e-34
+e = 1.6e-19
+phi0 = 2.067e-15
+hbar = h/(2 * pi)
+
+class JJ(pya.PCellDeclarationHelper):
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(JJ, self).__init__()
+
+    # declare the parameters
+    # i.e. self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
+    #      self.param("s", self.TypeShape, "", default = pya.DPoint(0, 0))
+    self.param("J", self.TypeDouble, "PSCAN Value", default=2.0)
+    self.param("Iu", self.TypeDouble, "Current Scalar (uA)", default=5.0)
+    self.param("Jc", self.TypeDouble, "Critical Current Density (uA/um^2)", default=1.0)
+    self.param("Cc", self.TypeDouble, "Capacitance Density (fF/um^2)", default=40.48)
+    self.param("BetaC", self.TypeDouble, "Damping Parameter", default=1.0)
+    self.param("SheetR", self.TypeDouble, "Sheet Resistance (Ohm/square)", default=2)
+    self.param("W", self.TypeDouble, "Resistor Width (um)", default=2)
+    self.param("Grounded", self.TypeBoolean, "Grounded", default=True)
+  
+    self.param("l_j1", self.TypeLayer, "Junction Layer", default = pya.LayerInfo(4,0), hidden=True)
+    self.param("l_a1", self.TypeLayer, "Anodization Layer", default = pya.LayerInfo(5,0), hidden=True)
+    self.param("l_r2", self.TypeLayer, "Resistor Layer", default=pya.LayerInfo(9,0), hidden=True)
+    self.param("l_m1", self.TypeLayer, "M1 Layer", default=pya.LayerInfo(1,0), hidden=True)
+    self.param("l_m2", self.TypeLayer, "M2 Layer", default=pya.LayerInfo(6,0), hidden=True)
+    self.param("l_m3", self.TypeLayer, "M3 Layer", default=pya.LayerInfo(10,0), hidden=True)
+    self.param("l_i0", self.TypeLayer, "I0 Layer", default=pya.LayerInfo(31,0), hidden=True)
+    self.param("l_i1", self.TypeLayer, "I1 Layer", default=pya.LayerInfo(3,0), hidden=True)
+    self.param("l_i2", self.TypeLayer, "I2 Layer", default=pya.LayerInfo(8,0), hidden=True)
+    
+    
+    self.param("Area", self.TypeDouble, "Area (um^2)", readonly=True)
+    self.param("D", self.TypeDouble, "Diameter(um)", readonly=True)
+    self.param("R", self.TypeDouble, "Radius", default=1,  hidden=True)
+    self.param("Res", self.TypeDouble, "Shunt Resistance (Ohm)", readonly=True)
+    self.param("C", self.TypeDouble, "Capacitance (fF)", readonly=True)
+  
+  
+    self.param("n", self.TypeDouble, "Number of pts in circle", hidden=True, default=64)
+    
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "JJ: J={}, Bc={}".format(self.J, self.BetaC)
+  
+  def coerce_parameters_impl(self):
+ 
+    self.Area = (self.J * self.Iu / self.Jc)
+    self.D = 2.0*sqrt(self.Area/pi)
+    self.R = self.D/2.0
+    self.Res = sqrt(hbar * self.BetaC * 1e15)/sqrt(2. * e * self.Jc * self.Cc) / self.Area *1e3
+    self.C = self.Area * self.Cc
+    
+  def produce_impl(self):
+    self.coerce_parameters_impl()
+    
+    dbu = self.layout.dbu
+    
+    ############################
+    ## Make the Junction Circle
+    ############################
+    
+    # fetch the parameters
+    ru_dbu = self.R / dbu
+    
+    # Compute the circle
+    jpts = []
+    da = pi * 2 / self.n
+    for i in range(0, self.n):
+      jpts.append(pya.Point.from_dpoint(pya.DPoint(ru_dbu * math.cos(i * da), ru_dbu * math.sin(i * da))))
+    
+    # create the shape
+    self.cell.shapes(self.l_j1_layer).insert(pya.Polygon(jpts))    
+
+    ########################
+    ## Make the Junction Anode
+    ########################
+    
+    
+    # fetch the parameters
+    ru_dbu = round(self.R + 1, 2) / dbu
+    
+    # Compute the circle
+    jpts = []
+    da = pi * 2 / self.n
+    for i in range(0, self.n):
+      jpts.append(pya.Point.from_dpoint(pya.DPoint(ru_dbu * math.cos(i * da), ru_dbu * math.sin(i * da))))
+    
+    # create the shape
+    self.cell.shapes(self.l_a1_layer).insert(pya.Polygon(jpts))  
+
+    ############################
+    ## Make the Junction Via
+    ############################
+    
+    # fetch the parameters
+    ru_dbu = 1.05*self.R / dbu
+    
+    # Compute the circle
+    jpts = []
+    da = pi * 2 / self.n
+    for i in range(0, self.n):
+      jpts.append(pya.Point.from_dpoint(pya.DPoint(ru_dbu * math.cos(i * da), ru_dbu * math.sin(i * da))))
+    
+    # create the shape
+    self.cell.shapes(self.l_i1_layer).insert(pya.Polygon(jpts)) 
+
+    ############################
+    ## Make the M2 Junction Contact
+    ############################
+    m2_dbu = round(self.R + 1, 2)*2 / dbu
+    llx, lly = -m2_dbu/2, -m2_dbu/2
+    urx, ury = m2_dbu/2, m2_dbu/2
+    m2pad = pya.Box.new(llx, lly, urx, ury)
+    
+    #create the shape
+    self.cell.shapes(self.l_m2_layer).insert(m2pad)
+    
+    ############################
+    ## Make the Resistor
+    ############################
+    toppt_dbu = -m2_dbu/2
+    rlen = self.Res * self.W / self.SheetR
+    btmpt_dbu = toppt_dbu - (rlen)/ dbu
+    
+    rpts = [pya.Point.new(0, toppt_dbu), pya.Point.new(0, btmpt_dbu)]
+    res = pya.Path.new(rpts, self.W/dbu)
+    
+    #create the shape
+    self.cell.shapes(self.l_r2_layer).insert(res)   
+    
+    ###############################
+    ## Make the M2-R2 Via
+    ###############################
+    
+    m2w = round(self.R + 1, 2)*2
+    r2_i1_g = 0.5 # Spacing from R2 to I1
+    vw = self.W - (2*r2_i1_g) # Via Size
+    
+    
+    llx, lly = -vw/2/dbu, -(m2w/2 + vw + r2_i1_g)/dbu
+    urx, ury = vw/2/dbu, lly+(vw/dbu)
+    m2pad1 = pya.Box.new(llx, lly, urx, ury)
+    
+    #create the shape
+    self.cell.shapes(self.l_i1_layer).insert(m2pad1)      
+ 
+    ###############################
+    ## Make the M2-Resistor Contact
+    ###############################
+    
+    llx, lly = -m2w/2/dbu, -(m2w/2 + vw + 2*r2_i1_g)/dbu
+    urx, ury = m2w/2/dbu, -m2w/2/dbu
+    m2pad = pya.Box.new(llx, lly, urx, ury)
+    
+    #create the shape
+    self.cell.shapes(self.l_m2_layer).insert(m2pad) 
+    
+    ###############################
+    ## Make the Resistor Ground Vias
+    ###############################
+
+    llx, lly = -self.W/2/dbu, btmpt_dbu - (self.W/2/dbu)
+    urx, ury = self.W/2/dbu, btmpt_dbu + (self.W/2/dbu)
+    rvgpad = pya.Box.new(llx, lly, urx, ury)
+    
+    self.cell.shapes(self.l_i1_layer).insert(rvgpad)
+    
+    if self.Grounded:
+      self.cell.shapes(self.l_i2_layer).insert(rvgpad) 
+        
+    ###############################
+    ## Make the Resistor Ground Contacts
+    ###############################
+    
+    llx, lly = llx - (0.5/dbu), lly - (0.5/dbu)
+    urx, ury = urx + (0.5/dbu), ury + (0.5/dbu)
+    rgpad = pya.Box.new(llx, lly, urx, ury)
+    self.cell.shapes(self.l_m2_layer).insert(rgpad)
+    
+    if self.Grounded:  
+      self.cell.shapes(self.l_m3_layer).insert(rgpad)
+    
+    ############################
+    ## Make the M1 Pad
+    ############################   
+
+    llx, lly = -(m2w/2 + 0.3)/dbu, lly - (0.3/dbu)
+    urx, ury = (m2w/2 + 0.3)/dbu, (m2w/2 + 0.3)/dbu
+    m1pad = pya.Box.new(llx, lly, urx, ury)
+    
+    self.cell.shapes(self.l_m1_layer).insert(m1pad) 
+    
+    ###############################
+    ## Make the I0 Via
+    ###############################
+    
+    llx, lly = -(self.W/2 + 0.3)/dbu, btmpt_dbu
+    urx, ury = (self.W/2 + 0.3)/dbu, btmpt_dbu - (self.W/2 + 0.3)/dbu
+    i0pad = pya.Box.new(llx, lly, urx, ury)
+    
+    if self.Grounded:
+      self.cell.shapes(self.l_i0_layer).insert(i0pad)
+
+
+class JJLib(pya.Library):
+
+  def __init__(self):
+  
+    # TODO: change the description
+    self.description = "Junction library"
+    
+    # register the PCell declarations
+    # TODO: change the names
+    self.layout().register_pcell("JJ", JJ())
+    # TODO: register more PCell declarations
+    
+    # register our library with the name "PCellLib"
+    # TODO: change the library name
+    self.register("JJLib")
+    
+# instantiate and register the library
+# TODO: change the library name
+JJLib()
+
+</text>
+</klayout-macro>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description/>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>import pya
+from math import sqrt
+
+
+pi = 3.14159
+h = 6.63e-34
+e = 1.6e-19
+phi0 = 2.067e-15
+hbar = h/(2 * pi)
+
+
+
+# PCell template
+# This macro template provides the framework for a PCell library
+
+# It is recommended to put PCell code into namespaces.
+# TODO: change the module name
+
+# The PCell declaration
+# Each PCell must provide a declaration. It is recommended to use the PCell name as the class name.
+# TODO: change the class name
+
+
+class JTL5u(pya.PCellDeclarationHelper):
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(JTL5u, self).__init__()
+
+    # declare the parameters
+    # i.e. self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
+    #      self.param("s", self.TypeShape, "", default = pya.DPoint(0, 0))
+    
+    self.param("J1", self.TypeDouble, "J1", default=2.0)
+    self.param("I1", self.TypeDouble, "I1", default=3.0)
+    self.param("L1", self.TypeDouble, "L1", default=1.5)
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "JTL: J={}, L={}, I={}".format(self.J1, self.L1, self.I1)
+  
+  def coerce_parameters_impl(self):
+    # TODO: use x to access parameter x and set_x to modify it's value 
+    pass
+    
+  def produce_impl(self):
+    
+    dbu = self.layout.dbu
+    
+    jj_lib = pya.Library.library_by_name("JJLib")
+    l_lib = pya.Library.library_by_name("MeanderInductors")
+    
+    jj_pcell = jj_lib.layout().pcell_declaration("JJ")
+    l_pcell = l_lib.layout().pcell_declaration("MeanderInductor")
+    
+    ## Place Bias Junction
+    
+    i1_params = {'J': self.I1, 'BetaC': 0.5}
+    i1_inst = self.layout.add_pcell_variant(jj_lib, jj_pcell.id(), i1_params)
+    i1_t = pya.Trans(pya.Trans.R0, 0, 0)
+   
+    self.cell.insert(pya.CellInstArray(i1_inst,i1_t))
+    
+    
+    ## Place J1 and J2
+    
+    j1_params = {'J': self.J1, 'BetaC': 1.0}
+    j1_inst = self.layout.add_pcell_variant(jj_lib, jj_pcell.id(), j1_params)
+
+    j1_t = pya.Trans(pya.Trans.R0, -25/dbu, 0)
+   
+    self.cell.insert(pya.CellInstArray(j1_inst, j1_t))    
+    
+    j2_t = pya.Trans(pya.Trans.R0, 25/dbu, 0)
+    
+    self.cell.insert(pya.CellInstArray(j1_inst, j2_t))
+    
+    ## Place L1 and L2
+    
+    l1_params = {'dx': 25.0, 'dy': 12 }
+    l1_inst = self.layout.add_pcell_variant(l_lib, l_pcell.id(), l1_params)
+    
+    l1_t = pya.Trans(pya.Trans.R0, -12.5/dbu, 0)
+    l2_t = pya.Trans(pya.Trans.R0, 12.5/dbu, 0)
+    
+    self.cell.insert(pya.CellInstArray(l1_inst, l1_t))
+    self.cell.insert(pya.CellInstArray(l1_inst, l2_t))
+    
+
+# The PCell library declaration
+# A PCell library must be declared by deriving a custom class from RBA::Library.
+# The main purpose of this class is to provide the PCell declarations and to register itself
+# with a proper name.
+# TODO: change the class name
+class SFQ5uLib(pya.Library):
+
+  def __init__(self):
+  
+    # TODO: change the description
+    self.description = "5uA SFQ library"
+    
+    # register the PCell declarations
+    # TODO: change the names
+    self.layout().register_pcell("JTL", JTL5u())
+    # TODO: register more PCell declarations
+    
+    # register our library with the name "PCellLib"
+    # TODO: change the library name
+    self.register("SFQ5uLib")
+    
+# instantiate and register the library
+# TODO: change the library name
+SFQ5uLib()
+
+</text>
+</klayout-macro>
