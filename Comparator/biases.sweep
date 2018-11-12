@@ -2,7 +2,7 @@
 source -c root.cir
 set value1=ib1
 set value2=ib2
-sweep 4u 6u 0.25u 4u 6u 0.25u
+sweep 3u 10u 1u 3u 10u 1u
 plot LJPM#branch LC#branch v(6) v(8) v(1) v(15)
 *write bias.dat v(1) v(15)
 .endc
