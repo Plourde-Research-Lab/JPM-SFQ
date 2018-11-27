@@ -1,11 +1,11 @@
-CIRCUIT jtl()
+CIRCUIT jtl0()
 {
 	PARAMETER
 		i1=2.0,
 		j1=2.0,
-		j1=2.0,
-		l1=0.75;
-
+		j2=2.0,
+		l1=0.75,
+		l3=1.5;
 	EXTERNAL
 		xi=1.0,
 		xl=1.0,

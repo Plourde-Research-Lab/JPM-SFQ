@@ -1,0 +1,51 @@
+*                                               Revised: Thursday, November 15, 2018
+* Z:\CHIP-DESIGN\JPM-SFQ\COMPARATOR\ORCAD\COMPARRevision:
+*
+*
+*
+*
+*
+P1 6 0 P1
+XJTL0 6 5 JTL
+XJTL1 5 3 JTL
+XJTL2 3 10 JTL
+XCMP 10 11 CMP
+XJTL4 11 12 JTL
+XJTL5 12 15 JTL
+.subckt CMP IN OUT
+* escape junctions
+Je1 1 2 J(J1*xj)
+Je2 1 0 J(J1*xj)
+* Bt is top comparator Jj and Bb is bottom Jj
+Jt 2 3 J(J1*xj)
+Jb 3 0 J(J1*xj)
+* Bq quantizing Jj in the SQUID factor of 4 smaller
+Jq 4 0 J(J2*xj)
+* top junction bias
+It 0 2 IT*xi
+* middle bias between comparator Jjs
+*Ib 3 0 pwl(0 0 5ps -2u 5ns -5u)
+Ibs 3 0 IB*xi
+* field from JPM you can ramp or apply a "Rabi" sinusoid or just static
+*Iq 5 0 pwl(0 0 20ns 20u)
+IJPM 5 0 IJPM
+*Iqs 5 0 20u
+* small input inductances at in and out of cell
+LTin IN 1 L1
+LTout 3 OUT L1
+*JPM inductance and mutual to LC which is the squid L in the comparator
+* K1 LJPM LC 0.25
+M1 0 LLM(LJPM, LC, M1*xm)
+LC 3 4 LC
+LJPM 5 0 LJPM
+.ends CMP
+.subckt JTL IN OUT
+J1 4 0 J(J1*xj)
+J2 5 0 J(J1*xj)
+*I0 0 3 pwl(0 0 5ps 3u 5ns 5u)
+I1 0 3 I1
+LT0 IN 4 L1
+LT1 4 3 L1
+LT2 3 5 L1
+LT3 5 OUT L1
+.ends JTL

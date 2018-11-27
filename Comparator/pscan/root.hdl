@@ -1,34 +1,44 @@
 PARAMETER
-	tseq=2000,
+	tseq=1000,
 	wbc=5.6, wvg = 4.13, wvrat = 0.7, wrrat = 0.1,
 	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0, xm=1.0;
 
 circuit root()
 {
 PARAMETER
-  I1 = 0.1,
-  I2 = 0.1,
-  J0 = 1,
-  J1 = 1,
-  J2 = 1,
-  LC = 1,
-  LJPM = 1,
+  I1 = 2.0,
+  I2 = 0.75,
+  J1 = 0.8,
+  LC = 1.0,
+  LJPM = 15,
   IJPMA = 0.2,
-  LT1 = 1,
-  LT2 = 1,
-  M1 = 0.01;
+  L1 = 0.2,
+	LQ1 = 0.01,
+  M1 = 0.1,
+	R1 = 1.0;
 
 INTERNAL
-  p=4,
+  p = 4,
   td = 10,
 	tp=tseq/p,
-	p0=psfq(tp,10,td),
-	I0=copysign(ijpma, sin(3.14*(tcurr)/(tseq/2)));
+	p1=psfq(tp,5,td),
+	IJPM=copysign(ijpma, sin(3.14*(tcurr)/(tseq/2)));
 
 EXTERNAL
 	xst = 0,
 	xr=0,
 	lw=0,
 	rw=0;
+
+freeze j1, j2, j3;
+
+rule trig(inc(p1))
+	set(DCSFQIN.in);
+
+rule lw(IJPM > 0 and inc(p1))
+	1==1;
+
+rule rw(IJPM < 0 and inc(p1))
+	set(JTL4.in);
 
 }
