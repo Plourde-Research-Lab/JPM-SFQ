@@ -1,0 +1,36 @@
+InductEx v5.05.18 (20 September 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse Wi, until 21 Dec 2018. [Basic with Visualization]
+IX2uJTL.GDS -fh 
+Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=1
+Spice netlist IX2uJTL.cir read. Totals: L = 5, k = 0, P = 5.
+Total unique loops identified in netlist = 5
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
+GDS file IX2uJTL.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+10 structures read. Reduced 98 objects to 49 polygons and 10 terminals.
+Top level structure is "2UJTL".
+Terminal blocks = 10; Labels = 10; Extracted Ports = 5
+
+Port                  Positive terminal    Negative terminal
+PL1                   M2,   line along y;  M2,   line along y;
+PL2                   M2,   line along y;  M2,   line along y;
+PL3                   M2,   line along y;  M2,   line along y;
+PL4                   M2,   line along y;  M2,   line along y;
+PBIAS                 M2,   line along x;  M2,   line along x;
+Minimum filaments in FFH = 145945
+
+SVD info: Condition nr. = 15.75; unknowns = 10; rank = 10. 
+
+Impedance  Inductance [pH]     Resistance [Ohm]   AbsDiff   PercDiff
+Name      Design    Extracted Design    Extracted (L only)  (L only)
+L1        125.000   58.3207   --        --        -66.679   -53.34%
+L2        125.000   3.71579   --        --        -121.28   -97.03%
+L3        125.000   3.72502   --        --        -121.27   -97.02%
+L4        125.000   58.2208   --        --        -66.779   -53.42%
+LBIAS     --        11.7866   --        --        +11.787   --%
+Deallocating memory.
+Cycles found in 0.548 seconds.
+SVD solution in 0.144 seconds.
+Job finished in 3568.300 seconds. (1.0 hours.)
+
+WARNING: Your license expires in 21 days.

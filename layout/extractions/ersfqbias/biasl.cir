@@ -1,0 +1,5 @@
+* Bias Inductor for ESFQ bias junctions
+L1  1 2
+
+* Ports
+P1 1 2

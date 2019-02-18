@@ -1,0 +1,33 @@
+InductEx v5.05.18 (20 September 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse Wi, until 21 Dec 2018. [Basic with Visualization]
+bjtl.GDS -fh 
+Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=0.5
+Spice netlist bjtl.cir read. Totals: L = 1, k = 0, P = 2.
+Total unique loops identified in netlist = 0
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
+GDS file bjtl.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+7 structures read. Reduced 8 objects to 7 polygons and 1 terminals.
+Top level structure is "BALLISTICJTL".
+Object in layer I1 moved to TERM layer. (Ppj1)
+Terminal blocks = 2; Labels = 2; Extracted Ports = 2
+
+Port                  Positive terminal    Negative terminal
+PL1                   M2,   line along y;  M0,   same as "+" terminal.
+PJ1                   M2,   polygon;       M1,   same as "+" terminal.
+Minimum filaments in FFH = 9831
+
+Single impedance.
+
+Impedance  Inductance [pH]     Resistance [Ohm]   AbsDiff   PercDiff
+Name      Design    Extracted Design    Extracted (L only)  (L only)
+L1        39.5000   39.4457   --        --        -0.0542   -0.14%
+
+Ports     Design    Extracted AbsDiff   PercDiff
+PJ1       --        2.01160
+Deallocating memory.
+Cycles found in 0.625 seconds.
+SVD solution in 0.119 seconds.
+Job finished in 11.798 seconds.
+
+WARNING: Your license expires in 21 days.

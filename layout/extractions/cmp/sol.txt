@@ -1,0 +1,29 @@
+InductEx v5.05.18 (20 September 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse Wi, until 21 Dec 2018. [Basic with Visualization]
+cmp.GDS -fh 
+Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=0.5
+Spice netlist cmp.cir read. Totals: L = 3, k = 0, P = 8.
+Total unique loops identified in netlist = 0
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
+GDS file cmp.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+8 structures read. Reduced 74 objects to 42 polygons and 3 terminals.
+Top level structure is "CMPV2".
+Object in layer I1 moved to TERM layer. (Pje1)
+Object in layer I1 moved to TERM layer. (Pje2)
+Object in layer I1 moved to TERM layer. (Pjt)
+Object in layer I1 moved to TERM layer. (Pjb)
+Object in layer I1 moved to TERM layer. (Pjq)
+Terminal blocks = 8; Labels = 8; Extracted Ports = 8
+
+Port                  Positive terminal    Negative terminal
+PIN                   M2,   line along y;  M0,   same as "+" terminal.
+POUT                  M2,   line along y;  M0,   same as "+" terminal.
+PLC                   M2,   line along x;  M0,   same as "+" terminal.
+JE1                   M2,   polygon;       M1,   same as "+" terminal.
+JE2                   M2,   polygon;       M1,   same as "+" terminal.
+JT                    M2,   polygon;       M1,   same as "+" terminal.
+JB                    M2,   polygon;       M1,   same as "+" terminal.
+JQ                    M2,   polygon;       M1,   same as "+" terminal.
+Minimum filaments in FFH = 74774
+(81) Error reading solver.exe output file "solver_out.txt". Check if solver is in path.

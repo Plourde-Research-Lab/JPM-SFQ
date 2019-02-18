@@ -1,0 +1,53 @@
+InductEx v5.05.18 (20 September 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse U, until 21 Nov 2019. [Basic with Visualization]
+jpm.GDS -fh 
+Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=0.7
+Spice netlist jpm.cir read. Totals: L = 5, k = 2, P = 9.
+Total unique loops identified in netlist = 5
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
+GDS file jpm.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+12 structures read. Reduced 98 objects to 57 polygons and 5 terminals.
+Top level structure is "COMPARATORJPM".
+Object in layer I1 moved to TERM layer. (Pje1)
+Object in layer I1 moved to TERM layer. (Pje2)
+Object in layer I1 moved to TERM layer. (Pjt)
+Object in layer I1 moved to TERM layer. (Pjb)
+Terminal blocks = 9; Labels = 9; Extracted Ports = 9
+
+Port                  Positive terminal    Negative terminal
+PL1                   M2,   line along y;  M1,   same as "+" terminal.
+PB                    M2,   line along x;  M1,   same as "+" terminal.
+PLC                   M2,   line along x;  M1,   same as "+" terminal.
+PIN                   M2,   line along y;  M0,   same as "+" terminal.
+POUT                  M2,   line along y;  M0,   same as "+" terminal.
+JE1                   M2,   polygon;       M1,   same as "+" terminal.
+JE2                   M2,   polygon;       M1,   same as "+" terminal.
+JT                    M2,   polygon;       M1,   same as "+" terminal.
+JB                    M2,   polygon;       M1,   same as "+" terminal.
+Minimum filaments in FFH = 76287
+
+SVD info: Condition nr. = 551.2; unknowns = 12; rank = 12. 
+
+Impedance  Inductance [pH]     Resistance [Ohm]   AbsDiff   PercDiff
+Name      Design    Extracted Design    Extracted (L only)  (L only)
+L1        1000.00   1019.37   --        --        +19.372   +1.94%
+LB        70.0000   67.1283   --        --        -2.8716   -4.10%
+LC        70.0000   67.4816   --        --        -2.5184   -3.60%
+LIN       5.00000   2.71149   --        --        -2.2885   -45.77%
+LOUT      5.00000   1.30812   --        --        -3.6919   -73.84%
+
+Mutual Inductance [pH]                               Coupling factor
+Name      Design    Extracted AbsDiff   PercDiff            k
+MB        +13.229   +9.0975   -4.1312   +31.23%             +0.0347   
+MC        +13.229   +9.2630   -3.9658   +29.98%             +0.0353   
+
+Ports     Design    Extracted AbsDiff   PercDiff
+JE1       --        3.99350
+JE2       --        3.99350
+JT        --        3.99350
+JB        --        3.99350
+Deallocating memory.
+Cycles found in 0.740 seconds.
+SVD solution in 0.336 seconds.
+Job finished in 1113.700 seconds.

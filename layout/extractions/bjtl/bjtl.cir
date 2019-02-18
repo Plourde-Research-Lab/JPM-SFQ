@@ -1,6 +1,7 @@
 * spice netlist for coupledballisticJTL
 * Inductors
-L1     1   2   41
+L1     1   2   39.5
 * Ports
-P1     1   2
+PL1     1   0
+PJ1     2   3  2
 .end
