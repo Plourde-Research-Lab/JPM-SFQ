@@ -16,26 +16,22 @@
  <dsl-interpreter-name/>
  <text>import pya
 
-# PCell template
-# This macro template provides the framework for a PCell library
 
-# It is recommended to put PCell code into namespaces.
-# TODO: change the module name
-
-# The PCell declaration
-# Each PCell must provide a declaration. It is recommended to use the PCell name as the class name.
-# TODO: change the class name
 class MeanderInductor(pya.PCellDeclarationHelper):
 
   def __init__(self):
 
     # Important: initialize the super class
     super(MeanderInductor, self).__init__()
-
-    self.param("lyr", self.TypeLayer, "Metal Layer", default=pya.LayerInfo(6,0), hidden=True)
+    self.param("Label", self.TypeString, "Label", default='L1')
+    self.param("Lp", self.TypeDouble, "Inductance (pscan units)", default=1.5)
+    self.param("Iu", self.TypeDouble, "PSCAN Scalar (uA)", default=5.0)
+    self.param("usepscan", self.TypeBoolean, "Use pscan val", default=True)
+    self.param("L", self.TypeDouble, "Expected Inductance (pH)", default=50.0)
+    self.param("lyr", self.TypeLayer, "Metal Layer", default=pya.LayerInfo(6,0), hidden=False)
     self.param("dx", self.TypeDouble, "X-size of inductor (um)", default=20.0)
     self.param("dy", self.TypeDouble, "Max Y-size of inductor (um)", default=20.0)
-    self.param("L", self.TypeDouble, "Expected Inductance (pH)", default=50.0)
+    
     self.param("w", self.TypeDouble, "Inductor Width (um)", default=1.0)
     self.param("s", self.TypeDouble, "Inductor Gap (um)", default=1.0)
     self.param("Ll", self.TypeDouble, "Inductance/length at 1um width (pH/um)", default=0.73)
@@ -47,11 +43,15 @@ class MeanderInductor(pya.PCellDeclarationHelper):
 
   def display_text_impl(self):
     # Provide a descriptive text for the cell
-    return "L={:.3f}pH".format(self.L)
+    return "{}={:.3f}pH".format(self.Label, self.L)
   
   def coerce_parameters_impl(self):
-    # TODO: use x to access parameter x and set_x to modify it's value 
-  
+    
+    
+    if self.usepscan:
+      Lu = phi0/(2 * pi) / (self.Iu * 1e-6) # Find current scalar
+      self.L = self.Lp * Lu * 1e12              # Convert to pH
+      
     self.l = self.L/self.Ll
     
     h = 2*self.dy
@@ -104,28 +104,40 @@ class MeanderInductor(pya.PCellDeclarationHelper):
     inductor = pya.Path(pts, self.w/dbu)
     self.cell.shapes(self.lyr_layer).insert(inductor)
     
-  # optional:
-  # def can_create_from_shape_impl(self):
-  #   TODO: determine if we have a shape that we can use to derive the 
-  #   PCell parameters from and return true in that case
-  # 
-  # optional:
-  # def parameters_from_shape_impl(self):
-  #   TODO: change parameters using set_x to reflect the parameter for the
-  #   given shape
-  # 
-  # optional:
-  # def transformation_from_shape_impl(self):
-  #   TODO: return a RBA::Trans object for the initial transformation of
-  #   the instance
-  
-# TODO: add more PCell classes ..
+class PathToInductor(pya.PCellDeclarationHelper):
 
-# The PCell library declaration
-# A PCell library must be declared by deriving a custom class from RBA::Library.
-# The main purpose of this class is to provide the PCell declarations and to register itself
-# with a proper name.
-# TODO: change the class name
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(PathToInductor, self).__init__()
+  
+    self.param("lyr", self.TypeLayer, "Metal Layer", default=pya.LayerInfo(6,0))
+    self.param("Ll", self.TypeDouble, "Inductance/length at 1um width (pH/um)", default=0.37)
+    self.param("ixterm", self.TypeBoolean, "Include Terminals", default=False)    
+    self.param("l", self.TypeDouble, "Inductor Length (um)", readonly=True)
+    
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "L={:.3f}pH".format(self.L)
+    
+  def can_create_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we can use any shape which 
+    # has a finite bounding box
+    return self.shape.is_path()
+  
+  def parameters_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we set r and l from the shape's 
+    # bounding box width and layer
+    # self.tmp = self.shape.bbox().width() * self.layout.dbu / 2
+    self.l = self.layout.get_info(self.layer)
+    self.s = self.shape.path # read selected path obj.
+                      
+  def transformation_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we use the center of the shape's
+    # bounding box to determine the transformation
+    return pya.Trans()
+    
 class MeanderInductors(pya.Library):
 
   def __init__(self):

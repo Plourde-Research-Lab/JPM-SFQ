@@ -40,10 +40,11 @@ class Via_M2_M1(pya.PCellDeclarationHelper):
 
     # declare the parameters
     #self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
-    self.param("s", self.TypeDouble, "Size", default = 2)
-    self.param("l2", self.TypeLayer, "Layer2", default=pya.LayerInfo(6,0))
-    self.param("l1", self.TypeLayer, "Layer1", default=pya.LayerInfo(1,0))
-    self.param("d1", self.TypeLayer, "Dielectric", default=pya.LayerInfo(3,0))
+    self.param("x", self.TypeDouble, "XSize", default = 2)
+    self.param("y", self.TypeDouble, "YSize", default=2)
+    self.param("m2", self.TypeLayer, "M2", default=pya.LayerInfo(6,0), readonly=True)
+    self.param("m1", self.TypeLayer, "M1", default=pya.LayerInfo(1,0), readonly=True)
+    self.param("i1", self.TypeLayer, "I1", default=pya.LayerInfo(3,0), readonly=True)
     #self.param("r", self.TypeDouble, "Radius", default = 0.1)
     #self.param("n", self.TypeInt, "Number of points", default = 64)     
     # this hidden parameter is used to determine whether the radius has changed
@@ -53,7 +54,7 @@ class Via_M2_M1(pya.PCellDeclarationHelper):
 
   def display_text_impl(self):
     # Provide a descriptive text for the cell
-    return "Via(s=" + str(self.s) + ", M2-M1)"
+    return "Vias(x={},y={} M2-M1)".format(self.x, self.y)
   
   def coerce_parameters_impl(self):
   
@@ -71,7 +72,8 @@ class Via_M2_M1(pya.PCellDeclarationHelper):
   def parameters_from_shape_impl(self):
     # Implement the "Create PCell from shape" protocol: we set r and l from the shape's 
     # bounding box width and layer
-    self.s = self.shape.bbox().width() * self.layout.dbu
+    self.x = self.shape.bbox().width() * self.layout.dbu
+    self.y = self.shape.bbox().height() * self.layout.dbu
   
   def transformation_from_shape_impl(self):
     # Implement the "Create PCell from shape" protocol: we use the center of the shape's
@@ -83,18 +85,18 @@ class Via_M2_M1(pya.PCellDeclarationHelper):
     # This is the main part of the implementation: create the layout
 
     # fetch the parameters
-    s_dbu = self.s / self.layout.dbu
-    d_dbu = (self.s+1)/self.layout.dbu
-    s2_dbu = (self.s+2)/self.layout.dbu
+    x_dbu, y_dbu = self.x / self.layout.dbu, self.y / self.layout.dbu
+    ix_dbu, iy_dbu = (self.x-1)/self.layout.dbu, (self.y-1)/self.layout.dbu
+    x2_dbu, y2_dbu = (self.x)/self.layout.dbu, (self.y)/self.layout.dbu
     
     # create the Top Electrode
-    self.cell.shapes(self.l2_layer).insert(pya.Box.new(-s_dbu/2., -s_dbu/2. , s_dbu/2, s_dbu/2))
+    self.cell.shapes(self.m2_layer).insert(pya.Box.new(-x_dbu/2., -y_dbu/2. , x_dbu/2, y_dbu/2))
 
     # create the Dielectric Via
-    self.cell.shapes(self.d1_layer).insert(pya.Box.new(-d_dbu/2, -d_dbu/2, d_dbu/2, d_dbu/2))
+    self.cell.shapes(self.i1_layer).insert(pya.Box.new(-ix_dbu/2, -iy_dbu/2, ix_dbu/2, iy_dbu/2))
     
     # create the Bottom Electrode
-    self.cell.shapes(self.l1_layer).insert(pya.Box.new(-s2_dbu/2, -s2_dbu/2, s2_dbu/2, s2_dbu/2))
+    self.cell.shapes(self.m1_layer).insert(pya.Box.new(-x2_dbu/2, -y2_dbu/2, x2_dbu/2, y2_dbu/2))
 
 class Via_M3_M2(pya.PCellDeclarationHelper):
   """
@@ -107,21 +109,15 @@ class Via_M3_M2(pya.PCellDeclarationHelper):
     super(Via_M3_M2, self).__init__()
 
     # declare the parameters
-    #self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
-    self.param("s", self.TypeDouble, "Size", default = 2)
-    self.param("l2", self.TypeLayer, "Layer2", default=pya.LayerInfo(10,0))
-    self.param("l1", self.TypeLayer, "Layer1", default=pya.LayerInfo(6,0))
-    self.param("d1", self.TypeLayer, "Dielectric", default=pya.LayerInfo(8,0))
-    #self.param("r", self.TypeDouble, "Radius", default = 0.1)
-    #self.param("n", self.TypeInt, "Number of points", default = 64)     
-    # this hidden parameter is used to determine whether the radius has changed
-    # or the "s" handle has been moved
-    #self.param("ru", self.TypeDouble, "Radius", default = 0.0, hidden = True)
-    #self.param("rd", self.TypeDouble, "Double radius", readonly = True)
+    self.param("x", self.TypeDouble, "XSize", default = 2)
+    self.param("y", self.TypeDouble, "YSize", default=2)
+    self.param("m3", self.TypeLayer, "M3", default=pya.LayerInfo(10,0), readonly=True)
+    self.param("m2", self.TypeLayer, "M2", default=pya.LayerInfo(6,0), readonly=True)
+    self.param("i2", self.TypeLayer, "I1", default=pya.LayerInfo(8,0), readonly=True)
 
   def display_text_impl(self):
     # Provide a descriptive text for the cell
-    return "Via(s=" + str(self.s) + ", M3-M2)"
+    return "Vias(x={},y={} M2-M1)".format(self.x, self.y)
   
   def coerce_parameters_impl(self):
   
@@ -139,7 +135,8 @@ class Via_M3_M2(pya.PCellDeclarationHelper):
   def parameters_from_shape_impl(self):
     # Implement the "Create PCell from shape" protocol: we set r and l from the shape's 
     # bounding box width and layer
-    self.s = self.shape.bbox().width() * self.layout.dbu
+    self.x = self.shape.bbox().width() * self.layout.dbu
+    self.y = self.shape.bbox().height() * self.layout.dbu
   
   def transformation_from_shape_impl(self):
     # Implement the "Create PCell from shape" protocol: we use the center of the shape's
@@ -151,18 +148,18 @@ class Via_M3_M2(pya.PCellDeclarationHelper):
     # This is the main part of the implementation: create the layout
 
     # fetch the parameters
-    s_dbu = self.s / self.layout.dbu
-    d_dbu = (self.s+1)/self.layout.dbu
-    s2_dbu = (self.s+2)/self.layout.dbu
+    x_dbu, y_dbu = self.x / self.layout.dbu, self.y / self.layout.dbu
+    ix_dbu, iy_dbu = (self.x+1)/self.layout.dbu, (self.y + 1)/self.layout.dbu
+    x2_dbu, y2_dbu = (self.x + 2)/self.layout.dbu, (self.y + 2)/self.layout.dbu
     
     # create the Top Electrode
-    self.cell.shapes(self.l2_layer).insert(pya.Box.new(-s_dbu/2., -s_dbu/2. , s_dbu/2, s_dbu/2))
+    self.cell.shapes(self.m3_layer).insert(pya.Box.new(-x_dbu/2., -y_dbu/2. , x_dbu/2, y_dbu/2))
 
     # create the Dielectric Via
-    self.cell.shapes(self.d1_layer).insert(pya.Box.new(-d_dbu/2, -d_dbu/2, d_dbu/2, d_dbu/2))
+    self.cell.shapes(self.i2_layer).insert(pya.Box.new(-ix_dbu/2, -iy_dbu/2, ix_dbu/2, iy_dbu/2))
     
     # create the Bottom Electrode
-    self.cell.shapes(self.l1_layer).insert(pya.Box.new(-s2_dbu/2, -s2_dbu/2, s2_dbu/2, s2_dbu/2))
+    self.cell.shapes(self.m2_layer).insert(pya.Box.new(-x2_dbu/2, -y2_dbu/2, x2_dbu/2, y2_dbu/2))
 
 
 class Via_M3_M0(pya.PCellDeclarationHelper):
@@ -177,18 +174,18 @@ class Via_M3_M0(pya.PCellDeclarationHelper):
 
     # declare the parameters
     #self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
-    self.param("s", self.TypeDouble, "Length", default = 2.0)
-    self.param("l_m0", self.TypeLayer, "M0 Layer", default=pya.LayerInfo(30,0), hidden=True)
-    self.param("l_m1", self.TypeLayer, "M1 Layer", default=pya.LayerInfo(1,0), hidden=True)
-    self.param("l_m2", self.TypeLayer, "M2 Layer", default=pya.LayerInfo(6,0), hidden=True)
-    self.param("l_m3", self.TypeLayer, "M3 Layer", default=pya.LayerInfo(10,0), hidden=True)
-    self.param("l_i0", self.TypeLayer, "I0 Layer", default=pya.LayerInfo(31,0), hidden=True)
-    self.param("l_i1", self.TypeLayer, "I1 Layer", default=pya.LayerInfo(3,0), hidden=True)
-    self.param("l_i2", self.TypeLayer, "I2 Layer", default=pya.LayerInfo(8,0), hidden=True)
+    self.param("s", self.TypeDouble, "Width", default = 2.0)
+    self.param("m0", self.TypeLayer, "M0 Layer", default=pya.LayerInfo(30,0), hidden=True)
+    self.param("m1", self.TypeLayer, "M1 Layer", default=pya.LayerInfo(1,0), hidden=True)
+    self.param("m2", self.TypeLayer, "M2 Layer", default=pya.LayerInfo(6,0), hidden=True)
+    self.param("m3", self.TypeLayer, "M3 Layer", default=pya.LayerInfo(10,0), hidden=True)
+    self.param("i0", self.TypeLayer, "I0 Layer", default=pya.LayerInfo(31,0), hidden=True)
+    self.param("i1", self.TypeLayer, "I1 Layer", default=pya.LayerInfo(3,0), hidden=True)
+    self.param("i2", self.TypeLayer, "I2 Layer", default=pya.LayerInfo(8,0), hidden=True)
 
   def display_text_impl(self):
     # Provide a descriptive text for the cell
-    return "Via(s={} M3-M0)".format(self.s)
+    return "Via(s={})".format(self.s)
   
   def coerce_parameters_impl(self):
   
@@ -227,19 +224,19 @@ class Via_M3_M0(pya.PCellDeclarationHelper):
     
     pts = [pya.Point.new(-l/dbu, 0), pya.Point.new(l/dbu, 0)]
     path = pya.Path(pts, 1.0/dbu)
-    self.cell.shapes(self.l_i0_layer).insert(path)
+    self.cell.shapes(self.i0_layer).insert(path)
     
     # I1 Via
     l += 0.4/2
     pts = [pya.Point.new(-l/dbu, 0), pya.Point.new(l/dbu, 0)]
     path = pya.Path(pts, 1.4/dbu)
-    self.cell.shapes(self.l_i1_layer).insert(path)    
+    self.cell.shapes(self.i1_layer).insert(path)    
     
     # I2 Via
     l += 0.4/2
     pts = [pya.Point.new(-l/dbu, 0), pya.Point.new(l/dbu, 0)]
     path = pya.Path(pts, 1.8/dbu)
-    self.cell.shapes(self.l_i2_layer).insert(path)    
+    self.cell.shapes(self.i2_layer).insert(path)    
     
     #Metal Contact
     l += 0.5
@@ -247,13 +244,13 @@ class Via_M3_M0(pya.PCellDeclarationHelper):
     mpath = pya.Path(mpts, 2.8/dbu)
     
       # M1 Contact
-    self.cell.shapes(self.l_m1_layer).insert(mpath)
+    self.cell.shapes(self.m1_layer).insert(mpath)
         
     # M2 Contact
-    self.cell.shapes(self.l_m2_layer).insert(mpath)    
+    self.cell.shapes(self.m2_layer).insert(mpath)    
  
      # M3 Contact
-    self.cell.shapes(self.l_m3_layer).insert(mpath)  
+    self.cell.shapes(self.m3_layer).insert(mpath)  
 
 
 class Vias(pya.Library):
