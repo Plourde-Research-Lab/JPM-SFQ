@@ -1,0 +1,37 @@
+(ExpressProject "Design10"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\comparatorv2.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "z:\chip-design\jpm-sfq\comparatorv2\orcad\comparatorv2.dsn")
+      (Path "Design Resources"
+         "z:\chip-design\jpm-sfq\comparatorv2\orcad\comparatorv2.dsn" "ROOT"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 657"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 338 2513 338 1034")
+        (Scroll "-403 132")
+        (Zoom "136")
+        (Occurrence "/"))
+      (Path "Z:\CHIP-DESIGN\JPM-SFQ\COMPARATORV2\ORCAD\COMPARATORV2.DSN")
+      (Schematic "ROOT")
+      (Page "ROOT")))
+  (MPSSessionName "caleb"))
