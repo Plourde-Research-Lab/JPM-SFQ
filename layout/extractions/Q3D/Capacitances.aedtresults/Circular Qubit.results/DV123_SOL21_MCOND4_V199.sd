@@ -1,0 +1,14 @@
+$begin 'MatrixData'
+	Type='Cond'
+	HasTransMatrix=false
+	Frequency=4500000000
+	SolutionType='Adaptive'
+	Names(2)
+	$begin 'Matrix'
+		m=1
+		n=1
+		$begin 'r0'
+			c(0)
+		$end 'r0'
+	$end 'Matrix'
+$end 'MatrixData'

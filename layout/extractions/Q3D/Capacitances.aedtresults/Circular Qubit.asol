@@ -1,0 +1,390 @@
+$begin '$base_index$'
+  $begin 'properties'
+    all_levels=000000000000
+    time(year=000000002019, month=000000000001, day=000000000003, hour=000000000012, min=000000000016, sec=000000000002)
+    version=000000000000
+  $end 'properties'
+  $begin '$base_index$'
+    $index$(pos=000000020343, lin=000000000365, lvl=000000000000)
+  $end '$base_index$'
+$end '$base_index$'
+$begin 'SolutionBlock31'
+	SimSetupID=19
+	SimSetupName='CG'
+	VersionID=199
+	SolveSetupID=0
+	$begin 'CapSurfCurrentPassNum'
+		'CapSurf.CP'(VID=123, Ver=199, P=10)
+	$end 'CapSurfCurrentPassNum'
+	$begin 'CapSurfCurrentMeshes'
+		'CSM.cmesh'(VID=123, Ver=199, Dir='DV123_S19_V199_CSM.cmesh/')
+	$end 'CapSurfCurrentMeshes'
+	$begin 'CapSurfAdpFiles'
+		IDDblMap(67, 1, 72, 2, 76, 3, 80, 4, 84, 5, 88, 6, 92, 7, 96, 8, 100, 9, 104, 10)
+		$begin 'DataMap'
+			VID=123
+			Ver=199
+			'CSM.ADP'(DblID=67, Dir='DV123_S19_V199_P67_CSM.ADP/')
+			'CSM.ADP'(DblID=72, Dir='DV123_S19_V199_P72_CSM.ADP/')
+			'CSM.ADP'(DblID=76, Dir='DV123_S19_V199_P76_CSM.ADP/')
+			'CSM.ADP'(DblID=80, Dir='DV123_S19_V199_P80_CSM.ADP/')
+			'CSM.ADP'(DblID=84, Dir='DV123_S19_V199_P84_CSM.ADP/')
+			'CSM.ADP'(DblID=88, Dir='DV123_S19_V199_P88_CSM.ADP/')
+			'CSM.ADP'(DblID=92, Dir='DV123_S19_V199_P92_CSM.ADP/')
+			'CSM.ADP'(DblID=96, Dir='DV123_S19_V199_P96_CSM.ADP/')
+			'CSM.ADP'(DblID=100, Dir='DV123_S19_V199_P100_CSM.ADP/')
+			'CSM.ADP'(DblID=104, Dir='DV123_S19_V199_P104_CSM.ADP/')
+		$end 'DataMap'
+	$end 'CapSurfAdpFiles'
+	$begin 'SU'
+		$begin 'SubData'
+			ID=1
+			SU(VID=123, Ver=199, File='DV123_S19_SD1_V199.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=2
+			SU(VID=123, Ver=199, File='DV123_S19_SD2_V199.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=3
+			SU(VID=123, Ver=199, File='DV123_S19_SD3_V199.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=4
+			SU(VID=123, Ver=199, File='DV123_S19_SD4_V199.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=5
+			SU(VID=123, Ver=199, File='DV123_S19_SD5_V199.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=6
+			SU(VID=123, Ver=199, File='DV123_S19_SD6_V199.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=7
+			SU(VID=123, Ver=199, File='DV123_S19_SD7_V199.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=8
+			SU(VID=123, Ver=199, File='DV123_S19_SD8_V199.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=9
+			SU(VID=123, Ver=199, File='DV123_S19_SD9_V199.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=10
+			SU(VID=123, Ver=199, File='DV123_S19_SD10_V199.su')
+		$end 'SubData'
+	$end 'SU'
+	$begin 'SU'
+	$end 'SU'
+	$begin 'SU'
+	$end 'SU'
+	$begin 'CapLastPassNumbers'
+		'Cap.LP'(VID=123, Ver=199, P=10)
+	$end 'CapLastPassNumbers'
+	$begin 'Profiles'
+		PRF(VID=123, Ver=199, File='DV123_S19_V199.profile')
+	$end 'Profiles'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=56001
+			MI(VID=123, Ver=199, Dir='DV123_S19_MI56001_V199.sd/')
+		$end 'SubData'
+	$end 'MI'
+$end 'SolutionBlock31'
+$begin 'BlockMapName'
+	FileHeader='SolutionBlock1'
+	'SolutionKey(SimSetup=19, Instance=\'$Cr=\\\'287.5fF\\\' C_s=\\\'145um\\\' cavg=\\\'6um\\\' cavw=\\\'125um\\\' dz=\\\'0.0062mm\\\' gap=\\\'5um\\\' h=\\\'500um\\\' i0t=\\\'500nm\\\' m3_t=\\\'0.6um\\\' qm0_t=\\\'0.1um\\\' qubit_gap=\\\'40um\\\' radius=\\\'100um\\\' subw=\\\'500um\\\' t=\\\'0.1um\\\' w=\\\'10um\\\'\', Solution=-3, VersionID=199)'='SolutionBlock32'
+	'SolutionKey(SimSetup=19, Instance=\'SetupDefinition\', Solution=-1, VersionID=199)'='SolutionBlock31'
+	'SolutionKey(SimSetup=19, Instance=\'SolutionDefinition\', Solution=20, VersionID=199)'='SolutionBlock29'
+	'SolutionKey(SimSetup=19, Instance=\'SolutionDefinition\', Solution=21, VersionID=199)'='SolutionBlock30'
+$end 'BlockMapName'
+$begin 'SolutionBlock30'
+	SolutionName='AdaptivePass'
+	SolutionID=21
+	V=199
+	$begin 'States'
+		F(VID=123, Ver=199)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(4500000000)
+		SolutionType=6
+		CenterFreq=0
+	$end 'Definition'
+	SweepID=-1
+	$begin 'MCAP'
+		$begin 'SubData'
+			ID=1
+			MCAP(VID=123, Ver=199, File='DV123_SOL21_MCAP1_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=2
+			MCAP(VID=123, Ver=199, File='DV123_SOL21_MCAP2_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=3
+			MCAP(VID=123, Ver=199, File='DV123_SOL21_MCAP3_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=4
+			MCAP(VID=123, Ver=199, File='DV123_SOL21_MCAP4_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=5
+			MCAP(VID=123, Ver=199, File='DV123_SOL21_MCAP5_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=6
+			MCAP(VID=123, Ver=199, File='DV123_SOL21_MCAP6_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=7
+			MCAP(VID=123, Ver=199, File='DV123_SOL21_MCAP7_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=8
+			MCAP(VID=123, Ver=199, File='DV123_SOL21_MCAP8_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=9
+			MCAP(VID=123, Ver=199, File='DV123_SOL21_MCAP9_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=10
+			MCAP(VID=123, Ver=199, File='DV123_SOL21_MCAP10_V199.sd')
+		$end 'SubData'
+	$end 'MCAP'
+	$begin 'MCOND'
+		$begin 'SubData'
+			ID=1
+			MCOND(VID=123, Ver=199, File='DV123_SOL21_MCOND1_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=2
+			MCOND(VID=123, Ver=199, File='DV123_SOL21_MCOND2_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=3
+			MCOND(VID=123, Ver=199, File='DV123_SOL21_MCOND3_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=4
+			MCOND(VID=123, Ver=199, File='DV123_SOL21_MCOND4_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=5
+			MCOND(VID=123, Ver=199, File='DV123_SOL21_MCOND5_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=6
+			MCOND(VID=123, Ver=199, File='DV123_SOL21_MCOND6_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=7
+			MCOND(VID=123, Ver=199, File='DV123_SOL21_MCOND7_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=8
+			MCOND(VID=123, Ver=199, File='DV123_SOL21_MCOND8_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=9
+			MCOND(VID=123, Ver=199, File='DV123_SOL21_MCOND9_V199.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=10
+			MCOND(VID=123, Ver=199, File='DV123_SOL21_MCOND10_V199.sd')
+		$end 'SubData'
+	$end 'MCOND'
+$end 'SolutionBlock30'
+$begin 'SolutionBlock29'
+	SolutionName='LastAdaptive'
+	SolutionID=20
+	V=199
+	$begin 'States'
+		F(VID=123, Ver=199)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(4500000000)
+		SolutionType=6
+		CenterFreq=0
+	$end 'Definition'
+	SweepID=-1
+	$begin 'MCAP'
+		$begin 'SubData'
+			ID=0
+			MCAP(VID=123, Ver=199, File='DV123_SOL20_MCAP0_V199.sd')
+		$end 'SubData'
+	$end 'MCAP'
+	$begin 'MCOND'
+		$begin 'SubData'
+			ID=0
+			MCOND(VID=123, Ver=199, File='DV123_SOL20_MCOND0_V199.sd')
+		$end 'SubData'
+	$end 'MCOND'
+$end 'SolutionBlock29'
+$begin 'SolutionBlock32'
+	$begin '56001'
+		ConvSetupName='CapConv'
+		MaxPasses='10'
+		MinPasses='1'
+		ConvTarget='1'
+		ConvTargetConsecPasses='N/A'
+		ConvCurrentConsecPasses='N/A'
+		c(tri=291, p=1)
+		c(tri=715, delta=100, p=2)
+		c(tri=1996, delta=18.0256, p=3)
+		c(tri=2611, delta=54.8247, p=4)
+		c(tri=3308, delta=22.9103, p=5)
+		c(tri=4208, delta=21.9996, p=6)
+		c(tri=5278, delta=13.4281, p=7)
+		c(tri=6477, delta=4.72295, p=8)
+		c(tri=7960, delta=1.84776, p=9)
+		c(tri=9699, delta=6.46281, p=10)
+	$end '56001'
+$end 'SolutionBlock32'
+$begin 'SolutionBlock1'
+	ProductName='Q3D Extractor'
+	CircuitName='Circular Qubit'
+	VersionID=11
+	PostProcess=false
+	LossLess=true
+	NextUniqueID=302
+	MoveBackwards=false
+	$begin 'VariationIDs'
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'0.0062mm\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'100um\' subw=\'250um\' t=\'0.1um\' w=\'10um\'', ID=22)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'100um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=129)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'10um\' subw=\'250um\' t=\'0.1um\' w=\'10um\'', ID=107)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'20um\' subw=\'250um\' t=\'0.1um\' w=\'10um\'', ID=109)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'30um\' subw=\'250um\' t=\'0.1um\' w=\'10um\'', ID=110)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'40um\' subw=\'250um\' t=\'0.1um\' w=\'10um\'', ID=111)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'50um\' subw=\'250um\' t=\'0.1um\' w=\'10um\'', ID=112)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'60um\' subw=\'250um\' t=\'0.1um\' w=\'10um\'', ID=113)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'70um\' subw=\'250um\' t=\'0.1um\' w=\'10um\'', ID=114)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'80um\' subw=\'250um\' t=\'0.1um\' w=\'10um\'', ID=115)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'10um\' radius=\'90um\' subw=\'250um\' t=\'0.1um\' w=\'10um\'', ID=116)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'20um\' radius=\'100um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=130)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'30um\' radius=\'100um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=131)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'100um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=123)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'120um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=124)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'140um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=125)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'160um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=126)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'180um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=127)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'200um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=128)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'20um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=119)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'40um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=120)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'60um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=121)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'80um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=122)
+		Map(V='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'6.2um\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'50um\' radius=\'100um\' subw=\'500um\' t=\'0.1um\' w=\'10um\'', ID=132)
+	$end 'VariationIDs'
+	VersionID2=17
+	$begin 'InitialSurfaceMeshes'
+		SM(VID=22, Ver=11, Dir='DV22_V11_SM.imesh/')
+		SM(VID=123, Ver=11, Dir='DV123_V11_SM.imesh/')
+		SM(VID=128, Ver=11, Dir='DV128_V11_SM.imesh/')
+	$end 'InitialSurfaceMeshes'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=56001
+			MI(VID=22, Ver=11, Dir='DV22_MI56001_V11.sd/')
+			MI(VID=123, Ver=11, Dir='DV123_MI56001_V11.sd/')
+			MI(VID=128, Ver=11, Dir='DV128_MI56001_V11.sd/')
+		$end 'SubData'
+	$end 'MI'
+$end 'SolutionBlock1'
+$begin 'OptimetricsResult2'
+	V=2
+	svi('$Cr', '287.5fF')
+	svi('C_s', '145um')
+	svi('cavg', '6um')
+	svi('cavw', '125um')
+	svi('gap', '5um')
+	svi('h', '500um')
+	svi('i0t', '500nm')
+	svi('m3_t', '0.6um')
+	svi('qm0_t', '0.1um')
+	vi('qubit_gap', '40um', '40um', '40um')
+	svi('radius', '100um')
+	svi('subw', '500um')
+	svi('t', '0.1um')
+	svi('w', '10um')
+	gver(0)
+	gi('C(Cylinder1,Cylinder1): Freq(4.5GHz): Original', 20, 0, 'pF')
+	var(2.875000000000000e-13, 1.450000000000000e-04, 6.000000000000000e-06, 1.250000000000000e-04, 5.000000000000000e-06, 5.000000000000000e-04, 5.000000000000001e-07, 6.000000000000000e-07, 1.000000000000000e-07, 9.999999999999999e-06, 9.999999999999999e-05, 5.000000000000000e-04, 1.000000000000000e-07, 9.999999999999999e-06)
+	gvs(9.999999999999999e-06, 1.224191000000000e-13)
+	var(2.875000000000000e-13, 1.450000000000000e-04, 6.000000000000000e-06, 1.250000000000000e-04, 5.000000000000000e-06, 5.000000000000000e-04, 5.000000000000001e-07, 6.000000000000000e-07, 1.000000000000000e-07, 2.000000000000000e-05, 9.999999999999999e-05, 5.000000000000000e-04, 1.000000000000000e-07, 9.999999999999999e-06)
+	gvs(2.000000000000000e-05, 1.014258000000000e-13)
+	var(2.875000000000000e-13, 1.450000000000000e-04, 6.000000000000000e-06, 1.250000000000000e-04, 5.000000000000000e-06, 5.000000000000000e-04, 5.000000000000001e-07, 6.000000000000000e-07, 1.000000000000000e-07, 3.000000000000000e-05, 9.999999999999999e-05, 5.000000000000000e-04, 1.000000000000000e-07, 9.999999999999999e-06)
+	gvs(3.000000000000000e-05, 9.866443000000000e-14)
+	var(2.875000000000000e-13, 1.450000000000000e-04, 6.000000000000000e-06, 1.250000000000000e-04, 5.000000000000000e-06, 5.000000000000000e-04, 5.000000000000001e-07, 6.000000000000000e-07, 1.000000000000000e-07, 4.000000000000000e-05, 9.999999999999999e-05, 5.000000000000000e-04, 1.000000000000000e-07, 9.999999999999999e-06)
+	gvs(4.000000000000000e-05, 0.000000000000000e+00)
+	var(2.875000000000000e-13, 1.450000000000000e-04, 6.000000000000000e-06, 1.250000000000000e-04, 5.000000000000000e-06, 5.000000000000000e-04, 5.000000000000001e-07, 6.000000000000000e-07, 1.000000000000000e-07, 5.000000000000000e-05, 9.999999999999999e-05, 5.000000000000000e-04, 1.000000000000000e-07, 9.999999999999999e-06)
+	gvs(5.000000000000000e-05, 9.598763000000001e-14)
+$end 'OptimetricsResult2'
+$begin 'ResponseSurfaceCache'
+	ResponseSurfaceCache()
+$end 'ResponseSurfaceCache'
+$begin 'OptimetricsResult1'
+	V=2
+	svi('$Cr', '287.5fF')
+	svi('C_s', '145um')
+	svi('cavg', '6um')
+	svi('cavw', '125um')
+	svi('gap', '5um')
+	svi('h', '500um')
+	svi('i0t', '500nm')
+	svi('m3_t', '0.6um')
+	svi('qm0_t', '0.1um')
+	svi('qubit_gap', '40um')
+	vi('radius', '200um', '200um', '200um')
+	svi('subw', '500um')
+	svi('t', '0.1um')
+	svi('w', '10um')
+	gver(0)
+	gi('C(Cylinder1,Cylinder1): Freq(4.5GHz): Original', 20, 0, 'pF')
+	var(2.875000000000000e-013, 1.450000000000000e-004, 6.000000000000000e-006, 1.250000000000000e-004, 5.000000000000000e-006, 5.000000000000000e-004, 5.000000000000001e-007, 6.000000000000000e-007, 1.000000000000000e-007, 4.000000000000000e-005, 2.000000000000000e-005, 5.000000000000000e-004, 1.000000000000000e-007, 9.999999999999999e-006)
+	gvs(2.000000000000000e-005, 1.204589000000000e-014)
+	var(2.875000000000000e-013, 1.450000000000000e-004, 6.000000000000000e-006, 1.250000000000000e-004, 5.000000000000000e-006, 5.000000000000000e-004, 5.000000000000001e-007, 6.000000000000000e-007, 1.000000000000000e-007, 4.000000000000000e-005, 4.000000000000000e-005, 5.000000000000000e-004, 1.000000000000000e-007, 9.999999999999999e-006)
+	gvs(4.000000000000000e-005, 2.944753000000000e-014)
+	var(2.875000000000000e-013, 1.450000000000000e-004, 6.000000000000000e-006, 1.250000000000000e-004, 5.000000000000000e-006, 5.000000000000000e-004, 5.000000000000001e-007, 6.000000000000000e-007, 1.000000000000000e-007, 4.000000000000000e-005, 6.000000000000000e-005, 5.000000000000000e-004, 1.000000000000000e-007, 9.999999999999999e-006)
+	gvs(6.000000000000000e-005, 5.175188000000000e-014)
+	var(2.875000000000000e-013, 1.450000000000000e-004, 6.000000000000000e-006, 1.250000000000000e-004, 5.000000000000000e-006, 5.000000000000000e-004, 5.000000000000001e-007, 6.000000000000000e-007, 1.000000000000000e-007, 4.000000000000000e-005, 7.999999999999999e-005, 5.000000000000000e-004, 1.000000000000000e-007, 9.999999999999999e-006)
+	gvs(7.999999999999999e-005, 7.830203000000001e-014)
+	var(2.875000000000000e-013, 1.450000000000000e-004, 6.000000000000000e-006, 1.250000000000000e-004, 5.000000000000000e-006, 5.000000000000000e-004, 5.000000000000001e-007, 6.000000000000000e-007, 1.000000000000000e-007, 4.000000000000000e-005, 9.999999999999999e-005, 5.000000000000000e-004, 1.000000000000000e-007, 9.999999999999999e-006)
+	gvs(9.999999999999999e-005, 9.737325000000000e-014)
+	var(2.875000000000000e-013, 1.450000000000000e-004, 6.000000000000000e-006, 1.250000000000000e-004, 5.000000000000000e-006, 5.000000000000000e-004, 5.000000000000001e-007, 6.000000000000000e-007, 1.000000000000000e-007, 4.000000000000000e-005, 1.200000000000000e-004, 5.000000000000000e-004, 1.000000000000000e-007, 9.999999999999999e-006)
+	gvs(1.200000000000000e-004, 0.000000000000000e+000)
+	var(2.875000000000000e-013, 1.450000000000000e-004, 6.000000000000000e-006, 1.250000000000000e-004, 5.000000000000000e-006, 5.000000000000000e-004, 5.000000000000001e-007, 6.000000000000000e-007, 1.000000000000000e-007, 4.000000000000000e-005, 1.400000000000000e-004, 5.000000000000000e-004, 1.000000000000000e-007, 9.999999999999999e-006)
+	gvs(1.400000000000000e-004, 0.000000000000000e+000)
+	var(2.875000000000000e-013, 1.450000000000000e-004, 6.000000000000000e-006, 1.250000000000000e-004, 5.000000000000000e-006, 5.000000000000000e-004, 5.000000000000001e-007, 6.000000000000000e-007, 1.000000000000000e-007, 4.000000000000000e-005, 1.600000000000000e-004, 5.000000000000000e-004, 1.000000000000000e-007, 9.999999999999999e-006)
+	gvs(1.600000000000000e-004, 0.000000000000000e+000)
+	var(2.875000000000000e-013, 1.450000000000000e-004, 6.000000000000000e-006, 1.250000000000000e-004, 5.000000000000000e-006, 5.000000000000000e-004, 5.000000000000001e-007, 6.000000000000000e-007, 1.000000000000000e-007, 4.000000000000000e-005, 1.800000000000000e-004, 5.000000000000000e-004, 1.000000000000000e-007, 9.999999999999999e-006)
+	gvs(1.800000000000000e-004, 0.000000000000000e+000)
+	var(2.875000000000000e-013, 1.450000000000000e-004, 6.000000000000000e-006, 1.250000000000000e-004, 5.000000000000000e-006, 5.000000000000000e-004, 5.000000000000001e-007, 6.000000000000000e-007, 1.000000000000000e-007, 4.000000000000000e-005, 2.000000000000000e-004, 5.000000000000000e-004, 1.000000000000000e-007, 9.999999999999999e-006)
+	gvs(2.000000000000000e-004, 0.000000000000000e+000)
+$end 'OptimetricsResult1'
+$begin 'OptimetricsResults'
+	'0:0'='OptimetricsResult1'
+	'1:0'='OptimetricsResult2'
+$end 'OptimetricsResults'
+$begin '$index$'
+	$begin '$index$'
+		OptimetricsResults(pos=20233, lin=361, lvl=0)
+		BlockMapName(pos=2851, lin=88, lvl=0)
+		SolutionBlock32(pos=6621, lin=221, lvl=0)
+		SolutionBlock29(pos=6060, lin=194, lvl=0)
+		SolutionBlock30(pos=3605, lin=95, lvl=0)
+		SolutionBlock31(pos=370, lin=1, lvl=0)
+		SolutionBlock1(pos=7158, lin=241, lvl=0)
+		OptimetricsResult2(pos=13421, lin=290, lvl=0)
+		ResponseSurfaceCache(pos=15760, lin=319, lvl=0)
+		OptimetricsResult1(pos=15842, lin=322, lvl=0)
+		$base_index$(pos=0, lin=1, lvl=0)
+		$index$(pos=20343, lin=365, lvl=0)
+	$end '$index$'
+$end '$index$'
