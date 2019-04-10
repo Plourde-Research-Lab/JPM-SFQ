@@ -1,7 +1,0 @@
-CIRCUIT ptl10()
-{
-
-rule ptl(get(1))
-1==1;
-
-}

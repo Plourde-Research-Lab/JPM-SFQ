@@ -1,1 +1,0 @@
-psglobals.OptimizeSimulation=False
