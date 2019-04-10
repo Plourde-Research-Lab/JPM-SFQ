@@ -1,0 +1,21 @@
+CIRCUIT cmp()
+{
+	PARAMETER
+		it=0.7,
+    ib=0.67,
+		j1=0.8,
+		j2=0.2,
+		l1=0.075,
+    M1=0.25,
+    LC=1,
+    LJPM=15,
+    ijpma=0.2;
+
+	EXTERNAL
+		xi=1.0,
+		xl=1.0,
+		xj=1.0;
+
+  INTERNAL
+  	IJPM=copysign(ijpma, sin(3.14*(tcurr)/(tseq/2)));
+}

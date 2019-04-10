@@ -1,8 +1,8 @@
 CIRCUIT jtl()
 {
 	PARAMETER
-		i0=2.0,
-		j0=2.0,
+		i1=2.0,
+		j1=2.0,
 		j1=2.0,
 		l1=0.75;
 
@@ -12,6 +12,6 @@ CIRCUIT jtl()
 		xj=1.0;
 
 	RULE GO(GET(IN))
-		[INC(J0),INC(J1)],
+		[INC(J1),INC(J2)],
 		SET(OUT);
 }

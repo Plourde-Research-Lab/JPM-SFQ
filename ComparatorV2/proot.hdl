@@ -1,0 +1,22 @@
+PARAMETER
+	tseq=1000,
+	wbc=5.6, wvg = 4.13, wvrat = 0.7, wrrat = 0.1,
+	xi = 1.0, xj = 1.0, xl = 1.0, xr = 1.0, xm=1.0;
+
+circuit proot()
+{
+
+PARAMETER
+  p=4;
+
+INTERNAL
+  td=10,
+	tp=tseq/p,
+	p1=psfq(tp,5,td);
+
+EXTERNAL
+	xst=0,
+	xr=0,
+	lw=0,
+	rw=0;
+}

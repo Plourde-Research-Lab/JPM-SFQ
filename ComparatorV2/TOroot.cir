@@ -1,0 +1,64 @@
+* Compartor simulation with flux simulating JPM
+* TAO 11/16/18
+*
+*.tran 5p 100n
+
+
+.tran 1p 20n uic
+.options ysep
+
+V0 7 0 pulse(0 1mV 2ps 2ps 2ps 20ps .5ns)
+R1 7 6 50
+X0 6 5 JTL
+X1 5 3 JTL
+X2 3 10 JTL
+X3 10 11 CMP
+X4 11 12 JTL
+X5 12 15 JTL
+
+.subckt CMP IN OUT
+* escape junctions
+Be1 1 2 102 jjs area=4
+Be2 1 0 103 jjs area=4
+* Bt is top comparator Jj and Bb is bottom Jj
+Bt 2 3 104 jjs area=4
+Bb 3 0 105 jjs area=4
+* Bq quantizing Jj in the SQUID factor of 4 smaller
+Bq 4 0 106 jjs area=1
+
+* top junction bias
+It 0 2 3.5u
+* middle bias between comparator Jjs
+*Ib 3 0 pwl(0 0 5ps -2u 5ns -5u)
+Ibs 3 0 -3.25u
+* field from JPM you can ramp or apply a "Rabi" sinusoid or just static
+*Iq 5 0 pwl(0 0 20ns 20u)
+IRabi 5 0 sin(0 2u 100meg)
+*Iqs 5 0 20u
+* small input inductances at in and out of cell
+LTin IN 1 5p
+LTout 3 OUT 5p
+*JPM inductance and mutual to LC which is the squid L in the comparator
+K1 LJPM LC 0.25
+LC 3 4 30p
+LJPM 5 0 1.2n
+.ends CMP
+
+.subckt JTL IN OUT
+B0 4 0 100 jjs area=4
+B1 5 0 101 jjs area=4
+*I0 0 3 pwl(0 0 5ps 3u 5ns 5u)
+I0 0 3 3.5u
+LT0 IN 4 125p
+LT1 4 3 125p
+LT2 3 5 125p
+LT3 5 OUT 125p
+.ends JTL
+
+.model jjs jj(rtype=1,cct=1,icon=10m,vg=2.8m,delv=0.08m,
++ icrit=0.001m,r0=50,rn=4.9,cap=36f)
+
+.control
+run
+plot  v(3.X0) v(105.X3) v(3.X5) LJPM.X3#branch
+.endc

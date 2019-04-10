@@ -2,12 +2,12 @@
 Permutaion ordering: Multiple Minimum Degree (A^T + A)
 Frequency = 1.000000E+10:
 Recip. pivot growth = 1.000000e+00
-Recip. condition number = 4.111460e-07
+Recip. condition number = 1.601736e-06
      rhs            FERR            BERR
        1    0.000000e+00    0.000000e+00
-No of nonzeros in factor L = 1073624
-No of nonzeros in factor U = 1066034
-No of nonzeros in L+U      = 2087335
-Memory L\U [MB]   = 257.899
-Memory Total [MB] = 289.293
+No of nonzeros in factor L = 356009
+No of nonzeros in factor U = 351419
+No of nonzeros in L+U      = 677601
+Memory L\U [MB]   = 185.857
+Memory Total [MB] = 203.753
 Memory expansions = 0
