@@ -1,0 +1,16 @@
+CIRCUIT jtl()
+{
+	PARAMETER
+		i1=1.75,
+		j1=2,
+		l1=0.75;
+
+	EXTERNAL
+		xi=1.0,
+		xl=1.0,
+		xj=1.0;
+
+	RULE GO(GET(IN))
+		[INC(J1),INC(J2)],
+		SET(OUT);
+}

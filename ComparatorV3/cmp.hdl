@@ -1,0 +1,31 @@
+CIRCUIT cmp()
+{
+	PARAMETER
+		it=0.09,
+    ib=0.064,
+		j1=0.08,
+		j2=0.02,
+		l1=0.75,
+    M1=1.5,
+    LC=10,
+    LJPM=182,
+    ijpma=0.02,
+		p=6;
+
+	EXTERNAL
+		xi=1.0,
+		xl=1.0,
+		xj=1.0;
+
+  INTERNAL
+  	IJPM=copysign(ijpma, sin(3.14*(tcurr)/(tseq/p)));
+
+  FREEZE Je1, Je2, Jq;
+
+	RULE trig(GET(IN))
+		inc(Jt),
+		dec(Jb);
+
+	RULE go(inc(Jb) and IJPM < 0)
+		SET(OUT);
+}
