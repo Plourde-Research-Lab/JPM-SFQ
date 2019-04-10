@@ -1,0 +1,30 @@
+# Global parameters
+tseq	6000.0
+wbc	5.6
+wrrat	0.1
+wvg	4.13
+wvrat	0.7
+xi	1.0
+xj	1.0
+xl	1.0
+xm	1.0
+xr	1.0
+# cmp parameters
+cmp.ib	1.25
+cmp.ijpma	0.012
+cmp.it	1.95
+cmp.j1	2.0
+cmp.j2	0.5
+cmp.l1	0.1
+cmp.lc	10.0
+cmp.ljpm	182.0
+cmp.m1	1.5
+cmp.p	6.0
+# jtl parameters
+jtl.i1	1.75
+jtl.j1	2.0
+jtl.l1	0.75
+# proot parameters
+proot.c1	3.0
+proot.p	18.0
+proot.td	10.0
