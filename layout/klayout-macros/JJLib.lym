@@ -34,6 +34,7 @@ class JJ(pya.PCellDeclarationHelper):
     # declare the parameters
     # i.e. self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
     #      self.param("s", self.TypeShape, "", default = pya.DPoint(0, 0))
+    self.param("Label", self.TypeString, "Label", default='J1')
     self.param("J", self.TypeDouble, "PSCAN Value", default=2.0)
     self.param("Iu", self.TypeDouble, "Current Scalar (uA)", default=5.0)
     self.param("Jc", self.TypeDouble, "Critical Current Density (uA/um^2)", default=1.0)
@@ -53,7 +54,6 @@ class JJ(pya.PCellDeclarationHelper):
     self.param("l_i1", self.TypeLayer, "I1 Layer", default=pya.LayerInfo(3,0), hidden=True)
     self.param("l_i2", self.TypeLayer, "I2 Layer", default=pya.LayerInfo(8,0), hidden=True)
     
-    
     self.param("Area", self.TypeDouble, "Area (um^2)", readonly=True)
     self.param("D", self.TypeDouble, "Diameter(um)", readonly=True)
     self.param("R", self.TypeDouble, "Radius", default=1,  hidden=True)
@@ -65,7 +65,7 @@ class JJ(pya.PCellDeclarationHelper):
     
   def display_text_impl(self):
     # Provide a descriptive text for the cell
-    return "JJ: J={}, Bc={}".format(self.J, self.BetaC)
+    return "{}={:.3f}, Bc={:.3f}".format(self.Label, self.J, self.BetaC)
   
   def coerce_parameters_impl(self):
  
@@ -74,6 +74,9 @@ class JJ(pya.PCellDeclarationHelper):
     self.R = self.D/2.0
     self.Res = sqrt(hbar * self.BetaC * 1e15)/sqrt(2. * e * self.Jc * self.Cc) / self.Area *1e3
     self.C = self.Area * self.Cc
+    
+    if self.W &lt; 2:
+      self.W = 2
     
   def produce_impl(self):
     self.coerce_parameters_impl()
@@ -160,10 +163,14 @@ class JJ(pya.PCellDeclarationHelper):
     m2w = round(self.R + 1, 2)*2
     r2_i1_g = 0.5 # Spacing from R2 to I1
     vw = self.W - (2*r2_i1_g) # Via Size
+    vh = 1
+    
+    if vw &lt; 1:
+      vw = 1
     
     
-    llx, lly = -vw/2/dbu, -(m2w/2 + vw + r2_i1_g)/dbu
-    urx, ury = vw/2/dbu, lly+(vw/dbu)
+    llx, lly = -vw/2/dbu, -(m2w/2 + vh + r2_i1_g)/dbu
+    urx, ury = vw/2/dbu, lly+(vh/dbu)
     m2pad1 = pya.Box.new(llx, lly, urx, ury)
     
     #create the shape
@@ -173,7 +180,7 @@ class JJ(pya.PCellDeclarationHelper):
     ## Make the M2-Resistor Contact
     ###############################
     
-    llx, lly = -m2w/2/dbu, -(m2w/2 + vw + 2*r2_i1_g)/dbu
+    llx, lly = -m2w/2/dbu, -(m2w/2 + vh + 2*r2_i1_g)/dbu
     urx, ury = m2w/2/dbu, -m2w/2/dbu
     m2pad = pya.Box.new(llx, lly, urx, ury)
     
@@ -184,8 +191,9 @@ class JJ(pya.PCellDeclarationHelper):
     ## Make the Resistor Ground Vias
     ###############################
 
-    llx, lly = -self.W/2/dbu, btmpt_dbu - (self.W/2/dbu)
-    urx, ury = self.W/2/dbu, btmpt_dbu + (self.W/2/dbu)
+    llx, lly = -(m2w-0.5)/2/dbu, btmpt_dbu - (vh/2/dbu)
+    
+    urx, ury = (m2w-0.5)/2/dbu, btmpt_dbu + (vh/2/dbu)
     rvgpad = pya.Box.new(llx, lly, urx, ury)
     
     self.cell.shapes(self.l_i1_layer).insert(rvgpad)
@@ -214,13 +222,18 @@ class JJ(pya.PCellDeclarationHelper):
     m1pad = pya.Box.new(llx, lly, urx, ury)
     
     self.cell.shapes(self.l_m1_layer).insert(m1pad) 
+  
+    ############################
+    ## Make the M3 Pad
+    ############################   
     
+    self.cell.shapes(self.l_m3_layer).insert(m1pad)   
     ###############################
     ## Make the I0 Via
     ###############################
     
     llx, lly = -(self.W/2 + 0.3)/dbu, btmpt_dbu
-    urx, ury = (self.W/2 + 0.3)/dbu, btmpt_dbu - (self.W/2 + 0.3)/dbu
+    urx, ury = (self.W/2 + 0.3)/dbu, btmpt_dbu - (vh/2 + 0.3)/dbu
     i0pad = pya.Box.new(llx, lly, urx, ury)
     
     if self.Grounded:

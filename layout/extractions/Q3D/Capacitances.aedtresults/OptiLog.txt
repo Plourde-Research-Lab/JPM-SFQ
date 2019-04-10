@@ -1,0 +1,70 @@
+
+=== constructing optimizer ===
+
+--- Begin Model Info ---
+# inp variables = 1
+# out variables = 1
+Lower Bounds(inp) follow
+DoubleArr: dim = 1
+array[0] = 8e-005
+Upper Bounds(inp) follow
+DoubleArr: dim = 1
+array[0] = 0.0001
+--- Begin ConstraintArr Info ---
+Array dim = 2
+Begin Linear Constraint
+RHS = -8e-005
+Coef vector follows: DoubleArr: dim = 1
+array[0] = -1
+End Linear Constraint
+Begin Linear Constraint
+RHS = 0.0001
+Coef vector follows: DoubleArr: dim = 1
+array[0] = 1
+End Linear Constraint
+--- End ConstraintArr Info ---
+Min steps follow
+DoubleArr: dim = 1
+array[0] = 8e-007
+Max steps follow
+DoubleArr: dim = 1
+array[0] = 8e-006
+X-scales follow
+DoubleArr: dim = 1
+array[0] = 2e-033
+Max scaled bondary violations follow
+DoubleArr: dim = 2
+array[0] = 0
+array[1] = 0
+--- End Model Info ---
+
+--- Begin Generic Optimizer Info ---
+Cost limit = 0
+Iter limit = 100
+Act iter # = 0
+InitInstance InstanceListIterator is invalid
+
+BestInstance InstanceListIterator is invalid
+
+--- End Generic Optimizer Info ---
+
+--- Begin OptiMd Info ---
+Noise = 0.0001
+maxStepCountLimit =5
+noSuccessCountLimit =3
+threePointMode = OFF
+variableErrorMode = ON
+--- End OptiMd Info ---
+
+UseBestinList	Init:Feasible&Solved	input	9.999999999999999e-005	output	5.261224676489999e-025
+UseInitInst	initUpdate	input	9.999999999999999e-005	output	5.261224676489999e-025
+logH	rescale	input	0	0	output	1.052244935298e-014
+Initial Gradient Approximation:
+calcGrd	0->1	input	9.199999999999999e-005	output	6.120379123600005e-026
+logNoise	center	input	9.999999999999999e-005	output	0.0001000000000145069
+logGrad	grad	input	9.999999999999999e-005	output	5.811483455162494e-020
+logGrad	error	input	9.999999999999999e-005	output	25.0000000036267
+grdPnts	center	input	9.999999999999999e-005	output	5.261224676489999e-025
+grdPnts	1:aux1	input	9.199999999999999e-005	output	6.120379123600005e-026
+Initial Rescaling the Hessian:
+logH	rescale	input	0	0	output	1.052244935298e-014

@@ -1,0 +1,32 @@
+<Qucs Schematic 0.0.19>
+<Properties>
+  <View=-68,-8,1160,1246,1,0,0>
+  <Grid=10,10,0>
+  <DataSet=SP circuit.dat>
+  <DataDisplay=SP circuit.sch>
+  <OpenDisplay=1>
+  <Script=SP circuit.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 130 765 833 665 3 #c0c0c0 1 01 1 0 2e+10 2e+11 1 -0.0259343 0.02 0.285277 1 -1 0.2 1 315 0 225 "" "" "">
+	<"S[2,1]" #0000ff 0 3 0 0 0>
+	<"S[3,1]" #ff0000 0 3 0 0 0>
+	<"S[3,2]" #ff00ff 0 3 0 0 0>
+	<"S[1,3]" #00ff00 0 3 0 0 0>
+	<"S[1,2]" #00ffff 0 3 0 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+</Paintings>

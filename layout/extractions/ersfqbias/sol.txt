@@ -1,0 +1,26 @@
+InductEx v5.05.20 (3 February 2019). Copyright 2003-2019 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse U, until 21 Nov 2019. [Basic with Visualization]
+biasl.GDS -fh 
+Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=0.7
+Spice netlist biasl.cir read. Totals: L = 1, k = 0, P = 1.
+Total unique loops identified in netlist = 1
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
+GDS file biasl.GDS read: db units in 1E-0009 m, 0.001 units per user unit.
+5 structures read. Reduced 12 objects to 5 polygons and 2 terminals.
+Top level structure is "BIASINDUCTOR".
+Terminal blocks = 2; Labels = 2; Extracted Ports = 1
+
+Port                  Positive terminal    Negative terminal
+P1                    M2,   line along x;  M1,   line along x;
+Minimum filaments in FFH = 4305
+
+Single impedance.
+
+Impedance  Inductance [pH]     Resistance [Ohm]   AbsDiff   PercDiff
+Name      Design    Extracted Design    Extracted (L only)  (L only)
+L1        --        358.358   --        --        +358.36   --%
+Deallocating memory.
+Cycles found in 0.627 seconds.
+SVD solution in 0.108 seconds.
+Job finished in 4.739 seconds.

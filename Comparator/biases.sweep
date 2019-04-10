@@ -1,8 +1,9 @@
 .control
 source -c root.cir
-set value1=ib1
-set value2=ib2
-sweep 3u 10u 1u 3u 10u 1u
-plot LJPM#branch LC#branch v(6) v(8) v(1) v(15)
+set k1=0.1
+set value1=i1
+set i2=1u
+sweep 8.5u 9.0u .05u
+plot LT0#branch v(7) v(12)/2/pi v(14)/2/pi v(13)
 *write bias.dat v(1) v(15)
 .endc

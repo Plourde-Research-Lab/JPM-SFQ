@@ -14,9 +14,9 @@ Units             =  1e-6
 *    If you have no idea what this means, keep CIFUnitsPerMicron = 100
 CIFUnitsPerMicron =  100
 AbsMin            =  0.001
-GapMax            =  0.75
+GapMax            = 0.7
 GPOverhang        =  5.0
-ProcessHasGroundPlane = FALSE
+ProcessHasGroundPlane = TRUE
 BlankAllCutsGP    =  FALSE
 ZSegsToEC         =  TRUE
 LastDieLayerOrder =  10
@@ -90,16 +90,16 @@ HFilaments =     2
 Colour     =     10
 $End
 *
-* I1C
+* J1
 $Layer
 Number     =     4
-Name       =     I1C
+Name       =     J1
 Bias       =     0
 Thickness  =     0.05
 Order      =     3
 Mask       =     0
 Filmtype   =     A
-IDensity   =     4.5e-5
+IDensity   =     1e-6
 $End
 *
 * A1
@@ -125,17 +125,17 @@ Mask       =     1
 Filmtype   =     N
 $End
 *
-* I1B
+* I1
 $Layer
 Number     =     3
-Name       =     I1B
+Name       =     I1
 Bias       =    -0.1
 Thickness  =     0.2
 Order      =     6
 Mask       =    -1
 Filmtype   =     I
 LayerSUB   =     9
-* We subtract layer 9 (R2) from I1B to eradicate I1B vias to resistors that will
+* We subtract layer 9 (R2) from I1 to eradicate I1 vias to resistors that will
 * short to M1 otherwise (all normal layers are discarded during segmentation, thus
 * removing them from the z-directed stack for connectivity checking).
 $End

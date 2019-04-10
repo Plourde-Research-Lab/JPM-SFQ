@@ -1,0 +1,48 @@
+$begin 'Profile'
+	$begin '56001'
+		$begin 'ProfileGroup'
+			StartInfo='Time:  12/14/2018 13:20:58; Host: ITS-AVHE-PHY-08; Processor: 12; OS: NT 6.2; Q3D Extractor 2017.2.0'
+			TotalInfo='Time:  12/14/2018 13:22:37, Status: Normal Completion'
+			ProfileTask('', 0, 0, 0, 0, 0, 'Executing from C:\\Program Files\\AnsysEM\\AnsysEM18.2\\Win64\\Q3DCOMENGINE.exe', false, true)
+			ProfileTask('  Mesh (phi surface)', 0, 0, 0, 0, 26624, '315 triangles', true, true)
+			ProfileTask('  Mesh (surface translation)', 0, 0, 0, 0, 24548, '291 triangles', true, true)
+			ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('Adaptive Pass 1', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('  Solver setup', 3, 0, 0, 0, 12620, '1 core(s)', true, true)
+			ProfileTask('  Matrix solution', 3, 0, 0, 0, 14500, '1 core(s)', true, true)
+			ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('Adaptive Pass 2', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('  Mesh (surface, adaptive)', 0, 0, 0, 0, 25368, '796 triangles', true, true)
+			ProfileTask('  Solver setup', 5, 0, 2, 0, 33692, '1 core(s)', true, true)
+			ProfileTask('  Matrix solution', 2, 0, 0, 0, 33692, '1 core(s)', true, true)
+			ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('Adaptive Pass 3', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('  Mesh (surface, adaptive)', 0, 0, 0, 0, 28992, '2196 triangles', true, true)
+			ProfileTask('  Solver setup', 11, 0, 8, 0, 57708, '1 core(s)', true, true)
+			ProfileTask('  Matrix solution', 1, 0, 0, 0, 57708, '1 core(s)', true, true)
+			ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('Adaptive Pass 4', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('  Mesh (surface, adaptive)', 0, 0, 0, 0, 31608, '2930 triangles', true, true)
+			ProfileTask('  Solver setup', 9, 0, 5, 0, 47472, '1 core(s)', true, true)
+			ProfileTask('  Matrix solution', 1, 0, 0, 0, 47472, '1 core(s)', true, true)
+			ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('Adaptive Pass 5', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('  Mesh (surface, adaptive)', 0, 0, 0, 0, 34484, '3877 triangles', true, true)
+			ProfileTask('  Solver setup', 13, 0, 10, 0, 66504, '1 core(s)', true, true)
+			ProfileTask('  Matrix solution', 2, 0, 0, 0, 66504, '1 core(s)', true, true)
+			ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('Adaptive Pass 6', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('  Mesh (surface, adaptive)', 0, 0, 0, 0, 38036, '5079 triangles', true, true)
+			ProfileTask('  Solver setup', 11, 0, 7, 0, 57088, '1 core(s)', true, true)
+			ProfileTask('  Matrix solution', 2, 0, 1, 0, 60480, '1 core(s)', true, true)
+			ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('Adaptive Pass 7', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('  Mesh (surface, adaptive)', 0, 0, 0, 0, 42136, '6763 triangles', true, true)
+			ProfileTask('  Solver setup', 16, 0, 13, 0, 78336, '1 core(s)', true, true)
+			ProfileTask('  Matrix solution', 3, 0, 1, 0, 83384, '1 core(s)', true, true)
+			ProfileTask('', 0, 0, 0, 0, 0, 'Adaptive Passes converged', false, true)
+			ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+			ProfileTask('Solution Process', 0, 0, 0, 0, 0, 'Elapsed time : 00:01:38 , Q3D ComEngine Memory : 46.5 M', false, true)
+		$end 'ProfileGroup'
+	$end '56001'
+$end 'Profile'

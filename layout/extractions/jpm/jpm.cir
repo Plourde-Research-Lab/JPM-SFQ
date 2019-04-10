@@ -1,0 +1,20 @@
+* spice netlist for InductEx4
+L1     1   2   1000
+LB     3   4
+LC     5   6   20
+KB     L1  LB  0.05
+KC     L1  LC  -0.1
+* LIN    7   8   5
+* LOUT   9   10  5
+* Ports
+PL1     1   2
+PB      3   4
+PC      5   6
+* Pin     7   8
+* Pout    9   10
+* Je1     11  0 4
+* Je2     12  0 4
+* Jt      13  0 4
+* Jb      14  0 4
+* Jq      15  0 1
+.end

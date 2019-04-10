@@ -1,0 +1,83 @@
+(ExpressProject "Design9"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\comparator.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (GND
+      (LibraryName "D:\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (I
+      (FullPartName "I.Normal")
+      (LibraryName "G:\CIR\ADC\PCOUNTER\V0\4BIT\TMP\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (L4
+      (FullPartName "L4.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (L2
+      (FullPartName "L2.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (JUNCTION
+      (FullPartName "JUNCTION.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (J
+      (FullPartName "J.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0"))
+    (P
+      (FullPartName "P.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\JJDEVICE.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "z:\chip-design\jpm-sfq\comparator\orcad\comparator.dsn")
+      (Path "Design Resources"
+         "z:\chip-design\jpm-sfq\comparator\orcad\comparator.dsn" "ROOT")
+      (Path "Design Resources"
+         "z:\chip-design\jpm-sfq\comparator\orcad\comparator.dsn" "JTL"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 420"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 26 1478 26 485")
+        (Scroll "-217 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "Z:\CHIP-DESIGN\JPM-SFQ\COMPARATOR\ORCAD\COMPARATOR.DSN")
+      (Schematic "ROOT")
+      (Page "ROOT"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 52 1688 52 511")
+        (Scroll "-309 0")
+        (Zoom "100"))
+      (Path "Z:\CHIP-DESIGN\JPM-SFQ\COMPARATOR\ORCAD\COMPARATOR.DSN")
+      (Schematic "JTL")
+      (Page "JTL")))
+  (MPSSessionName "caleb"))

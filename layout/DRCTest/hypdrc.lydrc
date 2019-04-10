@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description/>
+ <version/>
+ <category>drc</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>false</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>true</show-in-menu>
+ <group-name>drc_scripts</group-name>
+ <menu-path>tools_menu.drc.end</menu-path>
+ <interpreter>dsl</interpreter>
+ <dsl-interpreter-name>drc-dsl-xml</dsl-interpreter-name>
+ <text>report("out.lyrdb")
+
+m0 = input(30)
+m0.width(1).output("m0_width", "M0 width violations")
+m0.space(1).output("m0_space", "M0 space violations")
+
+in0 = input(31)
+in0.width(1).output("in0_width", "I0 width violations")
+in0.space(1).output("in0_space", "I0 space violations")
+
+j1 = input(4)
+j1.width(1).output("j1_width", "J1 width violations")
+
+a1 = input(5)
+a1.width(1).output("a1_width", "A1 width violations")
+
+m1 = input(1)
+m1.width(1).output("m1_width", "M1 width violations")
+
+r2 = input(9)
+r2.width(1).output("r2_width", "R2 width violations")
+
+in1 = input(3)
+in1.width(1).output("in1_width", "I1 width violations")
+
+m2 = input(6)
+m2.width(1).output("m2_width", "M2 width violations")
+
+in2 = input(8)
+in2.width(1).output("in2_width", "I2 width violations")
+
+m3 = input(10)
+m3.width(1).output("m3_width", "M3 width violations")
+
+r3 = input(11)
+r3.width(1).output("r3_width", "R3 width violations")</text>
+</klayout-macro>

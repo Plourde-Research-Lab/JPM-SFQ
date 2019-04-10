@@ -1,0 +1,47 @@
+SimValueCacheVersionID=1
+$begin 'SimValueInfos'
+	NextUniqueID=2
+	MoveBackwards=false
+	$begin 'SimValue'
+		ID=0
+		$begin 'SimValueParams'
+			QuantityName='C(Cylinder1,Cylinder1)'
+			ValueState(28, 4, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=1
+		$begin 'SimValueParams'
+			QuantityName='C(Qubit,Qubit)'
+			ValueState(28, 4, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+$end 'SimValueInfos'
+$begin 'SimValueCache'
+	$begin 'DesignMap'
+		DesignID=4
+		$begin 'SolutionMap'
+			$begin 'ContextMap'
+				SolutionID=20
+				$begin 'VersionMap'
+					$begin 'ReportTypeSolnDef'
+						ReportType=0
+						SimValueContext(0, 0, 2, 0, false, false, 0, 1, 0, 1, 1, '', 0, 0)
+					$end 'ReportTypeSolnDef'
+					$begin 'MajorVVMap'
+						VersionID=199
+						$begin 'MinorVVMap'
+							MajorVariation='$Cr=\'287.5fF\' C_s=\'145um\' cavg=\'6um\' cavw=\'125um\' dz=\'0.0062mm\' gap=\'5um\' h=\'500um\' i0t=\'500nm\' m3_t=\'0.6um\' qm0_t=\'0.1um\' qubit_gap=\'40um\' radius=\'100um\' subw=\'500um\' t=\'0.1um\' w=\'10um\''
+							MinorCacheFile='min7F763318015465357637.tmp'
+						$end 'MinorVVMap'
+					$end 'MajorVVMap'
+				$end 'VersionMap'
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=21
+			$end 'ContextMap'
+		$end 'SolutionMap'
+	$end 'DesignMap'
+$end 'SimValueCache'

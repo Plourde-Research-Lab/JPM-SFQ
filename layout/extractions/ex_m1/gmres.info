@@ -4,30 +4,30 @@ GMRES absolute tolerance = 1.000000E-02
 GMRES max iterations = 400
 Frequency = 1.000000E+10:
 Port p7:
-Iterations = 39
-Residual error (2-norm) = 7.054382E-05
-Relative residual error (2-norm) = 2.432545E-06
+Iterations = 45
+Residual error (2-norm) = 1.251979E-04
+Relative residual error (2-norm) = 7.236872E-07
 Port p6:
-Iterations = 41
-Residual error (2-norm) = 6.902454E-05
-Relative residual error (2-norm) = 1.917348E-06
+Iterations = 49
+Residual error (2-norm) = 1.118383E-04
+Relative residual error (2-norm) = 8.045918E-07
 Port p5:
-Iterations = 39
-Residual error (2-norm) = 7.324060E-05
-Relative residual error (2-norm) = 2.929624E-06
+Iterations = 45
+Residual error (2-norm) = 1.560398E-04
+Relative residual error (2-norm) = 6.501658E-06
 Port p4:
-Iterations = 39
-Residual error (2-norm) = 1.008331E-04
-Relative residual error (2-norm) = 1.769001E-06
+Iterations = 45
+Residual error (2-norm) = 2.758986E-04
+Relative residual error (2-norm) = 6.131079E-06
 Port p3:
-Iterations = 40
-Residual error (2-norm) = 4.317679E-05
-Relative residual error (2-norm) = 1.166940E-06
+Iterations = 49
+Residual error (2-norm) = 4.362477E-05
+Relative residual error (2-norm) = 7.790137E-07
 Port p2:
-Iterations = 40
-Residual error (2-norm) = 8.953193E-05
-Relative residual error (2-norm) = 4.476597E-06
+Iterations = 46
+Residual error (2-norm) = 2.066644E-04
+Relative residual error (2-norm) = 1.878767E-06
 Port p1:
-Iterations = 39
-Residual error (2-norm) = 9.353708E-05
-Relative residual error (2-norm) = 7.666974E-07
+Iterations = 46
+Residual error (2-norm) = 1.014067E-04
+Relative residual error (2-norm) = 6.627889E-07

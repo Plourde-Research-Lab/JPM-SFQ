@@ -1,3 +1,31 @@
-InductEx v4.30 Free (14 March 2015). Copyright 2003-2015 Coenrad Fourie
-Hyp_split_demo.gds -l h4k5.ldf -i split.inp -fh 
-(251) Your model size exceeds the Free version limits.
+InductEx v5.05.18 (20 September 2018). Copyright 2003-2018 Coenrad Fourie
+Licensed to: Caleb Howington, Plourde Research Lab, Syracuse Wi, until 21 Dec 2018. [Basic with Visualization]
+Hyp_split_demo.gds -i split.inp -fh 
+Techfile C:\InductEx\bin\inductex.exe read: Units in 1E-0006 m. AbsMin=0.001 GapMax=0.75
+Spice netlist Hyp_split_demo.cir read. Totals: L = 11, k = 0, P = 7.
+Total unique loops identified in netlist = 21
+Using FFH with DIAG preconditioner.
+FFH version 1.202su_64 found.
+GDS file Hyp_split_demo.gds read: db units in 1E-0009 m, 0.001 units per user unit.
+5 structures read. Reduced 80 objects to 32 polygons and 4 terminals.
+Top level structure is "HYP_SPLIT_DEMO".
+Object in layer I1 moved to TERM layer. (Ppj1)
+Object in layer I1 moved to TERM layer. (Ppj2)
+Object in layer I1 moved to TERM layer. (Ppj3)
+Terminal blocks = 7; Labels = 7; Extracted Ports = 7
+
+Port                  Positive terminal    Negative terminal
+PIN                   M2,   line along y;  M0,   same as "+" terminal.
+PJ1                   M2,   polygon;       M1,   same as "+" terminal.
+PIB                   M2,   line along x;  M0,   same as "+" terminal.
+PJ2                   M2,   polygon;       M1,   same as "+" terminal.
+POUT1                 M2,   line along y;  M0,   same as "+" terminal.
+PJ3                   M2,   polygon;       M1,   same as "+" terminal.
+POUT2                 M2,   line along x;  M0,   same as "+" terminal.
+Minimum filaments in FFH = 156774
+(48) Only 0 ports in ix.cur, compared to 7 in netlist/layout.
+
+WARNINGS:
+Port label "jj325" in structure "su45_jj325s" ignored. Add port lables only to top-level structure ("hyp_split_demo")
+Port label "jj250" in structure "su45_jj250s" ignored. Add port lables only to top-level structure ("hyp_split_demo")
+Port label "jj250" in structure "su45_jj250s" ignored. Add port lables only to top-level structure ("hyp_split_demo")

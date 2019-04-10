@@ -1,0 +1,32 @@
+<Qucs Schematic 0.0.19>
+<Properties>
+  <View=-109,-244,1560,770,1,68,0>
+  <Grid=10,10,0>
+  <DataSet=JPM.dat>
+  <DataDisplay=JPM.sch>
+  <OpenDisplay=1>
+  <Script=JPM.m>
+  <RunScript=1>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Tab -20 750 304 140 3 #c0c0c0 1 00 1 0 1 1 1 0 1 1 1 0 1 11 315 0 225 "" "" "">
+	<"Lj" #0000ff 0 3 1 0 0>
+  </Tab>
+  <Rect 50 532 1181 612 3 #c0c0c0 1 00 1 4.5e+09 1e+08 6e+09 1 -5.55303 0.5 0.654821 1 -1 0.2 1 315 0 225 "" "" "">
+	<"dbCav" #0000ff 0 3 0 0 0>
+	<"dbJPM" #ff0000 0 3 0 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+</Paintings>

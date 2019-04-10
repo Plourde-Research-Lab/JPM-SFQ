@@ -1,0 +1,8 @@
+* spice netlist for InductEx4
+L1     1   2   50
+* Ports
+PL1     1   0
+J1      2   0   10
+JBias   3   0   15
+J2      4   0   10
+.end
