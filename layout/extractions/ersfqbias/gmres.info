@@ -4,6 +4,6 @@ GMRES absolute tolerance = 1.000000E-02
 GMRES max iterations = 400
 Frequency = 1.000000E+10:
 Port p1:
-Iterations = 10
-Residual error (2-norm) = 1.100718E-06
-Relative residual error (2-norm) = 5.503589E-07
+Iterations = 12
+Residual error (2-norm) = 3.062001E-06
+Relative residual error (2-norm) = 3.062001E-06
