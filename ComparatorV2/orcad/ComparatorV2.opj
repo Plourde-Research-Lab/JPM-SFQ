@@ -14,10 +14,8 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "z:\chip-design\jpm-sfq\comparatorv2\orcad\comparatorv2.dsn")
-      (Path "Design Resources"
-         "z:\chip-design\jpm-sfq\comparatorv2\orcad\comparatorv2.dsn" "ROOT"))
+      (Path "Design Resources" ".\comparatorv2.dsn")
+      (Path "Design Resources" ".\comparatorv2.dsn" "ROOT"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -28,7 +26,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -31 338 2513 338 1034")
-        (Scroll "-403 132")
+        (Scroll "-403 113")
         (Zoom "136")
         (Occurrence "/"))
       (Path "Z:\CHIP-DESIGN\JPM-SFQ\COMPARATORV2\ORCAD\COMPARATORV2.DSN")
